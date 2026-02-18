@@ -1,6 +1,6 @@
 export type TypeGear = {
-   id: string;
    label: string;
+   icon: string;
 };
 
 export default async function fetchGears(): Promise<TypeGear[]> {

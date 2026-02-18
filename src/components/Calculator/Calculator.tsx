@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Label from "../Label/Label";
 import Step1 from "../Step1/Step1";
 import Step2 from "../Step2/Step2";
 import Step3 from "../Step3/Step3";
 import Step4 from "../Step4/Step4";
 import Navigation from "../Navigation/Navigation";
+import Summary from "../Summary/Summary";
 import styles from "./Calculator.module.scss";
 
 function Calculator() {
@@ -30,7 +31,6 @@ function Calculator() {
    const [medications, setMedications] = useState<string | null>(null);
 
    // Step4
-
    const setUrl = async () => {
       const url = new URL(window.location.href);
       url.search = "";
@@ -38,8 +38,7 @@ function Calculator() {
       if (step1Value) url.searchParams.set("step1", step1Value);
       if (days) url.searchParams.set("days", days.toString());
       if (people) url.searchParams.set("people", people.toString());
-      if (step3Value.length > 0)
-         url.searchParams.set("step3", step3Value.join(",") || "");
+      if (step3Value.length > 0) url.searchParams.set("step3", step3Value.join(",") || "");
       if (medications) url.searchParams.set("medications", medications);
 
       try {
@@ -47,11 +46,17 @@ function Calculator() {
       } catch (err) {
          console.log("Failed to copy: ", err);
       }
-      alert("URL kopiert!\n" + url.toString());
+      alert("URL kopiert!");
    };
 
+   // Summary
+   const summaryRef = useRef<HTMLDivElement>(null!);
+
+   // On first render: Check URL Params
    useEffect(() => {
       const currentUrl = new URL(window.location.href);
+      if(currentUrl.searchParams.size > 0) setCurrentStep(4)
+
       const step1UrlParams = currentUrl.searchParams.get("step1");
       const daysUrlParams = currentUrl.searchParams.get("days");
       const peopleUrlParams = currentUrl.searchParams.get("people");
@@ -103,6 +108,17 @@ function Calculator() {
             onPrev={onPrev}
             onNext={onNext}
             setUrl={setUrl}
+            summaryRef={summaryRef}
+         />
+
+         {/* Print */}
+         <Summary 
+            summaryRef={summaryRef}
+            step1Value={step1Value}
+            days={days}
+            people={people}
+            step3Value={step3Value}
+            medications={medications}
          />
       </div>
    );

@@ -42,16 +42,19 @@ function Step3({step3Value, setStep3Value, extra, setExtra, medications, setMedi
             </h2>
             <p>Welche davon hast du bereits?</p>
             <div className={styles.options}>
-               {gears.map(({ id, label }) => (
-                  <label key={id}>
+               {gears.map(({ label, icon }) => (
+                  <label key={label}>
                      <input
                         type="checkbox"
                         name="gear"
-                        value={id}
-                        checked={step3Value.includes(id)}
-                        onChange={() => handleChange(id)}
+                        value={label}
+                        checked={step3Value.includes(label)}
+                        onChange={() => handleChange(label)}
                      />
-                     <span>{label}</span>
+                     <p>
+                        <span dangerouslySetInnerHTML={{ __html: icon }}></span>
+                        <span>{label}</span>
+                     </p>
                   </label>
                ))}
             </div>
@@ -59,7 +62,7 @@ function Step3({step3Value, setStep3Value, extra, setExtra, medications, setMedi
                <label className={styles.switcher}>
                   <input
                      type="checkbox"
-                     name="gear"
+                     name="extra"
                      checked={extra}
                      onChange={handleExtra}
                   />

@@ -22,7 +22,7 @@
       border: 1px solid $white;
       border-radius: 5px;
       width: calc(100% / 3 - 20px);
-      height: 120px;
+      height: 150px;
       display: block;
       position: relative;
       padding-left: 35px;
@@ -43,13 +43,16 @@
          width: 0;
 
          &:checked {
-            & ~ span {
+            & ~ p {
                background-color: $white;
                color: $black;
             }
          }
       }
-      span {
+      p {
+         display: flex;
+         flex-direction: column;
+         gap: 10px;
          position: absolute;
          top: 0;
          left: 0;

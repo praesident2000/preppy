@@ -9,8 +9,7 @@ type StepProps = {
 function Step4({ step3Value }: StepProps) {
    const { gears } = useGears();
    const percent = Math.floor((step3Value.length / gears.length) * 100)
-   const missing = gears.filter(({id}) => !step3Value.includes(id))
-   console.log('missing', missing)
+   const missing = gears.filter(({label}) => !step3Value.includes(label))
 
    return (
       <div className={styles.step}>
@@ -27,8 +26,13 @@ function Step4({ step3Value }: StepProps) {
                   ? (
                      <ul className={styles.missingItems}>
                         <h3>Dir fehlen noch:</h3>
-                        {missing.map(({id, label}) => {
-                           return <li key={id}>{label}</li>
+                        {missing.map(({label, icon}) => {
+                           return (
+                              <li key={label}>
+                                 <span dangerouslySetInnerHTML={{ __html: icon }}></span>
+                                 <span>{label}</span>
+                              </li>
+                           )
                         })}
                      </ul>
                   ) : (

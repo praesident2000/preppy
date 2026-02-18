@@ -19,8 +19,8 @@ function Step1({ step1Value, setStep1Value }: StepProps) {
                   <input
                      type="radio"
                      name="type"
-                     value="single"
-                     checked={step1Value === 'single'}
+                     value="Einfamilienhaus"
+                     checked={step1Value === 'Einfamilienhaus'}
                      onChange={handleChange}
                   />
                   <span>Einfamilienhaus</span>
@@ -29,8 +29,8 @@ function Step1({ step1Value, setStep1Value }: StepProps) {
                   <input
                      type="radio"
                      name="type"
-                     value="2-10"
-                     checked={step1Value === '2-10'}
+                     value="Zwei bis zehn Wohnungen"
+                     checked={step1Value === 'Zwei bis zehn Wohnungen'}
                      onChange={handleChange}
                   />
                   <span>Zwei bis zehn Wohnunge</span>
@@ -39,8 +39,8 @@ function Step1({ step1Value, setStep1Value }: StepProps) {
                   <input
                      type="radio"
                      name="type"
-                     value=">10"
-                     checked={step1Value === '>10'}
+                     value="Mehr als zehn Wohnungen"
+                     checked={step1Value === 'Mehr als zehn Wohnungen'}
                      onChange={handleChange}
                   />
                   <span>Mehr als zehn Wohnungen</span>
