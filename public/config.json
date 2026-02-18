@@ -1,0 +1,465 @@
+{
+   "food": {
+      "drinks": {
+         "label": "Getränke",
+         "unit": "l",
+         "totPerPersonPerDay": 2,
+         "items": [
+            {
+               "label": "Mineralwasser",
+               "unit": "l",
+               "perPersonPerDay": 2.0,
+               "decimals": 1,
+               "packSize": 1.5,
+               "packLabelPlural": "Flaschen",
+               "packLabelSingular": "Flasche"
+            },
+            {
+               "label": "Zitronensaft",
+               "unit": "ml",
+               "perPersonPerDay": 14,
+               "decimals": 0,
+               "packSize": 250,
+               "packLabelPlural": "Flaschen",
+               "packLabelSingular": "Flasche"
+            },
+            {
+               "label": "Kaffee (Instant)",
+               "unit": "g",
+               "perPersonPerDay": 18,
+               "decimals": 0,
+               "packSize": 100,
+               "packLabelPlural": "Packungen",
+               "packLabelSingular": "Packung"
+            },
+            {
+               "label": "Tee schwarz",
+               "unit": "g",
+               "perPersonPerDay": 9,
+               "decimals": 0,
+               "packSize": 30,
+               "packLabelPlural": "Packungen",
+               "packLabelSingular": "Packung"
+            }
+         ],
+         "totalFromItemId": "waterLiters"
+      },
+      "grains": {
+         "label": "Getreideprodukte, Brot, Kartoffeln",
+         "unit": "g",
+         "totPerPersonPerDay": 330,
+         "items": [
+            {
+               "label": "Vollkornbrot",
+               "unit": "g",
+               "perPersonPerDay": 71,
+               "decimals": 0,
+               "packSize": 500,
+               "packLabelPlural": "Packungen",
+               "packLabelSingular": "Packung"
+            },
+            {
+               "label": "Zwieback",
+               "unit": "g",
+               "perPersonPerDay": 18,
+               "decimals": 0,
+               "packSize": 200,
+               "packLabelPlural": "Packungen",
+               "packLabelSingular": "Packung"
+            },
+            {
+               "label": "Knäckebrot",
+               "unit": "g",
+               "perPersonPerDay": 71,
+               "decimals": 0,
+               "packSize": 200,
+               "packLabelPlural": "Packungen",
+               "packLabelSingular": "Packung"
+            },
+            {
+               "label": "Nudeln (roh)",
+               "unit": "g",
+               "perPersonPerDay": 28,
+               "decimals": 0,
+               "packSize": 500,
+               "packLabelPlural": "Packungen",
+               "packLabelSingular": "Packung"
+            },
+            {
+               "label": "Reis (roh)",
+               "unit": "g",
+               "perPersonPerDay": 18,
+               "decimals": 0,
+               "packSize": 500,
+               "packLabelPlural": "Packungen",
+               "packLabelSingular": "Packung"
+            },
+            {
+               "label": "Hafer-/Getreideflocken",
+               "unit": "g",
+               "perPersonPerDay": 54,
+               "decimals": 0,
+               "packSize": 500,
+               "packLabelPlural": "Packungen",
+               "packLabelSingular": "Packung"
+            },
+            {
+               "label": "Kartoffeln (roh)",
+               "unit": "g",
+               "perPersonPerDay": 71,
+               "decimals": 0,
+               "packSize": 1000,
+               "packLabelPlural": "Säcke",
+               "packLabelSingular": "Sack"
+            }
+         ],
+         "totalPerPersonPerDay": 330
+      },
+      "veggies": {
+         "label": "Gemüse, Pilze",
+         "unit": "g",
+         "totPerPersonPerDay": 400,
+         "items": [
+            {
+               "label": "Bohnen grün (Konserve)",
+               "unit": "g",
+               "perPersonPerDay": 57,
+               "decimals": 0,
+               "packSize": 250,
+               "packLabelPlural": "Dosen",
+               "packLabelSingular": "Dose"
+            },
+            {
+               "label": "Erbsen/Möhren (Konserve)",
+               "unit": "g",
+               "perPersonPerDay": 64,
+               "decimals": 0,
+               "packSize": 250,
+               "packLabelPlural": "Dosen",
+               "packLabelSingular": "Dose"
+            },
+            {
+               "label": "Rotkohl (Konserve)",
+               "unit": "g",
+               "perPersonPerDay": 50,
+               "decimals": 0,
+               "packSize": 600,
+               "packLabelPlural": "Dosen",
+               "packLabelSingular": "Dose"
+            },
+            {
+               "label": "Sauerkraut (Konserve)",
+               "unit": "g",
+               "perPersonPerDay": 50,
+               "decimals": 0,
+               "packSize": 600,
+               "packLabelPlural": "Dosen",
+               "packLabelSingular": "Dose"
+            },
+            {
+               "label": "Spargel (Konserve)",
+               "unit": "g",
+               "perPersonPerDay": 29,
+               "decimals": 0,
+               "packSize": 250,
+               "packLabelPlural": "Dosen",
+               "packLabelSingular": "Dose"
+            },
+            {
+               "label": "Mais (Konserve)",
+               "unit": "g",
+               "perPersonPerDay": 29,
+               "decimals": 0,
+               "packSize": 250,
+               "packLabelPlural": "Dosen",
+               "packLabelSingular": "Dose"
+            },
+            {
+               "label": "Pilze (Konserve)",
+               "unit": "g",
+               "perPersonPerDay": 29,
+               "decimals": 0,
+               "packSize": 200,
+               "packLabelPlural": "Dosen",
+               "packLabelSingular": "Dose"
+            },
+            {
+               "label": "Saure Gurken (Konserve)",
+               "unit": "g",
+               "perPersonPerDay": 29,
+               "decimals": 0,
+               "packSize": 400,
+               "packLabelPlural": "Dosen",
+               "packLabelSingular": "Dose"
+            },
+            {
+               "label": "Rote Bete (Konserve)",
+               "unit": "g",
+               "perPersonPerDay": 29,
+               "decimals": 0,
+               "packSize": 450,
+               "packLabelPlural": "Dosen",
+               "packLabelSingular": "Dose"
+            },
+            {
+               "label": "Zwiebeln (frisch)",
+               "unit": "g",
+               "perPersonPerDay": 36,
+               "decimals": 0,
+               "packSize": 500,
+               "packLabelPlural": "Säcke",
+               "packLabelSingular": "Sack"
+            }
+         ],
+         "totalPerPersonPerDay": 400
+      },
+      "fruit": {
+         "label": "Obst",
+         "unit": "g",
+         "totPerPersonPerDay": 250,
+         "items": [
+            {
+               "label": "Kirschen (Konserve)",
+               "unit": "g",
+               "perPersonPerDay": 40,
+               "decimals": 0,
+               "packSize": 350,
+               "packLabelPlural": "Dosen",
+               "packLabelSingular": "Dose"
+            },
+            {
+               "label": "Birnen (Konserve)",
+               "unit": "g",
+               "perPersonPerDay": 18,
+               "decimals": 0,
+               "packSize": 450,
+               "packLabelPlural": "Dosen",
+               "packLabelSingular": "Dose"
+            },
+            {
+               "label": "Aprikosen (Konserve)",
+               "unit": "g",
+               "perPersonPerDay": 18,
+               "decimals": 0,
+               "packSize": 450,
+               "packLabelPlural": "Dosen",
+               "packLabelSingular": "Dose"
+            },
+            {
+               "label": "Mandarinen (Konserve)",
+               "unit": "g",
+               "perPersonPerDay": 25,
+               "decimals": 0,
+               "packSize": 200,
+               "packLabelPlural": "Dosen",
+               "packLabelSingular": "Dose"
+            },
+            {
+               "label": "Ananas (Konserve)",
+               "unit": "g",
+               "perPersonPerDay": 25,
+               "decimals": 0,
+               "packSize": 350,
+               "packLabelPlural": "Dosen",
+               "packLabelSingular": "Dose"
+            },
+            {
+               "label": "Rosinen",
+               "unit": "g",
+               "perPersonPerDay": 14,
+               "decimals": 0,
+               "packSize": 250,
+               "packLabelPlural": "Beutel",
+               "packLabelSingular": "Beutel"
+            },
+            {
+               "label": "Haselnusskerne",
+               "unit": "g",
+               "perPersonPerDay": 10,
+               "decimals": 0,
+               "packSize": 200,
+               "packLabelPlural": "Beutel",
+               "packLabelSingular": "Beutel"
+            },
+            {
+               "label": "Trockenpflaumen",
+               "unit": "g",
+               "perPersonPerDay": 25,
+               "decimals": 0,
+               "packSize": 200,
+               "packLabelPlural": "Beutel",
+               "packLabelSingular": "Beutel"
+            },
+            {
+               "label": "Frischobst",
+               "unit": "g",
+               "perPersonPerDay": 71,
+               "decimals": 0
+            }
+         ],
+         "totalPerPersonPerDay": 250
+      },
+      "dairy": {
+         "label": "Milch, Milcherzeugnisse",
+         "unit": "g",
+         "totPerPersonPerDay": 250,
+         "items": [
+            {
+               "label": "H-Milch (3,5 % Fett)",
+               "unit": "ml",
+               "perPersonPerDay": 200,
+               "decimals": 0,
+               "packSize": 1000,
+               "packLabelPlural": "Packungen",
+               "packLabelSingular": "Packung"
+            },
+            {
+               "label": "Hartkäse",
+               "unit": "g",
+               "perPersonPerDay": 50,
+               "decimals": 0,
+               "packSize": 250,
+               "packLabelPlural": "Packungen",
+               "packLabelSingular": "Packung"
+            }
+         ],
+         "totalPerPersonPerDay": 250
+      },
+      "meat": {
+         "label": "Eier, Fleisch, Wurst und Fisch",
+         "unit": "g",
+         "totPerPersonPerDay": 120,
+         "items": [
+            {
+               "label": "Thunfisch (Konserve ohne Öl)",
+               "unit": "g",
+               "perPersonPerDay": 17,
+               "decimals": 0,
+               "packSize": 150,
+               "packLabelPlural": "Dosen",
+               "packLabelSingular": "Dose",
+               "packMetaLabel": "Dose"
+            },
+            {
+               "label": "Ölsardinen (Konserve)",
+               "unit": "g",
+               "perPersonPerDay": 5,
+               "decimals": 0,
+               "packSize": 125,
+               "packLabelPlural": "Dosen",
+               "packLabelSingular": "Dose",
+               "packMetaLabel": "Dose"
+            },
+            {
+               "label": "Heringsfilet in Soße (Konserve)",
+               "unit": "g",
+               "perPersonPerDay": 5,
+               "decimals": 0,
+               "packSize": 200,
+               "packLabelPlural": "Dosen",
+               "packLabelSingular": "Dose",
+               "packMetaLabel": "Dose"
+            },
+            {
+               "label": "Corned Beef (Konserve)",
+               "unit": "g",
+               "perPersonPerDay": 16,
+               "decimals": 0,
+               "packSize": 340,
+               "packLabelPlural": "Dosen",
+               "packLabelSingular": "Dose",
+               "packMetaLabel": "Dose"
+            },
+            {
+               "label": "Kalbsleberwurst (Konserve)",
+               "unit": "g",
+               "perPersonPerDay": 16,
+               "decimals": 0,
+               "packSize": 200,
+               "packLabelPlural": "Dosen",
+               "packLabelSingular": "Dose",
+               "packMetaLabel": "Dose"
+            },
+            {
+               "label": "Dauerwurst (z.B. Salami)",
+               "unit": "g",
+               "perPersonPerDay": 16,
+               "decimals": 0
+            },
+            {
+               "label": "Bockwürstchen (Konserve)",
+               "unit": "g",
+               "perPersonPerDay": 16,
+               "decimals": 0,
+               "packSize": 200,
+               "packLabelPlural": "Gläser",
+               "packLabelSingular": "Glas",
+               "packMetaLabel": "Glas"
+            },
+            {
+               "label": "Eier (Gewichtsklasse M)",
+               "unit": "st",
+               "perPersonPerDay": 0.5,
+               "decimals": 1,
+               "packSize": 6,
+               "packLabelPlural": "Packungen",
+               "packLabelSingular": "Packung",
+               "packMetaLabel": "Packung"
+            }
+         ],
+         "totalPerPersonPerDay": 120
+      },
+      "fats": {
+         "label": "Fette, Öl",
+         "unit": "g",
+         "totPerPersonPerDay": 33,
+         "items": [
+            {
+               "label": "Streichfett (Butter/Margarine)",
+               "unit": "g",
+               "perPersonPerDay": 18,
+               "decimals": 0,
+               "packSize": 200,
+               "packLabelPlural": "Packungen",
+               "packLabelSingular": "Packung"
+            },
+            {
+               "label": "Speiseöl (z. B. Rapsöl)",
+               "unit": "ml",
+               "perPersonPerDay": 15,
+               "decimals": 0,
+               "packSize": 750,
+               "packLabelPlural": "Flaschen",
+               "packLabelSingular": "Flasche"
+            }
+         ],
+         "totalPerPersonPerDay": 33
+      }
+   },
+   "gears": [
+      {
+         "id": "firstAid",
+         "label": "Erste-Hilfe-Set"
+      },
+      {
+         "id": "flashlight",
+         "label": "Taschenlampe + Batterien"
+      },
+      {
+         "id": "powerbank",
+         "label": "Powerbank zum Laden von Geräten"
+      },
+      {
+         "id": "emergencyBag",
+         "label": "Notfallrucksack"
+      },
+      {
+         "id": "documents",
+         "label": "Wichtige Dokumente"
+      },
+      {
+         "id": "cash",
+         "label": "Bargeld"
+      }
+   ]
+}

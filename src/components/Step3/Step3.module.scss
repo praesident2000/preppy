@@ -1,0 +1,116 @@
+@use "../../styles/variables" as *;
+@use "../../styles/animations" as *;
+
+.step {
+   width: 100%;
+   border: 1px solid $white;
+   border-radius: 30px;
+   padding: 30px;
+   opacity: 0;
+   animation: fadeRight 1s $cubic forwards;
+}
+.stepMain {
+}
+.options {
+   display: flex;
+   gap: 30px;
+   display: flex;
+   flex-wrap: wrap;
+   margin-top: 30px;
+
+   label {
+      border: 1px solid $white;
+      border-radius: 5px;
+      width: calc(100% / 3 - 20px);
+      height: 120px;
+      display: block;
+      position: relative;
+      padding-left: 35px;
+      cursor: pointer;
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: bold;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+
+      input {
+         position: absolute;
+         opacity: 0;
+         cursor: pointer;
+         height: 0;
+         width: 0;
+
+         &:checked {
+            & ~ span {
+               background-color: $white;
+               color: $black;
+            }
+         }
+      }
+      span {
+         position: absolute;
+         top: 0;
+         left: 0;
+         height: 100%;
+         width: 100%;
+         background-color: transparent;
+         transition: 0.3s ease;
+         padding: 10px;
+      }
+   }
+}
+.extra {
+   margin-top: 40px;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+
+   input {
+      background-color: transparent;
+      border: 1px solid $white;
+      border-radius: 5px;
+      padding: 10px;
+      color: $white;
+   }
+}
+.switcher {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   font-size: 14px;
+   font-weight: bold;
+
+   input[type="checkbox"] {
+      width: 42px;
+      height: 22px;
+      -webkit-appearance: none;
+      background-color: transparent;
+      border: 1px solid $white;
+      border-radius: 20px;
+      position: relative;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &::before {
+         content: "";
+         position: absolute;
+         top: 2px;
+         left: 2px;
+         width: 16px;
+         height: 16px;
+         background-color: $white;
+         border-radius: 50%;
+         transition: transform 0.3s;
+      }
+      &:checked {
+         background-color: $white;
+
+         &::before {
+            background-color: $black;
+            transform: translateX(20px);
+         }
+      }
+   }
+}
