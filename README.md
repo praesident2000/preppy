@@ -1,73 +1,101 @@
-# React + TypeScript + Vite
+# Preppy Calculator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Internal Development Documentation
 
-Currently, two official plugins are available:
+------------------------------------------------------------------------
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Stack
 
-## React Compiler
+-   React 19\
+-   TypeScript\
+-   Vite\
+-   Static build (no backend)\
+-   Embedded in TYPO3 via HTML module
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+------------------------------------------------------------------------
 
-## Expanding the ESLint configuration
+## Development
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Install dependencies:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+npm install
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Start dev server:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+npm run dev
+
+------------------------------------------------------------------------
+
+## Build
+
+Create production build:
+
+npm run build
+
+Build output:
+
+/dist
+
+Always deploy the full contents of `/dist`.
+
+------------------------------------------------------------------------
+
+## TYPO3 Integration
+
+### Upload
+
+Upload all files from `/dist` to:
+
+/fileadmin/preppy/
+
+------------------------------------------------------------------------
+
+### Embed (TYPO3 HTML Module)
+
+`<link rel="stylesheet" href="/fileadmin/preppy/index-XXXXX.css">`{=html}
+
+::: {#root}
+:::
+
+```{=html}
+<script type="module" src="/fileadmin/preppy/index-XXXXX.js"></script>
 ```
+Notes: - Filenames contain hashes and change after each build. - Update
+CSS + JS references after rebuilding. - `type="module"` is required. -
+Clear TYPO3 cache after deployment.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+------------------------------------------------------------------------
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Configuration
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Bundled Config
+
+Edit:
+
+/src/config/config.json
+
+Rebuild required after changes.
+
+------------------------------------------------------------------------
+
+### External Config (Same Origin)
+
+Place JSON in:
+
+/fileadmin/preppy/config.json
+
+Fetch using:
+
+fetch("/fileadmin/preppy/config.json")
+
+Do not use cross-origin fetch.
+
+------------------------------------------------------------------------
+
+## Important
+
+-   Fully client-side application\
+-   No backend\
+-   No data persistence\
+-   PDF export uses browser print dialog\
+-   Requires modern browser with ES module support
