@@ -1,0 +1,81 @@
+@use "../../../styles/variables" as *;
+
+.options {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	padding: 20px;
+	border-radius: 10px;
+	background-color: $white;
+	box-shadow: 0 4px 10px rgba($black, 0.05);
+}
+.optionsText {
+	color: $gray;
+	font-size: 14px;
+	line-height: 14px;
+}
+.optionsWrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+.optionsItem {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	cursor: pointer;
+	font-size: 14px;
+	line-height: 14px;
+	padding: 15px;
+	border-radius: 10px;
+	background-color: $lightgray;
+	transition: background 0.2s;
+
+	input[type="checkbox"] {
+		display: none;
+	}
+
+	.optionsItemLabel {
+		display: inline-flex;
+		align-items: center;
+		gap: 15px;
+		width: 100%;
+
+		div {
+			width: calc(100% - 70px);
+			display: flex;
+			flex-direction: column;
+			gap: 4px;
+
+			strong {
+				font-size: 14px;
+				line-height: 18px;
+			}
+			span {
+				font-size: 12px;
+				line-height: 16px;
+			}
+		}
+		&::before {
+			content: "";
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 20px;
+			height: 20px;
+			border-radius: 5px;
+			border: 1px solid $gray;
+			background-color: $white;
+			transition: background-color 0.3s ease;
+		}
+		svg {
+			color: $gray;
+		}
+	}
+	input:checked + .optionsItemLabel::before {
+		background-size: 10px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-image: url("data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.8684 0.365983C11.3564 0.854108 11.3564 1.64536 10.8684 2.13348L4.61839 8.38348C4.13027 8.87146 3.33901 8.87146 2.85089 8.38348L0.35089 5.88348C-0.122825 5.39301 -0.11605 4.61338 0.366117 4.13121C0.848284 3.64904 1.62792 3.64227 2.11839 4.11598L3.73464 5.73223L9.10089 0.365983C9.58902 -0.121994 10.3803 -0.121994 10.8684 0.365983Z' fill='black'/%3E%3C/svg%3E%0A");
+	}
+}

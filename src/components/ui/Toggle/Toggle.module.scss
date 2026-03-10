@@ -1,0 +1,28 @@
+@use "../../../styles/variables" as *;
+
+.toggle {
+	display: flex;
+	gap: 8px;
+	justify-content: space-between;
+	width: 100% !important;
+}
+.option {
+	border: 1px solid rgba($gray, 0.3);
+	padding: 15px 0;
+	border-radius: 10px;
+	background: transparent;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	font-size: 10px;
+	line-height: 10px;
+	margin: 0;
+	text-transform: uppercase;
+	font-weight: bold;
+	width: calc(100% / 3);
+
+	&.active {
+		background: $blue;
+		color: $white;
+		border: 1px solid transparent;
+	}
+}

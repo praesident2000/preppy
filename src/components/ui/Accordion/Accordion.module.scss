@@ -1,0 +1,36 @@
+@use "../../../styles/variables" as *;
+
+.accordion {
+}
+.accordionButton {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: space-between;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 0;
+
+	svg {
+		transition: 0.3s $cubic;
+	}
+	&.open {
+		svg {
+			transform: rotate(180deg);
+		}
+	}
+}
+.accordionContent {
+	max-height: 0;
+	overflow: hidden;
+	opacity: 0;
+	transition: max-height 0.3s ease, opacity 0.2s ease;
+
+	&.open {
+		max-height: 400px;
+		opacity: 1;
+	}
+}

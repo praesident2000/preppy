@@ -19,6 +19,7 @@ export type FoodMap = Record<string, FoodCategory>;
 
 export default async function fetchFood(): Promise<FoodMap> {
    const res = await fetch("/public/config.json");
+   // const res = await fetch("https://www.diakonie-katastrophenhilfe.de/fileadmin/Mediapool/testdateien/preppy-test/config.json");
    if (!res.ok) throw new Error(`HTTP error: ${res.status}`);
    const data = await res.json();
    if (!data?.food) throw new Error("Invalid config structure");

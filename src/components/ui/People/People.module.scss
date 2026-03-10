@@ -1,0 +1,70 @@
+@use "../../../styles/variables" as *;
+
+.people {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+.peopleList {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+.peopleItem {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	justify-content: space-between;
+	align-items: center;
+	background-color: $white;
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba($black, 0.05);
+	padding: 20px;
+}
+.peopleItemHeader {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	div {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		font-size: 14px;
+		line-height: 14px;
+	}
+}
+.peopleRemove {
+	padding: 0;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+
+	svg {
+		width: 20px;
+		height: 20px;
+
+		path {
+			fill: $gray;
+		}
+	}
+}
+.peopleItemOptions {
+	width: 100%;
+}
+.peopleMore {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	background-color: transparent;
+	color: $gray;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 14px;
+	border: 2px dashed rgba($gray, 0.3);
+	border-radius: 10px;
+	padding: 20px;
+	cursor: pointer;
+}
