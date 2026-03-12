@@ -1,30 +1,31 @@
+import { useAppContext } from "../../../context/AppContext";
 import Toggle from "../Toggle/Toggle";
+import { PersonIcon, PersonPlusIcon, TrashIcon } from "../../ui/Icon/Icon";
 import styles from "./People.module.scss";
-import type { PeopleProps } from "../../../types/types";
 
+function People() {
+	const { state, dispatch } = useAppContext();
 
-function People({ people, setPeople }: PeopleProps) {
-	// addPerson
 	const addPerson = () => {
-		setPeople([...people, "omnivore"]);
+		dispatch({ type: "set_people", payload: [...state.people, "omnivore"] });
 	};
-	// removePerson
+
 	const removePerson = (index: number) => {
-		setPeople(people.filter((_: string, i: number) => index !== i));
+		dispatch({
+			type: "set_people",
+			payload: state.people.filter((_: string, i: number) => index !== i),
+		});
 	};
 
 	return (
 		<div className={styles.people}>
 			<ul className={styles.peopleList}>
-				{people.map((person: string, index: number) => {
+				{state.people.map((person: string, index: number) => {
 					return (
 						<li key={index} className={styles.peopleItem}>
 							<div className={styles.peopleItemHeader}>
 								<div>
-									<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<rect width="32" height="32" rx="16" fill="#F1F5F9"/>
-										<path d="M16 16C15.3584 16 14.8091 15.7715 14.3521 15.3146C13.8952 14.8576 13.6667 14.3083 13.6667 13.6666C13.6667 13.025 13.8952 12.4757 14.3521 12.0187C14.8091 11.5618 15.3584 11.3333 16 11.3333C16.6417 11.3333 17.191 11.5618 17.648 12.0187C18.1049 12.4757 18.3334 13.025 18.3334 13.6666C18.3334 14.3083 18.1049 14.8576 17.648 15.3146C17.191 15.7715 16.6417 16 16 16ZM11.3334 20.6666V19.0333C11.3334 18.7028 11.4184 18.3989 11.5886 18.1219C11.7587 17.8448 11.9848 17.6333 12.2667 17.4875C12.8695 17.1861 13.482 16.96 14.1042 16.8094C14.7264 16.6587 15.3584 16.5833 16 16.5833C16.6417 16.5833 17.2737 16.6587 17.8959 16.8094C18.5181 16.96 19.1306 17.1861 19.7334 17.4875C20.0153 17.6333 20.2414 17.8448 20.4115 18.1219C20.5816 18.3989 20.6667 18.7028 20.6667 19.0333V20.6666H11.3334ZM12.5 19.5H19.5V19.0333C19.5 18.9264 19.4733 18.8291 19.4198 18.7416C19.3664 18.6541 19.2959 18.5861 19.2084 18.5375C18.6834 18.275 18.1535 18.0781 17.6188 17.9469C17.0841 17.8156 16.5445 17.75 16 17.75C15.4556 17.75 14.916 17.8156 14.3813 17.9469C13.8466 18.0781 13.3167 18.275 12.7917 18.5375C12.7042 18.5861 12.6337 18.6541 12.5802 18.7416C12.5268 18.8291 12.5 18.9264 12.5 19.0333V19.5ZM16 14.8333C16.3209 14.8333 16.5955 14.7191 16.824 14.4906C17.0525 14.2621 17.1667 13.9875 17.1667 13.6666C17.1667 13.3458 17.0525 13.0712 16.824 12.8427C16.5955 12.6142 16.3209 12.5 16 12.5C15.6792 12.5 15.4046 12.6142 15.1761 12.8427C14.9476 13.0712 14.8334 13.3458 14.8334 13.6666C14.8334 13.9875 14.9476 14.2621 15.1761 14.4906C15.4046 14.7191 15.6792 14.8333 16 14.8333Z" fill="#94A3B8"/>
-									</svg>
+									<PersonIcon />
 									<strong>{`Person ${index + 1}`}</strong>
 								</div>
 								{index > 0 && (
@@ -32,24 +33,16 @@ function People({ people, setPeople }: PeopleProps) {
 										className={styles.peopleRemove}
 										onClick={() => removePerson(index)}
 									>
-										<svg
-											xmlns="http://www.w3.org/2000/svg"
-											width="32"
-											height="32"
-											viewBox="0 0 24 24"
-										>
-											<path
-												d="m9.4 16.5l2.6-2.6l2.6 2.6l1.4-1.4l-2.6-2.6L16 9.9l-1.4-1.4l-2.6 2.6l-2.6-2.6L8 9.9l2.6 2.6L8 15.1zM7 21q-.825 0-1.412-.587T5 19V6H4V4h5V3h6v1h5v2h-1v13q0 .825-.587 1.413T17 21z"
-											/>
-										</svg>
+										<TrashIcon />
 									</button>
 								)}
 							</div>
 							<div className={styles.peopleItemOptions}>
 								<Toggle
 									person={person}
+									people={state.people}
 									index={index}
-									setPeople={setPeople}
+									dispatch={dispatch}
 								/>
 							</div>
 						</li>
@@ -57,9 +50,7 @@ function People({ people, setPeople }: PeopleProps) {
 				})}
 			</ul>
 			<button className={styles.peopleMore} onClick={addPerson}>
-				<svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M17 10V7H14V5H17V2H19V5H22V7H19V10H17ZM8 8C6.9 8 5.95833 7.60833 5.175 6.825C4.39167 6.04167 4 5.1 4 4C4 2.9 4.39167 1.95833 5.175 1.175C5.95833 0.391667 6.9 0 8 0C9.1 0 10.0417 0.391667 10.825 1.175C11.6083 1.95833 12 2.9 12 4C12 5.1 11.6083 6.04167 10.825 6.825C10.0417 7.60833 9.1 8 8 8ZM0 16V13.2C0 12.6333 0.145833 12.1125 0.4375 11.6375C0.729167 11.1625 1.11667 10.8 1.6 10.55C2.63333 10.0333 3.68333 9.64583 4.75 9.3875C5.81667 9.12917 6.9 9 8 9C9.1 9 10.1833 9.12917 11.25 9.3875C12.3167 9.64583 13.3667 10.0333 14.4 10.55C14.8833 10.8 15.2708 11.1625 15.5625 11.6375C15.8542 12.1125 16 12.6333 16 13.2V16H0ZM2 14H14V13.2C14 13.0167 13.9542 12.85 13.8625 12.7C13.7708 12.55 13.65 12.4333 13.5 12.35C12.6 11.9 11.6917 11.5625 10.775 11.3375C9.85833 11.1125 8.93333 11 8 11C7.06667 11 6.14167 11.1125 5.225 11.3375C4.30833 11.5625 3.4 11.9 2.5 12.35C2.35 12.4333 2.22917 12.55 2.1375 12.7C2.04583 12.85 2 13.0167 2 13.2V14ZM8 6C8.55 6 9.02083 5.80417 9.4125 5.4125C9.80417 5.02083 10 4.55 10 4C10 3.45 9.80417 2.97917 9.4125 2.5875C9.02083 2.19583 8.55 2 8 2C7.45 2 6.97917 2.19583 6.5875 2.5875C6.19583 2.97917 6 3.45 6 4C6 4.55 6.19583 5.02083 6.5875 5.4125C6.97917 5.80417 7.45 6 8 6Z" fill="#94A3B8"/>
-				</svg>
+				<PersonPlusIcon />
 				<span>Person hinzufügen</span>
 			</button>
 		</div>

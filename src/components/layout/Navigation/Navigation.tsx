@@ -1,24 +1,30 @@
+import { useAppContext } from "../../../context/AppContext";
+import { useSetUrl } from "../../../hooks/useSetUrl";
+import {
+	ArrowForwardIcon,
+	ArrowBackIcon,
+	LinkIcon,
+	DownloadIcon,
+	PdfIcon,
+} from "../../ui/Icon/Icon";
 import styles from "./Navigation.module.scss";
-import { ArrowForwardIcon, ArrowBackIcon, LinkIcon, DownloadIcon, PdfIcon } from '../../ui/Icon/Icon'
-
-type NavigationProps = {
-	currentStep: number;
-	onPrev: () => void;
-	onNext: () => void;
-	setUrl: () => void;
-	summaryRef: React.RefObject<HTMLElement>;
-};
 
 function Navigation({
-	currentStep,
-	onPrev,
-	onNext,
-	setUrl,
 	summaryRef,
-}: NavigationProps) {
-	const handleUrl = () => {
-		setUrl();
-	};
+}: {
+	summaryRef: React.RefObject<HTMLDivElement>;
+}) {
+	const { state, dispatch } = useAppContext();
+
+	const { setUrl } = useSetUrl({
+		currentStep: state.step,
+		theme: state.theme,
+		house: state.house,
+		days: state.days,
+		people: state.people,
+		shoppingList: state.shoppingList,
+		equipment: state.equipment,
+	});
 
 	const printSummary = () => {
 		const element = summaryRef.current;
@@ -28,8 +34,8 @@ function Navigation({
 		if (!printWindow) return;
 
 		const styles = Array.from(
-				document.querySelectorAll("link[rel='stylesheet'], style"),
-			)
+			document.querySelectorAll("link[rel='stylesheet'], style"),
+		)
 			.map((node) => node.outerHTML)
 			.join("");
 
@@ -59,24 +65,24 @@ function Navigation({
 	return (
 		<div className={styles.nav}>
 			<div className={styles.navTop}>
-				{currentStep !== 5 && (
+				{state.step !== 5 && (
 					<button
 						className={`${styles.navButton} ${styles.color}`}
-						onClick={onNext}
+						onClick={() => dispatch({ type: "step_increment" })}
 					>
 						<span>Weiter</span>
 						<ArrowForwardIcon />
 					</button>
 				)}
-				{currentStep === 5 && (
+				{state.step === 5 && (
 					<div className={styles.navTopWrapper}>
 						<div className={styles.navTopInner}>
 							<PdfIcon />
 							<p>
 								<strong>Dein persönlicher Ratgeber</strong>
 								<span>
-									Lade dir deine individuelle Check- und Einkaufsliste
-									sowie Notfallpläne als PDF herunter.
+									Lade dir deine individuelle Check- und
+									Einkaufslistesowie Notfallpläne als PDF herunter.
 								</span>
 							</p>
 						</div>
@@ -91,13 +97,16 @@ function Navigation({
 				)}
 			</div>
 
-			{currentStep !== 1 && (
+			{state.step !== 1 && (
 				<div className={styles.navBottom}>
-					<button className={styles.navButton} onClick={onPrev}>
+					<button
+						className={styles.navButton}
+						onClick={() => dispatch({ type: "step_decrement" })}
+					>
 						<ArrowBackIcon />
 						<span>Zurück</span>
 					</button>
-					<button className={styles.navButton} onClick={handleUrl}>
+					<button className={styles.navButton} onClick={setUrl}>
 						<LinkIcon />
 						<span>Link Speichern</span>
 					</button>

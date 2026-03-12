@@ -1,30 +1,39 @@
+import { useAppContext } from "../../../context/AppContext";
 import styles from "./Summary.module.scss";
 
-type SummaryProps = {
-   summaryRef: React.RefObject<HTMLDivElement>;
-   house: string | null;
-   days: number;
-   // people: number;
-   // equipment: string[];
-};
-
 function Summary({
-   summaryRef,
-   house,
-   days,
-   // people,
-   // equipment,
-}: SummaryProps) {
-   return (
-      <div className={styles.summary} ref={summaryRef}>
-         <ul>
-            <h2>Dein Preppy</h2>
-            {house && <li>Wie viele Parteien leben in ihrem Haus?: <strong>{house}</strong></li>}
-            {days > 0 && <li>Vorräte: Wie viele Tage möchtest du vorsorgen?: <strong>{days}</strong></li>}
-            {/* {people > 0 && <li>Haushalt: Wie viele Personen?: <strong>{people}</strong></li>} */}
-         </ul>
-      </div>
-   );
+	summaryRef,
+}: {
+	summaryRef: React.RefObject<HTMLDivElement>;
+}) {
+	const { state } = useAppContext();
+
+	return (
+		<div className={styles.summary} ref={summaryRef}>
+			<h2>Dein Preppy</h2>
+			<ul>
+				<li>
+					Szenario: <strong>{state.house.category}</strong>
+				</li>
+				<li>
+					Wohnsituation:{" "}
+					<strong>{state.house.category} - {state.house.subcategory?.join(', ')}</strong>
+				</li>
+				<li>
+					Tage:{" "}
+					<strong>{state.days}</strong>
+				</li>
+				<li>
+					Personen:{" "}
+					<strong>{state.people.length}</strong>
+				</li>
+				<li>
+					Ausrüstung:{" "}
+					<strong>{state.equipment.join(', ')}</strong>
+				</li>
+			</ul>
+		</div>
+	);
 }
 
 export default Summary;

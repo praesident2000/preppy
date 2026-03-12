@@ -1,39 +1,44 @@
-import styles from "./Step02.module.scss";
+import { useAppContext } from "../../../context/AppContext";
 import { useOptions } from "../../../hooks/useOptions";
-import type { Step02Props } from "../../../types/types"
+import styles from "./Step02.module.scss";
 
-
-function Step02({ currentStep, house, setHouse }: Step02Props) {
-	const { options, loading, error } = useOptions();
+function Step02() {
+	const { state, dispatch } = useAppContext();
+	const { data: options, loading, error } = useOptions();
 
 	const handleMainInput = (category: string) => {
-		setHouse((prev) => ({
-			...prev,
-			category,
-			subcategory: undefined,
-		}));
+		dispatch({
+			type: "set_house",
+			payload: {
+				category,
+				subcategory: undefined,
+			},
+		});
 	};
 
 	const handleSubInput = (label: string) => {
-		setHouse((prev) => ({
-			...prev,
-			subcategory: prev.subcategory?.includes(label)
-				? prev.subcategory.filter((item) => item !== label)
-				: [...(prev.subcategory ?? []), label],
-		}));
+		dispatch({
+			type: "set_house",
+			payload: {
+				...state.house,
+				subcategory: state.house.subcategory?.includes(label)
+					? state.house.subcategory.filter((item) => item !== label)
+					: [...(state.house.subcategory ?? []), label],
+			},
+		});
 	};
 
 	return (
 		<div className="step">
 			<div className="stepHeader">
-				<h2>Wie ist deine Wohnsituation?</h2>
-				<span>Schritt {currentStep}/5</span>
+				<strong>Wie ist deine Wohnsituation?</strong>
+				<span>Schritt {state.step}/5</span>
 			</div>
 			{!loading && !error && (
 				<div className="stepMain">
 					<div className={styles.radios}>
 						{options.map(({ category, icon, subcategories }) => {
-							const isActive = house.category === category;
+							const isActive = state.house.category === category;
 
 							return (
 								<label
@@ -45,7 +50,7 @@ function Step02({ currentStep, house, setHouse }: Step02Props) {
 										type="radio"
 										name="housingCategory"
 										value={category}
-										checked={house.category === category}
+										checked={state.house.category === category}
 										onChange={() => handleMainInput(category)}
 									/>
 									<div className={styles.radioButton}>
@@ -72,9 +77,11 @@ function Step02({ currentStep, house, setHouse }: Step02Props) {
 														type="checkbox"
 														name={`housingSubcategory-${category}`}
 														value={label}
-														checked={house.subcategory?.includes(
-															label,
-														)}
+														checked={
+															state.house.subcategory?.includes(
+																label,
+															) ?? false
+														}
 														onChange={() => handleSubInput(label)}
 													/>
 													<span>{label}</span>

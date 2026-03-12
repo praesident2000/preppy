@@ -1,3 +1,4 @@
+import type { Action } from "../../../reducer";
 import styles from "./Toggle.module.scss";
 
 const options = [
@@ -9,16 +10,19 @@ const options = [
 function Toggle({
 	person,
 	index,
-	setPeople,
+	people,
+	dispatch,
 }: {
 	person: string;
 	index: number;
-	setPeople: React.Dispatch<React.SetStateAction<string[]>>;
+	people: string[];
+	dispatch: React.Dispatch<Action>;
 }) {
 	const handleOption = (type: string, index: number) => {
-		setPeople((prev: string[]) =>
-			prev.map((item, i) => (i === index ? type : item)),
-		);
+		dispatch({
+			type: "set_people",
+			payload: people.map((item, i) => (i === index ? type : item)),
+		});
 	};
 
 	return (

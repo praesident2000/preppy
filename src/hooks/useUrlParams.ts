@@ -1,46 +1,60 @@
-// hooks/useUrlParams.ts
 import { useEffect } from "react";
-import type { House, ShoppingList } from "../types/types";
+import type { Dispatch } from "react";
+import type { Action } from "../reducer";
 
-type Setters = {
-	setCurrentStep: (v: number) => void;
-	setTheme: (v: string) => void;
-	setHouse: (v: House) => void;
-	setDays: (v: number) => void;
-	setPeople: (v: string[]) => void;
-	setShoppingList: (v: ShoppingList) => void;
-	setEquipment: (v: string[]) => void;
-};
-
-export function useUrlParams(setters: Setters) {
+export function useUrlParams(dispatch: Dispatch<Action>) {
 	useEffect(() => {
 		const hash = window.location.hash.slice(1);
 		const params = new URLSearchParams(hash);
 
 		const step = params.get("step");
-		if (step) setters.setCurrentStep(Number(step));
+		if (step) dispatch({ type: "set_step", payload: Number(step) });
 
 		const theme = params.get("theme");
-		if (theme) setters.setTheme(theme);
+		if (theme) dispatch({ type: "set_theme", payload: theme });
 
 		const days = params.get("days");
-		if (days) setters.setDays(Number(days));
+		const parsedDays = Number(days);
+		if (days && parsedDays >= 3 && parsedDays <= 14)
+			dispatch({ type: "set_days", payload: Number(days) });
 
 		const people = params.get("people");
-		if (people) setters.setPeople(people.split(","));
+		const VALID_DIETS = ["omnivore", "vegetarian", "vegan"];
+		if (people) {
+			const parsedPeople = people
+				.split(",")
+				.filter((p) => VALID_DIETS.includes(p));
+			if (parsedPeople.length > 0)
+				dispatch({ type: "set_people", payload: parsedPeople });
+		}
 
 		const shoppingList = params.get("shoppinglist");
-		if (shoppingList) setters.setShoppingList(JSON.parse(shoppingList));
+		if (shoppingList)
+			try {
+				dispatch({
+					type: "set_shoppinglist",
+					payload: JSON.parse(shoppingList),
+				});
+			} catch {
+				console.warn("Invalid shoppinglist param, ignoring.");
+			}
 
 		const equipment = params.get("equipment");
-		if (equipment) setters.setEquipment(equipment.split(","));
+		if (equipment)
+			dispatch({
+				type: "set_equipment",
+				payload: equipment.split(","),
+			});
 
 		const category = params.get("house");
 		const subcategory = params.get("house_sub");
 		if (category || subcategory) {
-			setters.setHouse({
-				category: category ?? undefined,
-				subcategory: subcategory ? subcategory.split(",") : undefined,
+			dispatch({
+				type: "set_house",
+				payload: {
+					category: category ?? undefined,
+					subcategory: subcategory ? subcategory.split(",") : undefined,
+				},
 			});
 		}
 	}, []);

@@ -1,26 +1,19 @@
 import { useState } from "react";
+import { useAppContext } from "../../../context/AppContext";
 import { useFood } from "../../../hooks/useFood";
 import Accordion from "../Accordion/Accordion";
 import Switcher from "../Switcher/Switcher";
 import styles from "../FoodList/FoodList.module.scss";
-import type { FoodProps, ShoppingList } from "../../../types/types";
+import type { ShoppingList } from "../../../types/types";
 
-function foodList({ people, days, shoppingList, setShoppingList }: FoodProps) {
-	const { food, loading, error } = useFood();
+function foodList() {
+	const { state, dispatch } = useAppContext();
+
+	const { data: food, loading, error } = useFood();
 	const [showQuantity, setShowQuantity] = useState<boolean>(false);
 
 	function handleChange(category: keyof ShoppingList, element: string) {
-		setShoppingList((prev) => {
-			const current = prev[category] ?? []
-			const exists = current.includes(element)
-
-			return {
-				...prev,
-				[category]: exists
-				? current.filter((item: string) => item !== element)
-				: [...current, element]
-			}
-		})
+		dispatch({ type: "toggle_shoppinglist", payload: { category, element } });
 	}
 
 	return (
@@ -28,7 +21,7 @@ function foodList({ people, days, shoppingList, setShoppingList }: FoodProps) {
 			<div className={styles.foodHeader}>
 				<h2>Benötigte Vorräte. Welche davon hast du bereits?</h2>
 				<p>
-					Für deinen {people.length}-Personen-Haushalt, um {days} Tage zu
+					Für deinen {state.people.length}-Personen-Haushalt, um {state.days} Tage zu
 					überbrücken (Quelle:{" "}
 					<a
 						href="https://www.ernaehrungsvorsorge.de/private-vorsorge/notvorrat/vorratskalkulator"
@@ -50,7 +43,7 @@ function foodList({ people, days, shoppingList, setShoppingList }: FoodProps) {
 						<div key={category} className={styles.foodSection}>
 							<Accordion
 								label={label}
-								sublabel={`${shoppingList[category].length} von ${items.length} Artikeln gesammelt`}
+								sublabel={`${state.shoppingList[category].length} von ${items.length} Artikeln gesammelt`}
 								icon={icon}
 								big={true}
 							>
@@ -65,7 +58,7 @@ function foodList({ people, days, shoppingList, setShoppingList }: FoodProps) {
 											packLabelSingular,
 										}) => {
 											const total =
-												perPersonPerDay * people.length * days;
+												perPersonPerDay * state.people.length * state.days;
 											const totalPacks = Math.ceil(
 												total / Number(packSize),
 											);
@@ -79,9 +72,9 @@ function foodList({ people, days, shoppingList, setShoppingList }: FoodProps) {
 														type="checkbox"
 														name={`foodCategory-${category}`}
 														value={label}
-														checked={shoppingList[category].includes(
-															label,
-														)}
+														checked={state.shoppingList[
+															category
+														].includes(label)}
 														onChange={() =>
 															handleChange(category, label)
 														}
