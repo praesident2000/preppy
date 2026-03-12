@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import fetchOptions, { type TypeStep } from '../api/fetchOptions'
+import fetchOptions, { type TypeOption } from '../api/fetchOptions'
 
 
 export function useOptions() {
-   const [options, setOptions] = useState<TypeStep[]>([])
+   const [options, setOptions] = useState<TypeOption[]>([])
    const [error, setError] = useState<Error | null>(null)
    const [loading, setLoading] = useState<boolean>(true)
    

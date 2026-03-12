@@ -1,10 +1,7 @@
 import Toggle from "../Toggle/Toggle";
 import styles from "./People.module.scss";
+import type { PeopleProps } from "../../../types/types";
 
-type PeopleProps = {
-	people: string[];
-	setPeople: React.Dispatch<React.SetStateAction<string[]>>;
-};
 
 function People({ people, setPeople }: PeopleProps) {
 	// addPerson
@@ -13,13 +10,13 @@ function People({ people, setPeople }: PeopleProps) {
 	};
 	// removePerson
 	const removePerson = (index: number) => {
-		setPeople(people.filter((_, i) => index !== i));
+		setPeople(people.filter((_: string, i: number) => index !== i));
 	};
 
 	return (
 		<div className={styles.people}>
 			<ul className={styles.peopleList}>
-				{people.map((person, index) => {
+				{people.map((person: string, index: number) => {
 					return (
 						<li key={index} className={styles.peopleItem}>
 							<div className={styles.peopleItemHeader}>

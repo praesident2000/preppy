@@ -1,0 +1,40 @@
+@use "../../../styles/variables" as *;
+
+.switcher {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	background-color: rgba($gray, 0.3);
+	border-radius: 10px;
+	padding: 3px;
+	cursor: pointer;
+	position: relative;
+
+	input {
+		display: none;
+	}
+	span {
+		width: 50%;
+		padding: 10px;
+		font-size: 14px;
+		line-height: 14px;
+		color: $black;
+		text-align: center;
+		z-index: 1;
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		top: 3px;
+		bottom: 3px;
+		width: calc(50% - 3px);
+		background: $white;
+		border-radius: 10px;
+		box-shadow: 0 1px 4px rgba($black, 0.05);
+		transition: transform 0.2s ease;
+		transform: translateX(0);
+	}
+	&:has(input:checked)::after {
+		transform: translateX(100%);
+	}
+}

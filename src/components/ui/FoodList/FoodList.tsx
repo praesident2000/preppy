@@ -1,32 +1,32 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useFood } from "../../../hooks/useFood";
+import Accordion from "../Accordion/Accordion";
+import Switcher from "../Switcher/Switcher";
 import styles from "../FoodList/FoodList.module.scss";
+import type { FoodProps, ShoppingList } from "../../../types/types";
 
-type FoodProps = {
-	people: string[];
-	days: number;
-};
-
-function foodList({ people, days }: FoodProps) {
+function foodList({ people, days, shoppingList, setShoppingList }: FoodProps) {
 	const { food, loading, error } = useFood();
 	const [showQuantity, setShowQuantity] = useState<boolean>(false);
-	const [showList, setShowList] = useState<boolean>(false);
 
-	if (loading) return <div>...</div>;
-	if (error) return <div>Error: {error.message}</div>;
+	function handleChange(category: keyof ShoppingList, element: string) {
+		setShoppingList((prev) => {
+			const current = prev[category] ?? []
+			const exists = current.includes(element)
+
+			return {
+				...prev,
+				[category]: exists
+				? current.filter((item: string) => item !== element)
+				: [...current, element]
+			}
+		})
+	}
 
 	return (
 		<div className={styles.foodList}>
 			<div className={styles.foodHeader}>
-				<h2>Einkaufsliste</h2>
-				<label className={styles.switcher}>
-					<span>Menge</span>
-					<input
-						type="checkbox"
-						onClick={() => setShowQuantity(!showQuantity)}
-					/>
-					<span>Packung</span>
-				</label>
+				<h2>Benötigte Vorräte. Welche davon hast du bereits?</h2>
 				<p>
 					Für deinen {people.length}-Personen-Haushalt, um {days} Tage zu
 					überbrücken (Quelle:{" "}
@@ -34,69 +34,76 @@ function foodList({ people, days }: FoodProps) {
 						href="https://www.ernaehrungsvorsorge.de/private-vorsorge/notvorrat/vorratskalkulator"
 						target="_blank"
 					>
-						BKK
+						<u>BKK</u>
 					</a>
 					)
 				</p>
+				<Switcher
+					switcher={() => setShowQuantity(!showQuantity)}
+					label1="Menge/Gewicht"
+					label2="Packungseinheiten"
+				/>
 			</div>
+			{!loading && !error && (
+				<div className={styles.foodListWrapper}>
+					{food.map(({ category, label, items, icon }) => (
+						<div key={category} className={styles.foodSection}>
+							<Accordion
+								label={label}
+								sublabel={`${shoppingList[category].length} von ${items.length} Artikeln gesammelt`}
+								icon={icon}
+								big={true}
+							>
+								<div className={styles.checkboxes}>
+									{items.map(
+										({
+											label,
+											unit,
+											perPersonPerDay,
+											packSize,
+											packLabelPlural,
+											packLabelSingular,
+										}) => {
+											const total =
+												perPersonPerDay * people.length * days;
+											const totalPacks = Math.ceil(
+												total / Number(packSize),
+											);
 
-			<div
-				className={`${styles.foodListWrapper} ${showList ? styles.show : ""}`}
-			>
-				{food &&
-					Object.entries(food).map(([key, category]) => {
-						const totalCategory =
-							category.totPerPersonPerDay * people.length * days;
-						return (
-							<ul key={key} className={styles.foodCategory}>
-								<h3>
-									{totalCategory} {category.unit} {category.label}
-								</h3>
-								{category.items.map(
-									({
-										label,
-										unit,
-										perPersonPerDay,
-										packSize,
-										packLabelPlural,
-										packLabelSingular,
-									}) => {
-										const total =
-											perPersonPerDay * people.length * days;
-										const totalPacks = Math.ceil(
-											total / Number(packSize),
-										);
-
-										return (
-											<li key={label}>
-												<span>
-													{label}
-													{showQuantity && (
-														<>
-															&nbsp;
-															<small>
-																({packSize}
-																{unit}/{packLabelSingular})
-															</small>
-														</>
-													)}
-												</span>
-												{showQuantity ? (
-													<strong>{`${totalPacks} ${totalPacks > 1 ? packLabelPlural : packLabelSingular}`}</strong>
-												) : (
-													<strong>{`${total} ${unit}`}</strong>
-												)}
-											</li>
-										);
-									},
-								)}
-							</ul>
-						);
-					})}
-			</div>
-			<button className={styles.more} onClick={() => setShowList(!showList)}>
-				{showList ? "Weniger" : "Mehr"} anzeigen
-			</button>
+											return (
+												<label
+													className={styles.checkbox}
+													key={label}
+												>
+													<input
+														type="checkbox"
+														name={`foodCategory-${category}`}
+														value={label}
+														checked={shoppingList[category].includes(
+															label,
+														)}
+														onChange={() =>
+															handleChange(category, label)
+														}
+													/>
+													<span>
+														<strong>{label}</strong>
+														<small>
+															{showQuantity
+																? `(${packSize}${unit}/${packLabelSingular}) ${totalPacks} ${totalPacks > 1 ? packLabelPlural : packLabelSingular}`
+																: `${total}${unit}`}
+														</small>
+													</span>
+												</label>
+											);
+										},
+									)}
+								</div>
+							</Accordion>
+						</div>
+					))}
+				</div>
+			)}
 		</div>
 	);
 }

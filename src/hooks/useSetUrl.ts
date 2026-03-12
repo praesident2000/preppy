@@ -1,49 +1,55 @@
-import type { House } from "../types/types";
+import type { House, ShoppingList } from "../types/types";
 
 type State = {
 	currentStep: number;
 	theme: string;
+	house: House;
 	days: number;
 	people: string[];
+	shoppingList: ShoppingList;
 	equipment: string[];
-	house: House;
 };
 
 const PARAM_CONFIG_SET = [
-	{ key: "schritt", serialize: (v: number) => v.toString() },
-	{ key: "thema", serialize: (v: string) => v },
-	{ key: "tage", serialize: (v: number) => v.toString() },
-	{ key: "personen", serialize: (v: string[]) => v.join(",") },
-	{ key: "ausruestung", serialize: (v: string[]) => v.join(",") },
+	{ key: "step", serialize: (v: number) => v.toString() },
+	{ key: "theme", serialize: (v: string) => v },
+	{ key: "days", serialize: (v: number) => v.toString() },
+	{ key: "people", serialize: (v: string[]) => v.join(",") },
+	{ key: "equipment", serialize: (v: string[]) => v.join(",") },
 ] as const;
 
 export function useSetUrl(state: State) {
 	const setUrl = async () => {
-		const url = new URL(window.location.href);
-		url.search = "";
+		const params = new URLSearchParams();
 
 		const STATE = {
-			schritt: state.currentStep,
-			thema: state.theme,
-			tage: state.days,
-			personen: state.people,
-			ausruestung: state.equipment,
+			step: state.currentStep,
+			theme: state.theme,
+			days: state.days,
+			people: state.people,
+			shoppinglist: state.shoppingList,
+			equipment: state.equipment,
 		};
 
 		PARAM_CONFIG_SET.forEach(({ key, serialize }) => {
 			const value = STATE[key];
-			if (value)
-				url.searchParams.set(key, (serialize as (v: any) => string)(value));
+			if (value) params.set(key, (serialize as (v: any) => string)(value));
 		});
 
-		// handle house separately
-		if (state.house.category)
-			url.searchParams.set("haus", state.house.category);
+		// then "shoppinglist" separately
+		if (Object.keys(state.shoppingList).length) {
+			params.set('shoppinglist', JSON.stringify(state.shoppingList))
+		}
+
+		// then "house" separately
+		if (state.house.category) params.set("house", state.house.category);
 		if (state.house.subcategory?.length)
-			url.searchParams.set("haus_sub", state.house.subcategory.join(","));
+			params.set("house_sub", state.house.subcategory.join(","));
+
+		const url = `${window.location.origin}${window.location.pathname}#${params.toString()}`;
 
 		try {
-			await navigator.clipboard.writeText(url.toString());
+			await navigator.clipboard.writeText(url);
 		} catch (err) {
 			console.error("Failed to copy: ", err);
 		}

@@ -1,0 +1,14 @@
+@use "./styles/variables" as *;
+
+.app {
+	padding: 40px 20px;
+	background-color: $lightblue;
+}
+.wrapper {
+	max-width: 430px;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 40px;
+}

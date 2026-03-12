@@ -1,21 +1,23 @@
-import styles from "./Step03.module.scss";
 import Range from "../../ui/Range/Range";
 import People from "../../ui/People/People";
 import FoodList from "../../ui/FoodList/FoodList";
+import type { Step03Props } from "../../../types/types";
 
-type StepProps = {
-	currentStep: number;
-	days: number;
-	setDays: React.Dispatch<React.SetStateAction<number>>;
-	people: string[];
-	setPeople: React.Dispatch<React.SetStateAction<string[]>>;
-};
-
-function Step03({ currentStep, days, setDays, people, setPeople }: StepProps) {
+function Step03({
+	currentStep,
+	days,
+	setDays,
+	people,
+	setPeople,
+	shoppingList,
+	setShoppingList,
+}: Step03Props) {
 	return (
 		<div className="step">
 			<div className="stepHeader">
-				<h2>Planen wir deine Vorräte. Wie lange möchtest du autark sein?</h2>
+				<h2>
+					Planen wir deine Vorräte. Wie lange möchtest du autark sein?
+				</h2>
 				<span>Schritt {currentStep}/5</span>
 			</div>
 			<div className="stepMain">
@@ -27,8 +29,16 @@ function Step03({ currentStep, days, setDays, people, setPeople }: StepProps) {
 					max={14}
 					step={1}
 				/>
-				<People people={people} setPeople={setPeople} />
-				<FoodList people={people} days={days} />
+				<People 
+					people={people} 
+					setPeople={setPeople} 
+				/>
+				<FoodList
+					people={people}
+					days={days}
+					shoppingList={shoppingList}
+					setShoppingList={setShoppingList}
+				/>
 			</div>
 		</div>
 	);

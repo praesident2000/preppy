@@ -5,7 +5,7 @@ type SummaryProps = {
    house: string | null;
    days: number;
    // people: number;
-   equipment: string[];
+   // equipment: string[];
 };
 
 function Summary({
@@ -13,7 +13,7 @@ function Summary({
    house,
    days,
    // people,
-   equipment,
+   // equipment,
 }: SummaryProps) {
    return (
       <div className={styles.summary} ref={summaryRef}>

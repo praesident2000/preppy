@@ -1,14 +1,9 @@
 import styles from "./Step02.module.scss";
 import { useOptions } from "../../../hooks/useOptions";
-import type { House } from "../../../types/types";
+import type { Step02Props } from "../../../types/types"
 
-type StepProps = {
-	currentStep: number;
-	house: House;
-	setHouse: React.Dispatch<React.SetStateAction<House>>;
-};
 
-function Step02({ house, setHouse, currentStep }: StepProps) {
+function Step02({ currentStep, house, setHouse }: Step02Props) {
 	const { options, loading, error } = useOptions();
 
 	const handleMainInput = (category: string) => {

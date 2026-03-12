@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import fetchFood, { type FoodMap } from '../api/fetchFood'
+import fetchFood, { type TypeFood } from '../api/fetchFood'
 
 
 export function useFood() {
-   const [food, setFood] = useState<FoodMap | null>(null)
+   const [food, setFood] = useState<TypeFood[]>([])
    const [error, setError] = useState<Error | null>(null)
    const [loading, setLoading] = useState<boolean>(true)
    
