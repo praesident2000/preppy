@@ -11,10 +11,16 @@ import styles from "./Navigation.module.scss";
 
 function Navigation({
 	summaryRef,
+	appRef,
 }: {
 	summaryRef: React.RefObject<HTMLDivElement>;
+	appRef: React.RefObject<HTMLDivElement>;
 }) {
 	const { state, dispatch } = useAppContext();
+
+	const scrollToApp = () => {
+		window.scrollTo({ top: appRef.current?.offsetTop ? appRef.current?.offsetTop- 150 : 0, behavior: "smooth" });
+	};
 
 	const { setUrl } = useSetUrl({
 		currentStep: state.step,
@@ -68,9 +74,9 @@ function Navigation({
 				{state.step !== 5 && (
 					<button
 						className={`${styles.navButton} ${styles.color}`}
-						onClick={() => dispatch({ type: "step_increment" })}
+						onClick={() => { dispatch({ type: "step_increment" }); requestAnimationFrame(scrollToApp); }}
 					>
-						<span>Weiter</span>
+						<span>weiter</span>
 						<ArrowForwardIcon />
 					</button>
 				)}
@@ -90,7 +96,7 @@ function Navigation({
 							className={`${styles.navButton} ${styles.color} ${styles.big}`}
 							onClick={printSummary}
 						>
-							<span>Download Pdf</span>
+							<span>Pdf herunterladen</span>
 							<DownloadIcon />
 						</button>
 					</div>
@@ -101,10 +107,10 @@ function Navigation({
 				<div className={styles.navBottom}>
 					<button
 						className={styles.navButton}
-						onClick={() => dispatch({ type: "step_decrement" })}
+						onClick={() => { dispatch({ type: "step_decrement" }); requestAnimationFrame(scrollToApp); }}
 					>
 						<ArrowBackIcon />
-						<span>Zurück</span>
+						<span>zurück</span>
 					</button>
 					<button className={styles.navButton} onClick={setUrl}>
 						<LinkIcon />

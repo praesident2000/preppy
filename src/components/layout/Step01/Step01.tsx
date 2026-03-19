@@ -25,7 +25,7 @@ function Step01() {
 	return (
 		<div className="step">
 			<div className="stepHeader">
-				<strong>Worauf möchtest du vorbereitet sein?</strong>
+				<h2>Worauf möchtest du vorbereitet sein?</h2>
 				<span>Schritt {state.step}/5</span>
 			</div>
 			{!loading && !error && (

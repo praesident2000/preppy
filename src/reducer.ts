@@ -1,11 +1,11 @@
-import type { House, ShoppingList } from "./types/types";
+import type { House, ShoppingList, Diet } from "./types/types";
 
 export type State = {
 	step: number;
 	theme: string;
 	house: House;
 	days: number;
-	people: string[];
+	people: Diet[];
 	shoppingList: ShoppingList;
 	equipment: string[];
 };
@@ -17,7 +17,7 @@ export type Action =
 	| { type: "set_theme"; payload: string }
 	| { type: "set_house"; payload: House }
 	| { type: "set_days"; payload: number }
-	| { type: "set_people"; payload: string[] }
+	| { type: "set_people"; payload: Diet[] }
 	| { type: "toggle_shoppinglist"; payload: { category: keyof ShoppingList; element: string } }
 	| { type: "set_shoppinglist"; payload: ShoppingList }
 	| { type: "toggle_equipment"; payload: string }
@@ -36,10 +36,15 @@ export const initialState: State = {
 		drinks: [],
 		grains: [],
 		veggies: [],
-		fruit: [],
+		nuts: [],
+		nuts_vegan: [],
 		dairy: [],
+		vegan_alternatives: [],
 		meat: [],
+		beans_veget: [],
+		beans_vegan: [],
 		fats: [],
+		miscellaneous: [],
 	},
 	equipment: [],
 };
@@ -51,12 +56,12 @@ export function reducer(state: State, action: Action): State {
 		case "step_decrement":
 			return {
 				...state,
-				step: state.step - 1,
+				step: Math.max(1, state.step - 1),
 			};
 		case "step_increment":
 			return {
 				...state,
-				step: state.step + 1,
+				step: Math.min(5, state.step + 1),
 			};
 		case "set_theme":
 			return {
@@ -93,7 +98,7 @@ export function reducer(state: State, action: Action): State {
 			};
 		}
 		case "set_shoppinglist":
-  			return { 
+  			return {
 				...state, 
 				shoppingList: action.payload 
 			};
@@ -107,7 +112,7 @@ export function reducer(state: State, action: Action): State {
 			};
 		}
 		case "set_equipment":
-  			return { 
+			return {
 				...state, 
 				equipment: action.payload 
 			};

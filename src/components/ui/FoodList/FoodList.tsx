@@ -5,8 +5,14 @@ import Accordion from "../Accordion/Accordion";
 import Switcher from "../Switcher/Switcher";
 import styles from "../FoodList/FoodList.module.scss";
 import type { ShoppingList } from "../../../types/types";
+import {
+	getActiveMerges,
+	computeItemTotal,
+	formatTotal,
+	getVisibleCategories,
+} from "../../../utils/dietFilter";
 
-function foodList() {
+function FoodList() {
 	const { state, dispatch } = useAppContext();
 
 	const { data: food, loading, error } = useFood();
@@ -16,19 +22,34 @@ function foodList() {
 		dispatch({ type: "toggle_shoppinglist", payload: { category, element } });
 	}
 
+	const visibleFood = getVisibleCategories(food, state.people);
+
+	const activeMerges = getActiveMerges(visibleFood, food);
+
+	function getTotal(category: string, label: string, perPersonPerDay: number): number {
+		return computeItemTotal(category, label, perPersonPerDay, state.people, state.days, food, activeMerges);
+	}
+
 	return (
 		<div className={styles.foodList}>
 			<div className={styles.foodHeader}>
-				<h2>Benötigte Vorräte. Welche davon hast du bereits?</h2>
+				<h2>Deine benötigten Vorräte. Welche davon hast du bereits?</h2>
 				<p>
 					Für deinen {state.people.length}-Personen-Haushalt, um {state.days} Tage zu
-					überbrücken (Quelle:{" "}
+					überbrücken (Quellen:{" "}
 					<a
 						href="https://www.ernaehrungsvorsorge.de/private-vorsorge/notvorrat/vorratskalkulator"
 						target="_blank"
 					>
 						<u>BKK</u>
-					</a>
+					</a>,{" "}
+					<a
+						href="https://www.dge.de/"
+						target="_blank"
+					>
+						<u>DGE</u>
+					</a>,{" "}
+					<span>eigene Berechnungen*</span>
 					)
 				</p>
 				<Switcher
@@ -39,11 +60,17 @@ function foodList() {
 			</div>
 			{!loading && !error && (
 				<div className={styles.foodListWrapper}>
-					{food.map(({ category, label, items, icon }) => (
+					{visibleFood.map(({ category, label, items, icon, unit, totPerPersonPerDay }) => {
+						const categoryTotal = items.reduce(
+							(sum, item) => sum + getTotal(category, item.label, item.perPersonPerDay),
+							0,
+						);
+						return (
 						<div key={category} className={styles.foodSection}>
 							<Accordion
 								label={label}
-								sublabel={`${state.shoppingList[category].length} von ${items.length} Artikeln gesammelt`}
+								sublabel1={formatTotal(categoryTotal, unit)}
+								sublabel2={`ca. ${totPerPersonPerDay} ${unit} pro Person und Tag`}
 								icon={icon}
 								big={true}
 							>
@@ -57,8 +84,7 @@ function foodList() {
 											packLabelPlural,
 											packLabelSingular,
 										}) => {
-											const total =
-												perPersonPerDay * state.people.length * state.days;
+											const total = getTotal(category, label, perPersonPerDay);
 											const totalPacks = Math.ceil(
 												total / Number(packSize),
 											);
@@ -84,7 +110,7 @@ function foodList() {
 														<small>
 															{showQuantity
 																? `(${packSize}${unit}/${packLabelSingular}) ${totalPacks} ${totalPacks > 1 ? packLabelPlural : packLabelSingular}`
-																: `${total}${unit}`}
+																: `${total.toLocaleString("de-DE")} ${unit}`}
 														</small>
 													</span>
 												</label>
@@ -94,11 +120,12 @@ function foodList() {
 								</div>
 							</Accordion>
 						</div>
-					))}
+					);
+					})}
 				</div>
 			)}
 		</div>
 	);
 }
 
-export default foodList;
+export default FoodList;

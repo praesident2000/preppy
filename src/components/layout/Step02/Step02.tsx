@@ -31,7 +31,7 @@ function Step02() {
 	return (
 		<div className="step">
 			<div className="stepHeader">
-				<strong>Wie ist deine Wohnsituation?</strong>
+				<h2>Wie ist deine Wohnsituation?</h2>
 				<span>Schritt {state.step}/5</span>
 			</div>
 			{!loading && !error && (

@@ -14,18 +14,19 @@ function AppInner() {
 	const { state, dispatch } = useAppContext();
 
 	const summaryRef = useRef<HTMLDivElement>(null!);
+	const appRef = useRef<HTMLDivElement>(null!);
 
 	useUrlParams(dispatch);
 
 	return (
-		<div className={styles.app}>
+		<div ref={appRef} className={styles.app}>
 			<div className={styles.wrapper}>
 				{state.step === 1 && <Step01 />}
 				{state.step === 2 && <Step02 />}
 				{state.step === 3 && <Step03 />}
 				{state.step === 4 && <Step04 />}
 				{state.step === 5 && <Step05 />}
-				<Navigation summaryRef={summaryRef} />
+				<Navigation summaryRef={summaryRef} appRef={appRef} />
 				<Summary summaryRef={summaryRef} />
 			</div>
 		</div>

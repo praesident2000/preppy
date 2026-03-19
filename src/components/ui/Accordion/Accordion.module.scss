@@ -50,17 +50,22 @@
 		text-align: left;
 		display: flex;
 		flex-direction: column;
-		gap: 4px;
 
 		strong {
 			font-size: 16px;
 			line-height: 20px;
+			margin-bottom: 5px;
 		}
 		small {
 			font-size: 12px;
 			line-height: 16px;
-			font-weight: normal;
-			color: $gray;
+			color: $blue;
+			font-weight: bold;
+			
+			&:last-of-type {
+				font-weight: normal;
+				color: $gray;
+			}
 		}
 		&:last-child {
 			max-width: calc(100% - 70px);

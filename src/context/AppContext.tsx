@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useReducer } from "react";
+import { createContext, useContext, useReducer } from "react";
 import { reducer, initialState } from "../reducer";
 import type { State, Action } from "../reducer";
 
@@ -11,10 +11,6 @@ const AppContext = createContext<AppContextType | null>(null);
 
 export function AppProvider({ children }: { children: React.ReactNode }) {
 	const [state, dispatch] = useReducer(reducer, initialState);
-
-	useEffect(() => {
-		console.log(state)
-	}, [state])
 
 	return (
 		<AppContext.Provider value={{ state, dispatch }}>

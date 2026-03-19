@@ -12,10 +12,11 @@
 	justify-content: space-between;
 	margin-bottom: 30px;
 
-	strong {
+	h2 {
 		font-size: 20px;
 		line-height: 24px;
 		max-width: 250px;
+		font-family: "Polaris Condensed Bold";
 	}
 	span {
 		font-size: 12px;
@@ -29,5 +30,5 @@
 .stepMain {
 	display: flex;
 	flex-direction: column;
-	gap: 40px;
+	gap: 50px;
 }

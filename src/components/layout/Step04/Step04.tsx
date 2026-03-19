@@ -13,7 +13,7 @@ function Step04() {
 	return (
 		<div className="step">
 			<div className="stepHeader">
-				<strong>Beim Szenario Stromausfall solltest du folgende Ausrüstung bereit halten.</strong>
+				<h2>Beim Szenario Stromausfall solltest du folgende Ausrüstung bereit halten.</h2>
 				<span>Schritt {state.step}/5</span>
 			</div>
 			{!loading && !error && (

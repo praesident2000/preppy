@@ -2,6 +2,7 @@ import { useAppContext } from "../../../context/AppContext";
 import { useGears } from "../../../hooks/useGear";
 import { useOptions } from "../../../hooks/useOptions";
 import { useFood } from "../../../hooks/useFood";
+import { getVisibleCategories, getActiveMerges, computeItemTotal } from "../../../utils/dietFilter";
 import Accordion from "../../ui/Accordion/Accordion";
 import Label from "../../ui/Label/Label";
 import {
@@ -19,16 +20,24 @@ function Step05() {
 	const { data: options, loading, error } = useOptions();
 
 	const { data: food } = useFood();
-	const totFood = food.reduce((sum, { items }) => sum + items.length, 0);
-	const totList = Object.values(state.shoppingList).reduce(
-		(sum, arr) => sum + arr.length,
+	const visibleFood = getVisibleCategories(food, state.people);
+
+	const totFood = visibleFood.reduce((sum, { items }) => sum + items.length, 0);
+	const totList = visibleFood.reduce(
+		(sum, { category }) => sum + (state.shoppingList[category]?.length ?? 0),
 		0,
 	);
 	const percentFood = Math.floor((totList / totFood) * 100);
 	const missingFoodNumber = totFood - totList;
 
-	const missingFoodList = food.flatMap(({ category, items }) =>
-		items.filter((item) => !state.shoppingList[category]?.includes(item.label)),
+	const activeMerges = getActiveMerges(visibleFood, food);
+	const missingFoodList = visibleFood.flatMap(({ category, items }) =>
+		items
+			.filter((item) => !state.shoppingList[category]?.includes(item.label))
+			.map((item) => ({
+				...item,
+				total: `${computeItemTotal(category, item.label, item.perPersonPerDay, state.people, state.days, food, activeMerges).toLocaleString("de-DE")} ${item.unit}`,
+			})),
 	);
 
 	const { data: gears } = useGears();
@@ -38,7 +47,7 @@ function Step05() {
 	return (
 		<div className="step">
 			<div className="stepHeader">
-				<strong>Übersicht und Auswertung</strong>
+				<h2>Übersicht und Auswertung</h2>
 				<span>Schritt {state.step}/5</span>
 			</div>
 
@@ -112,13 +121,14 @@ function Step05() {
 								<div>
 									{missingFoodList.length > 0 && (
 										<ul className={styles.list}>
-											{missingFoodList.map(({ label }) => {
+											{missingFoodList.map(({ label, total }) => {
 												return (
 													<li
 														key={label}
-														className={styles.listItem}
+														className={`${styles.listItem} ${styles.alt}`}
 													>
 														<span>{label}</span>
+														<strong>{total}</strong>
 													</li>
 												);
 											})}

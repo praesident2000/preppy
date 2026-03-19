@@ -3,7 +3,8 @@ import styles from "./Accordion.module.scss";
 
 type AccordionProps = {
 	label: string;
-	sublabel?: string;
+	sublabel1?: string;
+	sublabel2?: string;
 	children: React.ReactNode;
 	big?: boolean;
 	icon?: string;
@@ -11,7 +12,8 @@ type AccordionProps = {
 
 function Accordion({
 	label,
-	sublabel,
+	sublabel1,
+	sublabel2,
 	children,
 	big,
 	icon,
@@ -33,7 +35,8 @@ function Accordion({
 						></span>
 						<span>
 							<strong>{label}</strong>
-							<small>{sublabel}</small>
+							<small>{sublabel1}</small>
+							<small>{sublabel2}</small>
 						</span>
 					</div>
 				) : (

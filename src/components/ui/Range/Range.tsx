@@ -36,6 +36,7 @@ function Range() {
 				<strong>{state.days} Tage</strong>
 			</div>
 			<div className={styles.rangeWrapper}>
+				<span className={styles.rangeInfo}>Für wie viele Tage möchtest du Lebensmittel und Wasser vorrätig haben?</span>
 				<input
 					ref={inputRef}
 					type="range"
@@ -48,7 +49,7 @@ function Range() {
 				/>
 				<div>
 					<span>3 Tage</span>
-					<strong>10 Tage (Empfholen)</strong>
+					<strong>10 Tage (Empfohlen)</strong>
 					<span>14 Tage</span>
 				</div>
 			</div>

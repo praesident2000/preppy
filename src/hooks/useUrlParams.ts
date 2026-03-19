@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import type { Dispatch } from "react";
 import type { Action } from "../reducer";
+import type { Diet } from "../types/types";
 
 export function useUrlParams(dispatch: Dispatch<Action>) {
 	useEffect(() => {
@@ -19,11 +20,11 @@ export function useUrlParams(dispatch: Dispatch<Action>) {
 			dispatch({ type: "set_days", payload: Number(days) });
 
 		const people = params.get("people");
-		const VALID_DIETS = ["omnivore", "vegetarian", "vegan"];
+		const VALID_DIETS: Diet[] = ["omnivore", "vegetarian", "vegan"];
 		if (people) {
 			const parsedPeople = people
 				.split(",")
-				.filter((p) => VALID_DIETS.includes(p));
+				.filter((p): p is Diet => (VALID_DIETS as string[]).includes(p));
 			if (parsedPeople.length > 0)
 				dispatch({ type: "set_people", payload: parsedPeople });
 		}

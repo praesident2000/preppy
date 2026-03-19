@@ -50,11 +50,10 @@ export function useSetUrl(state: State) {
 
 		try {
 			await navigator.clipboard.writeText(url);
-		} catch (err) {
-			console.error("Failed to copy: ", err);
+			alert("Link kopiert!");
+		} catch {
+			alert("Link konnte nicht kopiert werden.");
 		}
-
-		alert("Link kopiert!");
 	};
 
 	return { setUrl };

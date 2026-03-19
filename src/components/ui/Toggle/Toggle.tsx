@@ -1,7 +1,8 @@
+import type { Diet } from "../../../types/types";
 import type { Action } from "../../../reducer";
 import styles from "./Toggle.module.scss";
 
-const options = [
+const options: { label: string; value: Diet }[] = [
 	{ label: "mischkost", value: "omnivore" },
 	{ label: "vegetarisch", value: "vegetarian" },
 	{ label: "vegan", value: "vegan" },
@@ -15,10 +16,10 @@ function Toggle({
 }: {
 	person: string;
 	index: number;
-	people: string[];
+	people: Diet[];
 	dispatch: React.Dispatch<Action>;
 }) {
-	const handleOption = (type: string, index: number) => {
+	const handleOption = (type: Diet, index: number) => {
 		dispatch({
 			type: "set_people",
 			payload: people.map((item, i) => (i === index ? type : item)),

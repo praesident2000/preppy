@@ -8,19 +8,20 @@
 .foodHeader {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-items: flex-start;
 	gap: 15px;
-	text-align: center;
 
 	h2 {
 		max-width: 300px;
 		font-size: 20px;
 		line-height: 24px;
+		font-family: "Polaris Condensed Bold";
 	}
 	p {
 		font-size: 14px;
 		line-height: 18px;
-		max-width: 300px;
+		max-width: 400px;
+		margin-bottom: 20px;
 	}
 }
 .foodListWrapper {
@@ -32,21 +33,16 @@
 	flex-direction: column;
 	gap: 15px;
 }
-
-
-
 .foodSection {
 	background-color: $white;
 	padding: 20px;
 	border-radius: 10px;
 	box-shadow: 0 4px 10px rgba($black, 0.05);
 }
-
-
 .checkboxes {
 	border-top: 1px solid rgba($gray, 0.3);
 	display: flex;
-   flex-direction: column;
+	flex-direction: column;
 	gap: 20px;
 	padding-top: 15px;
 	margin-top: 15px;
@@ -94,8 +90,8 @@
 			height: 22px;
 			border-radius: 50%;
 			border: 1px solid $gray;
-         background-color: transparent;
-         transition: background-color 0.3s ease;
+			background-color: transparent;
+			transition: background-color 0.3s ease;
 		}
 		strong {
 			font-size: 14px;

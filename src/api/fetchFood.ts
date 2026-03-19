@@ -12,14 +12,15 @@ export type TypeFood = {
 	category: string;
 	icon: string;
 	label: string;
+	totPerPersonPerDay: number;
+	unit: string;
 	items: FoodItem[];
 };
 
+import fetchConfig from "./fetchConfig";
+
 export default async function fetchFood(): Promise<TypeFood[]> {
-	const res = await fetch("/public/config.json");
-	// const res = await fetch("https://www.diakonie-katastrophenhilfe.de/fileadmin/Mediapool/testdateien/preppy-test/config.json");
-	if (!res.ok) throw new Error(`HTTP error: ${res.status}`);
-	const data = await res.json();
+	const data = await fetchConfig();
 	if (!data?.food) throw new Error("Invalid config structure");
 	return data.food;
 }
