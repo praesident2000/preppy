@@ -69,8 +69,8 @@ function FoodList() {
 						<div key={category} className={styles.foodSection}>
 							<Accordion
 								label={label}
-								sublabel1={formatTotal(categoryTotal, unit)}
-								sublabel2={`ca. ${totPerPersonPerDay} ${unit} pro Person und Tag`}
+								sublabel1={category !== "miscellaneous" ? formatTotal(categoryTotal, unit) : undefined}
+								sublabel2={category !== "miscellaneous" ? `ca. ${totPerPersonPerDay} ${unit} pro Person und Tag` : undefined}
 								icon={icon}
 								big={true}
 							>
@@ -107,11 +107,13 @@ function FoodList() {
 													/>
 													<span>
 														<strong>{label}</strong>
+														{category !== "miscellaneous" && (
 														<small>
 															{showQuantity
 																? `(${packSize}${unit}/${packLabelSingular}) ${totalPacks} ${totalPacks > 1 ? packLabelPlural : packLabelSingular}`
 																: `${total.toLocaleString("de-DE")} ${unit}`}
 														</small>
+													)}
 													</span>
 												</label>
 											);

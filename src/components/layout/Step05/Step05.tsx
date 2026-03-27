@@ -36,7 +36,9 @@ function Step05() {
 			.filter((item) => !state.shoppingList[category]?.includes(item.label))
 			.map((item) => ({
 				...item,
-				total: `${computeItemTotal(category, item.label, item.perPersonPerDay, state.people, state.days, food, activeMerges).toLocaleString("de-DE")} ${item.unit}`,
+				total: category !== "miscellaneous"
+					? `${computeItemTotal(category, item.label, item.perPersonPerDay, state.people, state.days, food, activeMerges).toLocaleString("de-DE")} ${item.unit}`
+					: null,
 			})),
 	);
 
@@ -128,7 +130,7 @@ function Step05() {
 														className={`${styles.listItem} ${styles.alt}`}
 													>
 														<span>{label}</span>
-														<strong>{total}</strong>
+														{total && <strong>{total}</strong>}
 													</li>
 												);
 											})}
