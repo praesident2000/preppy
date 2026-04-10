@@ -32,8 +32,10 @@ function Step02() {
 	return (
 		<div className="step">
 			<div className="stepHeader">
-				<h2>Wie ist deine Wohnsituation?</h2>
-				<span>Schritt {state.step}/5</span>
+				<div className="stepHeaderTop">
+					<h2>Wie ist deine Wohnsituation?</h2>
+					<span>Schritt {state.step}/5</span>
+				</div>
 			</div>
 			{!loading && !error && (
 				<div className="stepMain">
@@ -85,7 +87,9 @@ function Step02() {
 														}
 														onChange={() => handleSubInput(label)}
 													/>
-													<span><small>{label}</small></span>
+													<span>
+														<small>{label}</small>
+													</span>
 												</label>
 											))}
 										</div>

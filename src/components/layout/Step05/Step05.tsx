@@ -1,5 +1,6 @@
 import { useAppContext } from "../../../context/AppContext";
 import { useOptions } from "../../../hooks/useOptions";
+import type { TypeResults } from "../../../api/fetchOptions";
 import { useThemes } from "../../../hooks/useThemes";
 import { useFood } from "../../../hooks/useFood";
 import { useMissingFood } from "../../../hooks/useMissingFood";
@@ -43,21 +44,23 @@ function Step05() {
 	const percentFood = Math.floor((totList / totFood) * 100);
 	const missingFoodNumber = totFood - totList;
 
-	const houseResults = options
+	const houseResults = [...new Set(options
 		.filter(({ category }) => category === state.house.category)
 		.flatMap(({ subcategories }) =>
 			subcategories
 				.filter(({ label }) => state.house.subcategory?.includes(label))
-				.flatMap(({ results }) => results),
-		);
+				.flatMap(({ results }) => results[state.theme as keyof TypeResults] ?? []),
+		))];
 
 	const { missingGears, missingExtraGears, percentGears } = useMissingGear();
 
 	return (
 		<div className="step">
 			<div className="stepHeader">
-				<h2>Übersicht und Auswertung</h2>
-				<span>Schritt {state.step}/5</span>
+				<div className="stepHeaderTop">
+					<h2>Übersicht und Auswertung</h2>
+					<span>Schritt {state.step}/5</span>
+				</div>
 			</div>
 
 			<div className="stepMain">

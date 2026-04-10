@@ -8,8 +8,12 @@ function Step03() {
 	return (
 		<div className="step">
 			<div className="stepHeader">
-				<h2>Planen wir deine Vorräte. Wie lange möchtest du autark sein?</h2>
-				<span>Schritt {state.step}/5</span>
+				<div className="stepHeaderTop">
+					<h2>
+						Planen wir deine Vorräte. Wie lange möchtest du autark sein?
+					</h2>
+					<span>Schritt {state.step}/5</span>
+				</div>
 			</div>
 			<div className="stepMain">
 				<Range />

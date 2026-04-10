@@ -20,7 +20,7 @@ function People() {
 	return (
 		<div className={styles.people}>
 			<div className={styles.peopleHeader}>
-				<h2>Wie viele Personen?</h2>
+				<h2>Wie viele Personen leben in deinem Haushalt?</h2>
 			</div>
 			<ul className={styles.peopleList}>
 				{state.people.map((person: string, index: number) => {
@@ -66,7 +66,7 @@ function People() {
 						onChange={() => dispatch({type: "toggle_baby"})}
 					/>
 					<div className={styles.peopleCheckboxLabel}>
-						<span>Kleinkind/-er</span>
+						<span>Babies oder Kleinkinder</span>
 					</div>
 				</label>
 				<label className={styles.peopleCheckbox}>
@@ -77,7 +77,7 @@ function People() {
 						onChange={() => dispatch({type: "toggle_pet"})}
 					/>
 					<div className={styles.peopleCheckboxLabel}>
-						<span>Haustier/-e</span>
+						<span>Haustiere</span>
 					</div>
 				</label>
 			</div>

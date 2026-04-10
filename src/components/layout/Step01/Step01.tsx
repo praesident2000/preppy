@@ -7,7 +7,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 import styles from "./Step01.module.scss";
 
-
 function Step01() {
 	const { state, dispatch } = useAppContext();
 	const { data: themes, loading, error } = useThemes();
@@ -25,8 +24,13 @@ function Step01() {
 	return (
 		<div className="step">
 			<div className="stepHeader">
-				<h2>Worauf möchtest du vorbereitet sein?</h2>
-				<span>Schritt {state.step}/5</span>
+				<div className="stepHeaderTop">
+					<h2>Worauf möchtest du vorbereitet sein?</h2>
+					<span>Schritt {state.step}/5</span>
+				</div>
+				<div className="stepHeaderBottom">
+					<p>Wir haben Tipps für die in Deutschland wahrscheinlichsten Krisen-Szenarien zusammengestellt. Im ersten Schritt musst du dich für eines entscheiden. Am besten wählst du das für dich wahrscheinlichste Szenario aus. Du kannst jederzeit zurückkehren und das Szenario verändern.</p>
+				</div>
 			</div>
 			{!loading && !error && (
 				<Swiper

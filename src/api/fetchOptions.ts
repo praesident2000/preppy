@@ -1,6 +1,12 @@
+export type TypeResults = {
+   stromausfall: string[];
+   hitze: string[];
+   starkregen_hochwasser: string[];
+   sturm_tornado: string[];
+};
 export type TypeSubcategories = {
    label: string;
-   results: string[];
+   results: TypeResults;
 };
 
 export type TypeOption = {

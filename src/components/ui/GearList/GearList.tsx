@@ -23,14 +23,14 @@ function GearList({ reduced }: { reduced?: boolean }) {
 					))}
 					{state.baby && (
 						<li key="baby" className={styles.optionsAltItem}>
-							<strong>Babyausstattung</strong>
-							<span>Windeln, Fläschchen, Schnuller</span>
+							<strong>Baby- und Kleinkindausstattung</strong>
+							<span>Windeln, Fläschchen, Pflegeprodukte, Schnuller.</span>
 						</li>
 					)}
 					{state.pet && (
 						<li key="pet" className={styles.optionsAltItem}>
 							<strong>Tierausstattung</strong>
-							<span>Napf, Leine, Körbchen</span>
+							<span>Hygienestreu, Transportbehälter.</span>
 						</li>
 					)}
 				</ul>
@@ -79,8 +79,8 @@ function GearList({ reduced }: { reduced?: boolean }) {
 										/>
 										<div className={styles.optionsItemLabel}>
 											<div>
-												<strong>Babyausstattung</strong>
-												<span>Windeln, Fläschchen, Schnuller</span>
+												<strong>Baby- und Kleinkindausstattung</strong>
+												<span>Windeln, Fläschchen, Pflegeprodukte, Schnuller.</span>
 											</div>
 											<span>
 												<BabyIcon />
@@ -103,7 +103,7 @@ function GearList({ reduced }: { reduced?: boolean }) {
 										<div className={styles.optionsItemLabel}>
 											<div>
 												<strong>Tierausstattung</strong>
-												<span>Napf, Leine, Körbchen</span>
+												<span>Hygienestreu, Transportbehälter.</span>
 											</div>
 											<span>
 												<PetIcon />

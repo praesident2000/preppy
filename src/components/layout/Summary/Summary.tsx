@@ -30,12 +30,7 @@ function Summary({
 				<ul className={styles.summaryList}>
 					<li className={`${styles.summaryListItem} ${styles.alt}`}>
 						<span>Worauf möchtest du vorbereitet sein? </span>
-						<strong>
-							{state.theme === 'stromausfall' && 'Stromausfall'}
-							{state.theme === 'hitze-extremwetter' && 'Hitze & Extremwetter'}
-							{state.theme === 'starkregen-hochwasser' && 'Starkregen & Hochwasser'}
-							{state.theme === 'sturm-tornado' && 'Sturm & Tornado'}
-						</strong>
+						<strong>{selectedTheme?.title}</strong>
 					</li>
 					<li className={`${styles.summaryListItem} ${styles.alt}`}>
 						<span>Wie ist deine Wohnsituation? </span>
@@ -101,12 +96,7 @@ function Summary({
 				<div className={styles.summaryCols}>
 					<div>
 						<h2>Ausrüstung beim Szenario{" "}
-							<span>
-								{state.theme === 'stromausfall' && 'Stromausfall'}
-								{state.theme === 'hitze-extremwetter' && 'Hitze & Extremwetter'}
-								{state.theme === 'starkregen-hochwasser' && 'Starkregen & Hochwasser'}
-								{state.theme === 'sturm-tornado' && 'Sturm & Tornado'}
-							</span>{" "}
+							<span>{selectedTheme?.title}</span>{" "}
 						</h2>
 						<GearList reduced={true} />
 					</div>

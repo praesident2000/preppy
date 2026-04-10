@@ -26,7 +26,7 @@ function FoodList({reduced} : {reduced?: boolean}) {
 	const visibleFood = getVisibleCategories(food, state.people).map((cat) => {
 		if (cat.category !== "miscellaneous") return cat;
 		const extras: FoodItem[] = [
-			...(state.baby ? [{ label: "Kindernahrung", unit: "", perPersonPerDay: 0, decimals: 0 }] : []),
+			...(state.baby ? [{ label: "Baby- und Kleinkindnahrung (z. B. Milchpulver + zusätzliches Wasser, Fertignahrung, Snacks)", unit: "", perPersonPerDay: 0, decimals: 0 }] : []),
 			...(state.pet ? [{ label: "Haustierfutter", unit: "", perPersonPerDay: 0, decimals: 0 }] : []),
 		];
 		return extras.length > 0 ? { ...cat, items: [...cat.items, ...extras] } : cat;
