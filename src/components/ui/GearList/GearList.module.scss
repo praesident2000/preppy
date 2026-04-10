@@ -79,3 +79,26 @@
 		background-image: url("data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.8684 0.365983C11.3564 0.854108 11.3564 1.64536 10.8684 2.13348L4.61839 8.38348C4.13027 8.87146 3.33901 8.87146 2.85089 8.38348L0.35089 5.88348C-0.122825 5.39301 -0.11605 4.61338 0.366117 4.13121C0.848284 3.64904 1.62792 3.64227 2.11839 4.11598L3.73464 5.73223L9.10089 0.365983C9.58902 -0.121994 10.3803 -0.121994 10.8684 0.365983Z' fill='black'/%3E%3C/svg%3E%0A");
 	}
 }
+
+.optionsAlt {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+.optionsAltItem {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	border-bottom: 1px solid $blue;
+	font-size: 14px;
+	line-height: 16px;
+	padding: 8px 0;
+
+	strong {
+		font-size: 15px;
+		line-height: 18px;
+	}
+	&:first-child {
+		border-top: 1px solid $blue;
+	}
+}

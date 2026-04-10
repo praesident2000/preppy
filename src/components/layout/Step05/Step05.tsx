@@ -1,10 +1,12 @@
 import { useAppContext } from "../../../context/AppContext";
-import { useGears } from "../../../hooks/useGear";
 import { useOptions } from "../../../hooks/useOptions";
+import { useThemes } from "../../../hooks/useThemes";
 import { useFood } from "../../../hooks/useFood";
-import { getVisibleCategories, getActiveMerges, computeItemTotal } from "../../../utils/dietFilter";
+import { useMissingFood } from "../../../hooks/useMissingFood";
+import { useMissingGear } from "../../../hooks/useMissingGear";
+import { getVisibleCategories } from "../../../utils/dietFilter";
+
 import Accordion from "../../ui/Accordion/Accordion";
-import Label from "../../ui/Label/Label";
 import {
 	HelpIcon,
 	FoodIcon,
@@ -12,15 +14,26 @@ import {
 	GuideIcon,
 	ContactIcon,
 	ErrorIcon,
+	ArrowForwardIcon,
 } from "../../ui/Icon/Icon";
 import styles from "./Step05.module.scss";
 
 function Step05() {
 	const { state } = useAppContext();
-	const { data: options, loading, error } = useOptions();
+	const { data: options, loading: optionsLoading, error: optionsError } = useOptions();
+	const { data: themes, loading: themesLoading, error: themesError } = useThemes();
+	const selectedTheme = themes.find(({ label }) => label === state.theme);
 
 	const { data: food } = useFood();
-	const visibleFood = getVisibleCategories(food, state.people);
+	const { missingFoodList } = useMissingFood();
+	const visibleFood = getVisibleCategories(food, state.people).map((cat) => {
+		if (cat.category !== "miscellaneous") return cat;
+		const extras = [
+			...(state.baby ? [{ label: "Baby futter", unit: "", perPersonPerDay: 0, decimals: 0 }] : []),
+			...(state.pet ? [{ label: "Tierfutter", unit: "", perPersonPerDay: 0, decimals: 0 }] : []),
+		];
+		return extras.length > 0 ? { ...cat, items: [...cat.items, ...extras] } : cat;
+	});
 
 	const totFood = visibleFood.reduce((sum, { items }) => sum + items.length, 0);
 	const totList = visibleFood.reduce(
@@ -30,21 +43,15 @@ function Step05() {
 	const percentFood = Math.floor((totList / totFood) * 100);
 	const missingFoodNumber = totFood - totList;
 
-	const activeMerges = getActiveMerges(visibleFood, food);
-	const missingFoodList = visibleFood.flatMap(({ category, items }) =>
-		items
-			.filter((item) => !state.shoppingList[category]?.includes(item.label))
-			.map((item) => ({
-				...item,
-				total: category !== "miscellaneous"
-					? `${computeItemTotal(category, item.label, item.perPersonPerDay, state.people, state.days, food, activeMerges).toLocaleString("de-DE")} ${item.unit}`
-					: null,
-			})),
-	);
+	const houseResults = options
+		.filter(({ category }) => category === state.house.category)
+		.flatMap(({ subcategories }) =>
+			subcategories
+				.filter(({ label }) => state.house.subcategory?.includes(label))
+				.flatMap(({ results }) => results),
+		);
 
-	const { data: gears } = useGears();
-	const percentGears = Math.floor((state.equipment.length / gears.length) * 100);
-	const missingGears = gears.filter(({ label }) => !state.equipment.includes(label));
+	const { missingGears, missingExtraGears, percentGears } = useMissingGear();
 
 	return (
 		<div className="step">
@@ -55,45 +62,9 @@ function Step05() {
 
 			<div className="stepMain">
 				<div className={styles.sections}>
-					<div className={styles.section}>
-						<div className={styles.sectionMain}>
-							<HelpIcon />
-							<strong>Tipps für deine Wohnsituation</strong>
-						</div>
-						{!state.house.subcategory && (
-							<div className={`${styles.missing} ${styles.alt}`}>
-								<ErrorIcon />
-								<span>
-									Wohnsituation noch nicht angegeben - bitte Schritt 2
-									ausfüllen.
-								</span>
-							</div>
-						)}
-						<ul className={styles.list}>
-							{!loading &&
-								!error &&
-								options
-									.filter(
-										({ category }) => category === state.house.category,
-									)
-									.flatMap(({ subcategories }) =>
-										subcategories
-											.filter(({ label }) =>
-												state.house.subcategory?.includes(label),
-											)
-											.flatMap(({ results }) => results),
-									)
-									.map((result, index) => (
-										<li key={index} className={styles.listItem}>
-											{result}
-										</li>
-									))}
-						</ul>
-					</div>
 
 					<div className={styles.section}>
 						<div className={styles.sectionMain}>
-							<Label value={percentFood} />
 							<FoodIcon />
 							<strong>Vorräte</strong>
 							<span>
@@ -143,7 +114,6 @@ function Step05() {
 
 					<div className={styles.section}>
 						<div className={styles.sectionMain}>
-							<Label value={percentGears} />
 							<GearsIcon />
 							<strong>Ausrüstung</strong>
 							<span>
@@ -159,43 +129,102 @@ function Step05() {
 								></span>
 							</div>
 						</div>
-						{missingGears.length > 0 && (
+						{(missingGears.length > 0 || missingExtraGears.length > 0) && (
 							<div className={styles.sectionBottom}>
 								<Accordion label="Was mir noch fehlt">
 									<div>
 										<ul className={styles.list}>
-											{missingGears.map(({ label, icon }) => {
-												return (
-													<li
-														key={label}
-														className={styles.listItem}
-													>
-														<span
-															dangerouslySetInnerHTML={{
-																__html: icon,
-															}}
-														></span>
-														<span>{label}</span>
-													</li>
-												);
-											})}
+											{missingGears.map(({ label, icon }) => (
+												<li key={label} className={styles.listItem}>
+													<span dangerouslySetInnerHTML={{ __html: icon }}></span>
+													<span>{label}</span>
+												</li>
+											))}
+											{missingExtraGears.map(({ label, icon }) => (
+												<li key={label} className={styles.listItem}>
+													<span>{icon}</span>
+													<span>{label}</span>
+												</li>
+											))}
 										</ul>
 									</div>
 								</Accordion>
 							</div>
 						)}
 					</div>
-				</div>
 
-				<div className={styles.links}>
-					<a href="" target="_blank" className={styles.linksItem}>
-						<GuideIcon />
-						<span>Stromausfall-Guide</span>
-					</a>
-					<a href="" target="_blank" className={styles.linksItem}>
-						<ContactIcon />
-						<span>Wichtige Kontakte</span>
-					</a>
+					<div className={styles.section}>
+						<div className={styles.sectionMain}>
+							<HelpIcon />
+							<strong>Tipps für deine Wohnsituation</strong>
+						</div>
+						<div className={styles.sectionBottom}>
+							<Accordion label="Tipps">
+								<div>
+									<ul className={styles.list}>
+										{!optionsLoading && !optionsError && (
+											houseResults.length === 0
+												?	<div className={`${styles.missing} ${styles.alt}`}>
+														<ErrorIcon />
+														<span>Wohnsituation noch nicht angegeben - bitte Schritt 2 ausfüllen.</span>
+													</div>
+												: houseResults.map((result, index) => (
+													<li key={index} className={styles.listItem}>{result}</li>
+												))
+										)}
+									</ul>
+								</div>
+							</Accordion>
+						</div>
+					</div>
+
+					<div className={styles.section}>
+						<div className={styles.sectionMain}>
+							<GuideIcon />
+							<strong>Stromausfall-Guide</strong>
+						</div>
+						<div className={styles.sectionBottom}>
+							<Accordion label="Guide">
+								<div>
+									<ul className={styles.list}>
+										{!themesLoading && !themesError && (
+											selectedTheme?.guides.map(({label, url}) => (
+												<li key={label} className={`${styles.listItem} ${styles.alt}`}>
+													<a href={url}>
+														<ArrowForwardIcon />
+														<span>{label}</span>
+													</a>
+												</li>
+											))
+										)}
+									</ul>
+								</div>
+							</Accordion>
+						</div>
+					</div>
+
+					<div className={styles.section}>
+						<div className={styles.sectionMain}>
+							<ContactIcon />
+							<strong>Wichtige Kontakte</strong>
+						</div>
+						<div className={styles.sectionBottom}>
+							<Accordion label="Kontakte">
+								<div>
+									<ul className={styles.list}>
+										{!themesLoading && !themesError && (
+											selectedTheme?.contacts.map((contact) => (
+												<li key={contact} className={`${styles.listItem} ${styles.alt}`}>
+													<span>{contact}</span>
+												</li>
+											))
+										)}
+									</ul>
+								</div>
+							</Accordion>
+						</div>
+					</div>
+
 				</div>
 			</div>
 		</div>

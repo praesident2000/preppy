@@ -8,6 +8,7 @@ type AccordionProps = {
 	children: React.ReactNode;
 	big?: boolean;
 	icon?: string;
+	startOpen?: boolean;
 };
 
 function Accordion({
@@ -17,14 +18,15 @@ function Accordion({
 	children,
 	big,
 	icon,
+	startOpen,
 }: AccordionProps) {
-	const [isOpen, setIsOpen] = useState(false);
+	const [isOpen, setIsOpen] = useState(startOpen);
 
 	return (
-		<div className={styles.accordion}>
+		<div className={`${styles.accordion} ${isOpen ? styles.open : ""} ${big ? styles.big : ""}`}>
 			<button
 				onClick={() => setIsOpen(!isOpen)}
-				className={`${styles.accordionButton} ${isOpen ? styles.open : ""} ${big ? styles.big : ""}`}
+				className={styles.accordionButton}
 			>
 				{big ? (
 					<div className={styles.accordionButtonLabel}>

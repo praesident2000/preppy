@@ -1,6 +1,5 @@
 import { useAppContext } from "../../../context/AppContext";
 import Range from "../../ui/Range/Range";
-import People from "../../ui/People/People";
 import FoodList from "../../ui/FoodList/FoodList";
 
 function Step03() {
@@ -14,7 +13,6 @@ function Step03() {
 			</div>
 			<div className="stepMain">
 				<Range />
-				<People />
 				<FoodList />
 			</div>
 		</div>

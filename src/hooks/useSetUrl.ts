@@ -1,14 +1,4 @@
-import type { House, ShoppingList } from "../types/types";
-
-type State = {
-	currentStep: number;
-	theme: string;
-	house: House;
-	days: number;
-	people: string[];
-	shoppingList: ShoppingList;
-	equipment: string[];
-};
+import type { State } from "../reducer";
 
 const PARAM_CONFIG_SET = [
 	{ key: "step", serialize: (v: number) => v.toString() },
@@ -23,7 +13,7 @@ export function useSetUrl(state: State) {
 		const params = new URLSearchParams();
 
 		const STATE = {
-			step: state.currentStep,
+			step: state.step,
 			theme: state.theme,
 			days: state.days,
 			people: state.people,
@@ -36,9 +26,15 @@ export function useSetUrl(state: State) {
 			if (value) params.set(key, (serialize as (v: any) => string)(value));
 		});
 
+		// then "baby" separately
+		if (state.baby) params.set("baby", "1");
+
+		// then "pet" separately
+		if (state.pet) params.set("pet", "1");
+
 		// then "shoppinglist" separately
 		if (Object.keys(state.shoppingList).length) {
-			params.set('shoppinglist', JSON.stringify(state.shoppingList))
+			params.set("shoppinglist", JSON.stringify(state.shoppingList));
 		}
 
 		// then "house" separately

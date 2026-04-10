@@ -27,8 +27,8 @@ function AppInner() {
 				{state.step === 4 && <Step04 />}
 				{state.step === 5 && <Step05 />}
 				<Navigation summaryRef={summaryRef} appRef={appRef} />
-				<Summary summaryRef={summaryRef} />
 			</div>
+			<Summary summaryRef={summaryRef} />
 		</div>
 	);
 }

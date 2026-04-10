@@ -1,5 +1,6 @@
 import { useAppContext } from "../../../context/AppContext";
 import { useOptions } from "../../../hooks/useOptions";
+import People from "../../ui/People/People";
 import styles from "./Step02.module.scss";
 
 function Step02() {
@@ -70,7 +71,7 @@ function Step02() {
 										>
 											{subcategories.map(({ label }) => (
 												<label
-													className={styles.radioSubItem}
+													className={`${styles.radioSubItem} ${category === "Einfamilienhaus" || category === "Mehrfamilienhaus" ? styles.alt : ""}`}
 													key={label}
 												>
 													<input
@@ -84,7 +85,7 @@ function Step02() {
 														}
 														onChange={() => handleSubInput(label)}
 													/>
-													<span>{label}</span>
+													<span><small>{label}</small></span>
 												</label>
 											))}
 										</div>
@@ -93,6 +94,7 @@ function Step02() {
 							);
 						})}
 					</div>
+					<People />
 				</div>
 			)}
 		</div>

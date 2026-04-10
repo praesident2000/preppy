@@ -1,6 +1,46 @@
 @use "../../../styles/variables" as *;
 
 .accordion {
+	transition: 0.3s ease;
+
+	&.open {
+		.accordionButtonLabel::before {
+			transform: rotate(180deg);
+		}
+		.accordionContent {
+			max-height: 2000px;
+			opacity: 1;
+		}
+	}
+	&.big {
+		padding: 20px;
+		border-radius: 10px;
+		background-color: $white;
+		border: 2px solid transparent;
+		box-shadow: 0 4px 10px rgba($black, 0.05);
+
+		&.open {
+			background-color: $blue;
+			color: $white;
+
+			.accordionButtonLabel::before {
+				background-image: url("data:image/svg+xml,%3Csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg' %3E%3Cpath d='M9.46875 0.28125L5.57812 4.17188L1.6875 0.28125C1.3125 -0.09375 0.65625 -0.09375 0.28125 0.28125C-0.09375 0.703125 -0.09375 1.3125 0.28125 1.6875L4.875 6.28125C5.25 6.70312 5.90625 6.70312 6.28125 6.28125L10.875 1.6875C11.25 1.3125 11.25 0.703125 10.875 0.28125C10.5 -0.09375 9.84375 -0.09375 9.46875 0.28125Z' fill='%23fff' /%3E%3C/svg%3E");
+			}
+			.accordionButtonLabel {
+				span {
+					color: $white;
+
+					small {
+						color: currentColor;
+
+						&:last-of-type {
+							color: currentColor;
+						}
+					}
+				}
+			}
+		}
+	}
 }
 .accordionButton {
 	display: flex;
@@ -14,12 +54,6 @@
 	line-height: 18px;
 	font-weight: bold;
 	padding: 0;
-
-	&.open {
-		.accordionButtonLabel::before {
-			transform: rotate(180deg);
-		}
-	}
 }
 .accordionButtonLabel {
 	display: flex;
@@ -61,7 +95,7 @@
 			line-height: 16px;
 			color: $blue;
 			font-weight: bold;
-			
+
 			&:last-of-type {
 				font-weight: normal;
 				color: $gray;
@@ -76,12 +110,5 @@
 	max-height: 0;
 	overflow: hidden;
 	opacity: 0;
-	transition:
-		max-height 0.3s ease,
-		opacity 0.2s ease;
-
-	&.open {
-		max-height: 2000px;
-		opacity: 1;
-	}
+	transition: max-height 0.3s ease, opacity 0.2s ease;
 }

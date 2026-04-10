@@ -34,13 +34,9 @@
 	gap: 15px;
 }
 .foodSection {
-	background-color: $white;
-	padding: 20px;
-	border-radius: 10px;
-	box-shadow: 0 4px 10px rgba($black, 0.05);
 }
 .checkboxes {
-	border-top: 1px solid rgba($gray, 0.3);
+	border-top: 1px solid $white;
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
@@ -55,14 +51,13 @@
 	font-size: 14px;
 	line-height: 14px;
 	transition: background 0.2s;
+	min-height: 20px;
 
 	input[type="checkbox"] {
 		display: none;
 
 		&:checked {
 			& + span::before {
-				background-color: $blue;
-				border: 1px solid transparent;
 				background-size: 10px;
 				background-position: center;
 				background-repeat: no-repeat;
@@ -83,13 +78,13 @@
 		&::before {
 			content: "";
 			position: absolute;
-			top: 0;
+			top: -2px;
 			left: 0;
 			display: block;
-			width: 22px;
-			height: 22px;
-			border-radius: 50%;
-			border: 1px solid $gray;
+			width: 20px;
+			height: 20px;
+			border-radius: 5px;
+			border: 1px solid $white;
 			background-color: transparent;
 			transition: background-color 0.3s ease;
 		}
@@ -101,5 +96,51 @@
 			font-size: 12px;
 			line-height: 16px;
 		}
+	}
+}
+
+.foodListAltWrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+.foodSectionAlt {
+}
+.foodSectionAltHeader {
+	border-bottom: 1px solid $blue;
+	padding: 0 0 12px 0;
+	font-size: 14px;
+	line-height: 16px;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+
+	h3 {
+		font-size: 16px;
+		line-height: 20px;
+	}
+	strong {
+		color: $blue;
+	}
+}
+.foodSectionAltWrapper {
+	display: flex;
+	flex-direction: column;
+}
+.foodSectionAltItem {
+	border-bottom: 1px solid $blue;
+	padding: 8px 0 6px;
+	font-size: 12px;
+	line-height: 14px;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+
+	h4 {
+		font-size: 12px;
+		line-height: 16px;
+	}
+	strong {
+		color: $blue;
 	}
 }

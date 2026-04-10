@@ -1,14 +1,16 @@
 export type TypeThemes = {
-   label: string;
-   title: string;
-   subtitle: string;
-   icon: string;
+	label: string;
+	title: string;
+	subtitle: string;
+	icon: string;
+	contacts: string[];
+	guides: { label: string; url: string }[];
 };
 
 import fetchConfig from "./fetchConfig";
 
 export default async function fetchThemes(): Promise<TypeThemes[]> {
-   const data = await fetchConfig();
-   if (!data?.themes) throw new Error("Invalid config structure");
-   return data.themes;
+	const data = await fetchConfig();
+	if (!data?.themes) throw new Error("Invalid config structure");
+	return data.themes;
 }

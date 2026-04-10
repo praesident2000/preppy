@@ -6,6 +6,8 @@ export type State = {
 	house: House;
 	days: number;
 	people: Diet[];
+	baby: boolean;
+	pet: boolean;
 	shoppingList: ShoppingList;
 	equipment: string[];
 };
@@ -18,6 +20,10 @@ export type Action =
 	| { type: "set_house"; payload: House }
 	| { type: "set_days"; payload: number }
 	| { type: "set_people"; payload: Diet[] }
+	| { type: "toggle_baby" }
+	| { type: "toggle_pet" }
+	| { type: "set_baby"; payload: boolean }
+	| { type: "set_pet"; payload: boolean }
 	| { type: "toggle_shoppinglist"; payload: { category: keyof ShoppingList; element: string } }
 	| { type: "set_shoppinglist"; payload: ShoppingList }
 	| { type: "toggle_equipment"; payload: string }
@@ -32,6 +38,8 @@ export const initialState: State = {
 	},
 	days: 10,
 	people: ["omnivore"],
+	baby: false,
+	pet: false,
 	shoppingList: {
 		drinks: [],
 		grains: [],
@@ -83,6 +91,20 @@ export function reducer(state: State, action: Action): State {
 				...state,
 				people: action.payload,
 			};
+		case "toggle_baby":
+			return {
+				...state,
+				baby: !state.baby,
+			};
+		case "toggle_pet":
+			return {
+				...state,
+				pet: !state.pet,
+			};
+		case "set_baby":
+			return { ...state, baby: action.payload };
+		case "set_pet":
+			return { ...state, pet: action.payload };
 		case "toggle_shoppinglist": {
 			const { category, element } = action.payload;
 			const current = state.shoppingList[category] ?? [];

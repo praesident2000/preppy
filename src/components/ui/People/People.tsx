@@ -19,6 +19,9 @@ function People() {
 
 	return (
 		<div className={styles.people}>
+			<div className={styles.peopleHeader}>
+				<h2>Wie viele Personen?</h2>
+			</div>
 			<ul className={styles.peopleList}>
 				{state.people.map((person: string, index: number) => {
 					return (
@@ -53,6 +56,31 @@ function People() {
 				<PersonPlusIcon />
 				<span>Person hinzufügen</span>
 			</button>
+
+			<div className={styles.peopleCheckboxes}>
+				<label className={styles.peopleCheckbox}>
+					<input
+						type="checkbox"
+						name="baby"
+						checked={state.baby}
+						onChange={() => dispatch({type: "toggle_baby"})}
+					/>
+					<div className={styles.peopleCheckboxLabel}>
+						<span>Kleinkind/-er</span>
+					</div>
+				</label>
+				<label className={styles.peopleCheckbox}>
+					<input
+						type="checkbox"
+						name="pet"
+						checked={state.pet}
+						onChange={() => dispatch({type: "toggle_pet"})}
+					/>
+					<div className={styles.peopleCheckboxLabel}>
+						<span>Haustier/-e</span>
+					</div>
+				</label>
+			</div>
 		</div>
 	);
 }

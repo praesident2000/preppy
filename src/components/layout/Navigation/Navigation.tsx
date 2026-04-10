@@ -19,18 +19,10 @@ function Navigation({
 	const { state, dispatch } = useAppContext();
 
 	const scrollToApp = () => {
-		window.scrollTo({ top: appRef.current?.offsetTop ? appRef.current?.offsetTop- 150 : 0, behavior: "smooth" });
+		window.scrollTo({ top: appRef.current?.offsetTop ? appRef.current?.offsetTop- 150 : 0, behavior: "instant" });
 	};
 
-	const { setUrl } = useSetUrl({
-		currentStep: state.step,
-		theme: state.theme,
-		house: state.house,
-		days: state.days,
-		people: state.people,
-		shoppingList: state.shoppingList,
-		equipment: state.equipment,
-	});
+	const { setUrl } = useSetUrl(state);
 
 	const printSummary = () => {
 		const element = summaryRef.current;

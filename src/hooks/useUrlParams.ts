@@ -47,6 +47,9 @@ export function useUrlParams(dispatch: Dispatch<Action>) {
 				payload: equipment.split(","),
 			});
 
+		if (params.get("baby") === "1") dispatch({ type: "set_baby", payload: true });
+		if (params.get("pet") === "1") dispatch({ type: "set_pet", payload: true });
+
 		const category = params.get("house");
 		const subcategory = params.get("house_sub");
 		if (category || subcategory) {
