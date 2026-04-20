@@ -26,10 +26,31 @@
 		color: $gray;
 	}
 }
+.sectionIcon {
+	svg {
+		width: 46px;
+		height: 46px;
+	}
+}
 .sectionBottom {
 	border-top: 1px solid $black;
 	padding-top: 10px;
 	margin-top: 20px;
+}
+.sectionBottomSub {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+
+	strong {
+		display: block;
+		font-size: 14px;
+		line-height: 18px;
+		padding-top: 20px;
+	}
+	.list {
+		padding-top: 10px;
+	}
 }
 .list {
 	display: flex;
@@ -62,7 +83,7 @@
 	a {
 		display: grid;
 		grid-template-columns: 25px 1fr;
-		
+
 		svg {
 			width: 15px;
 			height: 15px;

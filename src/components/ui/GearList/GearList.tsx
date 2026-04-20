@@ -18,7 +18,7 @@ function GearList({ reduced }: { reduced?: boolean }) {
 					{gears.map(({ label, subtitle }) => (
 						<li key={label} className={styles.optionsAltItem}>
 							<strong>{label}</strong>
-							<span>{subtitle}</span>
+							<span dangerouslySetInnerHTML={{ __html: subtitle }} />
 						</li>
 					))}
 					{state.baby && (
@@ -55,7 +55,7 @@ function GearList({ reduced }: { reduced?: boolean }) {
 										<div className={styles.optionsItemLabel}>
 											<div>
 												<strong>{label}</strong>
-												<span>{subtitle}</span>
+												<span dangerouslySetInnerHTML={{ __html: subtitle }} />
 											</div>
 											<span
 												dangerouslySetInnerHTML={{ __html: icon }}

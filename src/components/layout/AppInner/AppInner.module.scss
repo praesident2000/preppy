@@ -1,14 +1,28 @@
 @use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
 
 .app {
-	padding: 40px 20px;
+	padding: 40px 15px;
 	background-color: $lightblue;
 }
 .wrapper {
-	max-width: 430px;
+	max-width: 1180px;
 	margin: auto;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	gap: 40px;
+
+	@include respond-to(sm) {
+		max-width: 540px;
+	}
+	@include respond-to(md) {
+		max-width: 720px;
+	}
+	@include respond-to(lg) {
+		max-width: 960px;
+	}
+	@include respond-to(xl) {
+		max-width: 1180px;
+	}
 }

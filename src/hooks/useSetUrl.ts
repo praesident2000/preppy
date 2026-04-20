@@ -44,12 +44,14 @@ export function useSetUrl(state: State) {
 
 		const url = `${window.location.origin}${window.location.pathname}#${params.toString()}`;
 
-		try {
-			await navigator.clipboard.writeText(url);
-			alert("Link kopiert!");
-		} catch {
-			alert("Link konnte nicht kopiert werden.");
-		}
+		return url
+
+		// try {
+		// 	await navigator.clipboard.writeText(url);
+		// 	alert("Link kopiert!");
+		// } catch {
+		// 	alert("Link konnte nicht kopiert werden.");
+		// }
 	};
 
 	return { setUrl };

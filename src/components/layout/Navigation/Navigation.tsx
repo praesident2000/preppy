@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useAppContext } from "../../../context/AppContext";
 import { useSetUrl } from "../../../hooks/useSetUrl";
 import {
@@ -6,6 +7,7 @@ import {
 	LinkIcon,
 	DownloadIcon,
 	PdfIcon,
+	CopyIcon,
 } from "../../ui/Icon/Icon";
 import styles from "./Navigation.module.scss";
 
@@ -19,10 +21,30 @@ function Navigation({
 	const { state, dispatch } = useAppContext();
 
 	const scrollToApp = () => {
-		window.scrollTo({ top: appRef.current?.offsetTop ? appRef.current?.offsetTop- 150 : 0, behavior: "instant" });
+		window.scrollTo({
+			top: appRef.current?.offsetTop ? appRef.current?.offsetTop - 150 : 0,
+			behavior: "instant",
+		});
 	};
 
 	const { setUrl } = useSetUrl(state);
+	const [popupOpen, setPopupOpen] = useState(false);
+	const [generatedUrl, setGeneratedUrl] = useState("");
+
+	const handleOpenPopup = async () => {
+		const url = await setUrl();
+		setGeneratedUrl(url);
+		setPopupOpen(true);
+	};
+
+	const handleCopyUrl = async () => {
+		try {
+			await navigator.clipboard.writeText(generatedUrl);
+			setPopupOpen(false);
+		} catch {
+			// fallback for browsers without clipboard API
+		}
+	};
 
 	const printSummary = () => {
 		const element = summaryRef.current;
@@ -66,7 +88,10 @@ function Navigation({
 				{state.step !== 5 && (
 					<button
 						className={`${styles.navButton} ${styles.color}`}
-						onClick={() => { dispatch({ type: "step_increment" }); requestAnimationFrame(scrollToApp); }}
+						onClick={() => {
+							dispatch({ type: "step_increment" });
+							requestAnimationFrame(scrollToApp);
+						}}
 					>
 						<span>weiter</span>
 						<ArrowForwardIcon />
@@ -96,19 +121,50 @@ function Navigation({
 			</div>
 
 			{state.step !== 1 && (
-				<div className={styles.navBottom}>
-					<button
-						className={styles.navButton}
-						onClick={() => { dispatch({ type: "step_decrement" }); requestAnimationFrame(scrollToApp); }}
+				<>
+					<div className={styles.navBottom}>
+						<button
+							className={styles.navButton}
+							onClick={() => {
+								dispatch({ type: "step_decrement" });
+								requestAnimationFrame(scrollToApp);
+							}}
+						>
+							<ArrowBackIcon />
+							<span>zurück</span>
+						</button>
+						<button
+							className={styles.navButton}
+							onClick={handleOpenPopup}
+						>
+							<LinkIcon />
+							<span>Link Speichern</span>
+						</button>
+					</div>
+
+					<div
+						className={`${styles.popup} ${popupOpen ? styles.active : ""}`}
+						onClick={() => setPopupOpen(false)}
 					>
-						<ArrowBackIcon />
-						<span>zurück</span>
-					</button>
-					<button className={styles.navButton} onClick={setUrl}>
-						<LinkIcon />
-						<span>Link Speichern</span>
-					</button>
-				</div>
+						<div
+							className={styles.popupInner}
+							onClick={(e) => e.stopPropagation()}
+						>
+							<textarea
+								className={styles.popupText}
+								readOnly
+								value={generatedUrl}
+							/>
+							<button
+								className={`${styles.navButton} ${styles.color}`}
+								onClick={handleCopyUrl}
+							>
+								<CopyIcon />
+								<span>Link Kopieren</span>
+							</button>
+						</div>
+					</div>
+				</>
 			)}
 		</div>
 	);

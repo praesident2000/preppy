@@ -4,7 +4,7 @@ $white: #ffffff;
 $blue: #009fe3;
 $lightblue: #f4fbff;
 $red: #ba0050;
-$gray: #94a3b8;
+$gray: #b2b2b2;
 $lightgray: #f8fafc;
 $orange: #f59e0b;
 $error: #ef4444;
@@ -17,3 +17,11 @@ $spacer: 20px;
 
 // CUBIC
 $cubic: cubic-bezier(0.22, 1, 0.36, 1);
+
+// BREAKPOINTS
+$breakpoints: (
+   sm:   576px,
+   md:   768px,
+   lg:   992px,
+   xl:   1210px,
+);

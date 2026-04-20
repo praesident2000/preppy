@@ -54,6 +54,17 @@
 			span {
 				font-size: 12px;
 				line-height: 16px;
+
+				a {
+					text-decoration: underline;
+					text-underline-offset: 2px;
+					text-decoration-thickness: 1px;
+					transition: 0.3s ease;
+
+					&:hover {
+						color: $blue;
+					}
+				}
 			}
 		}
 		&::before {

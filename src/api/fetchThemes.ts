@@ -3,6 +3,7 @@ export type TypeThemes = {
 	title: string;
 	subtitle: string;
 	icon: string;
+	tips: { label: string; list: string[] }[];
 	contacts: string[];
 	guides: { label: string; url: string }[];
 };
