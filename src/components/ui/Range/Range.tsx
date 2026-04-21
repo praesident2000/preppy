@@ -33,7 +33,7 @@ function Range() {
 					<CalendarIcon />
 					<span>Vorratsziel</span>
 				</div>
-				<strong>{state.days} Tage</strong>
+				<strong>{state.days} <small>Tage</small></strong>
 			</div>
 			<div className={styles.rangeWrapper}>
 				<span className={styles.rangeInfo}>Für wie viele Tage möchtest du Lebensmittel und Wasser vorrätig haben?</span>
@@ -51,6 +51,11 @@ function Range() {
 					<span>3 Tage</span>
 					<strong>10 Tage (Empfohlen)</strong>
 					<span>14 Tage</span>
+				</div>
+				<div className={styles.rangeText}>
+					{state.days < 10 && <span>Ein guter Anfang. Die Empfehlung liegt bei 10 Tagen.</span>}
+					{state.days === 10 && <span>Das entspricht der Empfehlung des BBK.</span>}
+					{state.days > 10 && <span>Über der BBK-Empfehlung - sehr gute Vorsorge. Die Empfehlung liegt bei 10 Tagen.</span>}
 				</div>
 			</div>
 		</div>

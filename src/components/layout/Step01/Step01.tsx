@@ -1,67 +1,46 @@
-import { useEffect } from "react";
-import { useAppContext } from "../../../context/AppContext";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
 import { useThemes } from "../../../hooks/useThemes";
 import "swiper/css";
 import "swiper/css/navigation";
 import styles from "./Step01.module.scss";
+import StepHeader from "../../ui/StepHeader/StepHeader";
+import Tile from "../../ui/Tile/Tile";
 
 function Step01() {
-	const { state, dispatch } = useAppContext();
 	const { data: themes, loading, error } = useThemes();
-
-	useEffect(() => {
-		const currentUrl = new URL(window.location.href);
-		const themeParam = currentUrl.searchParams.get("thema");
-		if (!themeParam && !loading && !error) {
-			dispatch({ type: "set_theme", payload: themes[0].label });
-		}
-	}, [loading]);
-
-	const themeIndex = themes.findIndex(({ label }) => label === state.theme);
 
 	return (
 		<div className="step">
-			<div className="stepHeader">
-				<div className="stepHeaderTop">
-					<h2>Worauf möchtest du vorbereitet sein?</h2>
-					<span>Schritt {state.step}/5</span>
-				</div>
-				<div className="stepHeaderBottom">
-					<p>Wir haben Tipps für die in Deutschland wahrscheinlichsten Krisen-Szenarien zusammengestellt. Im ersten Schritt musst du dich für eines entscheiden. Am besten wählst du das für dich wahrscheinlichste Szenario aus. Du kannst jederzeit zurückkehren und das Szenario verändern.</p>
-				</div>
-			</div>
+			<StepHeader
+				title="Worauf möchtest du vorbereitet sein?"
+				text={
+					<div className="stepHeaderBottom">
+						<div className="text">
+							<p>
+								Wir haben Tipps für die in Deutschland
+								wahrscheinlichsten Krisen-Szenarien zusammengestellt. Im
+								ersten Schritt musst du dich für eines entscheiden. Am
+								besten wählst du das für dich wahrscheinlichste Szenario
+								aus. Du kannst jederzeit zurückkehren und das Szenario
+								verändern.
+							</p>
+						</div>
+					</div>
+				}
+			/>
 			{!loading && !error && (
-				<Swiper
-					className={styles.slider}
-					modules={[Navigation]}
-					initialSlide={themeIndex}
-					loop
-					spaceBetween={50}
-					slidesPerView={1}
-					navigation
-					onRealIndexChange={(swiper) =>
-						dispatch({
-							type: "set_theme",
-							payload: themes[swiper.realIndex].label,
-						})
-					}
-				>
+				<div className={styles.themes}>
 					{themes.map(({ label, title, subtitle, icon }) => {
 						return (
-							<SwiperSlide key={label} className={styles.slide}>
-								<div className={styles.slideWrapper}>
-									<strong>{title.toUpperCase()}</strong>
-									<span
-										dangerouslySetInnerHTML={{ __html: icon }}
-									></span>
-									<span>{subtitle}</span>
-								</div>
-							</SwiperSlide>
+							<Tile
+								key={label}
+								label={label}
+								title={title}
+								subtitle={subtitle}
+								icon={icon}
+							/>
 						);
 					})}
-				</Swiper>
+				</div>
 			)}
 		</div>
 	);

@@ -1,9 +1,10 @@
 @use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
 
 .range {
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
+	gap: 10px;
 }
 .rangeLabel {
 	display: flex;
@@ -17,11 +18,24 @@
 		font-weight: bold;
 		font-size: 16px;
 		line-height: 16px;
+
+		@include respond-to(lg) {
+			font-size: 18px;
+			line-height: 18px;
+		}
 	}
 	strong {
-		font-size: 20px;
-		line-height: 20px;
+		font-size: 24px;
+		line-height: 24px;
 		color: $blue;
+
+		small {
+			font-size: 16px;
+			line-height: 16px;
+		}
+	}
+	svg {
+		margin-top: -2px;
 	}
 }
 .rangeWrapper {
@@ -30,26 +44,40 @@
 	gap: 25px;
 	padding: 20px;
 	background-color: $white;
-	border-radius: 10px;
-	box-shadow: 0 4px 10px rgba($black, 0.05);
+	border-radius: $radius;
+	box-shadow: $shadow;
+	border: 1px solid $gray;
 
 	div {
 		display: flex;
 		justify-content: space-between;
 		font-size: 12px;
-		line-height: 12px;
-		color: $gray;
+		line-height: 16px;
+		color: $darkgray;
 
 		strong {
 			color: $black;
 		}
+		@include respond-to(lg) {
+			font-size: 14px;
+			line-height: 14px;
+		}
+	}
+	@include respond-to(lg) {
+		padding: 30px;
 	}
 }
 .rangeInfo {
 	font-size: 14px;
 	line-height: 20px;
-	color: $gray;
 	max-width: 270px;
+
+	@include respond-to(lg) {
+		font-size: 16px;
+		line-height: 16px;
+		max-width: unset;
+		margin-bottom: 20px;
+	}
 }
 .rangeInput {
 	-webkit-appearance: none;
@@ -93,5 +121,19 @@
 		background: $blue;
 		border-radius: 100px;
 		height: 4px;
+	}
+}
+.rangeText {
+	background-color: $lightgray;
+	padding: 10px 20px;
+	text-align: center;
+	border-radius: $radius;
+
+	span {
+		color: $black;
+		margin: auto;
+	}
+	@include respond-to(lg) {
+		padding: 15px;
 	}
 }

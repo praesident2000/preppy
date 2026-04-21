@@ -11,8 +11,12 @@ export function useUrlParams(dispatch: Dispatch<Action>) {
 		const step = params.get("step");
 		if (step) dispatch({ type: "set_step", payload: Number(step) });
 
-		const theme = params.get("theme");
-		if (theme) dispatch({ type: "set_theme", payload: theme });
+		const themes = params.get("themes");
+		if (themes)
+			dispatch({
+				type: "set_themes",
+				payload: themes.split(","),
+			});
 
 		const days = params.get("days");
 		const parsedDays = Number(days);
@@ -47,8 +51,10 @@ export function useUrlParams(dispatch: Dispatch<Action>) {
 				payload: equipment.split(","),
 			});
 
-		if (params.get("baby") === "1") dispatch({ type: "set_baby", payload: true });
-		if (params.get("pet") === "1") dispatch({ type: "set_pet", payload: true });
+		if (params.get("baby") === "1")
+			dispatch({ type: "set_baby", payload: true });
+		if (params.get("pet") === "1")
+			dispatch({ type: "set_pet", payload: true });
 
 		const category = params.get("house");
 		const subcategory = params.get("house_sub");

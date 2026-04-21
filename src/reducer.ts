@@ -2,7 +2,7 @@ import type { House, ShoppingList, Diet } from "./types/types";
 
 export type State = {
 	step: number;
-	theme: string;
+	themes: string[];
 	house: House;
 	days: number;
 	people: Diet[];
@@ -16,7 +16,9 @@ export type Action =
 	| { type: "set_step"; payload: number }
 	| { type: "step_decrement" }
 	| { type: "step_increment" }
-	| { type: "set_theme"; payload: string }
+	| { type: "step_restart" }
+	| { type: "toggle_themes"; payload: string }
+	| { type: "set_themes"; payload: string[] }
 	| { type: "set_house"; payload: House }
 	| { type: "set_days"; payload: number }
 	| { type: "set_people"; payload: Diet[] }
@@ -31,12 +33,12 @@ export type Action =
 
 export const initialState: State = {
 	step: 1,
-	theme: "",
+	themes: [],
 	house: {
 		category: "",
 		subcategory: [],
 	},
-	days: 10,
+	days: 3,
 	people: ["omnivore"],
 	baby: false,
 	pet: false,
@@ -71,10 +73,24 @@ export function reducer(state: State, action: Action): State {
 				...state,
 				step: Math.min(5, state.step + 1),
 			};
-		case "set_theme":
+		case "step_restart":
 			return {
 				...state,
-				theme: action.payload,
+				step: 1,
+			};
+		case "toggle_themes": {
+			const exists = state.themes.includes(action.payload);
+			return {
+				...state,
+				themes: exists
+					? state.themes.filter((item) => item !== action.payload)
+					: [...state.themes, action.payload],
+			};
+		}
+		case "set_themes":
+			return {
+				...state, 
+				themes: action.payload 
 			};
 		case "set_house":
 			return {

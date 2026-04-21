@@ -167,52 +167,93 @@ function FoodList({ reduced }: { reduced?: boolean }) {
 							<h2>
 								Deine benötigten Vorräte. Welche davon hast du bereits?
 							</h2>
+							<Accordion label="Warum diese Mengen?">
+								<div className="text">
+									<p>
+										Die genannten Lebensmittel sind Vorschläge, um die
+										einzelnen Kategorien abwechslungsreich zu
+										gestalten. Du solltest natürlich Lebensmittel
+										wählen, die du gerne isst. Es müssen nicht nur
+										Konserven sein: Was und wieviel würdest du ohnehin
+										einkaufen? Wie lange sind diese Produkte haltbar?{" "}
+										<br />
+										<br />
+										Überlege auch, was du immer im Kühlschrank und
+										Tiefkühler hast, das du z. B. bei einem
+										Stromausfall sofort zubereiten könntest. Überlege
+										dir auch, ob und wie oft du warme Speisen
+										zubereiten kannst. Je nach dem solltest du auch
+										darauf achten, dass deine Vorräte kalt verzehrt
+										werden können. <br />
+										<br />
+										Die angegebenen Mengen sind praxisnahe
+										Empfehlungen basierend auf Angaben des{" "}
+										<a
+											href="https://www.ernaehrungsvorsorge.de/private-vorsorge/notvorrat/vorratskalkulator"
+											target="_blank"
+										>
+											BKK
+										</a>
+										, der{" "}
+										<a href="https://www.dge.de/" target="_blank">
+											DGE
+										</a>{" "}
+										und eigenen Überlegungen. Für eine
+										alltagstaugliche Einkaufsliste haben wir diese
+										Mengen in übliche Packungsgrößen umgerechnet. Du
+										kannst wählen, ob du lieber die Grammangabe oder
+										die Packungen anzeigen lassen möchtest.
+										<br />
+										<br />
+										<br />
+										Für deinen {state.people.length}
+										-Personen-Haushalt, um {state.days} Tage zu
+										überbrücken
+									</p>
+								</div>
+							</Accordion>
 						</div>
-						<div className={styles.foodHeaderBottom}>
-							<p>
-								Die genannten Lebensmittel sind Vorschläge, um die
-								einzelnen Kategorien abwechslungsreich zu gestalten. Du
-								solltest natürlich Lebensmittel wählen, die du gerne
-								isst. Es müssen nicht nur Konserven sein: Was und
-								wieviel würdest du ohnehin einkaufen? Wie lange sind
-								diese Produkte haltbar? <br />
-								<br />
-								Überlege auch, was du immer im Kühlschrank und
-								Tiefkühler hast, das du z. B. bei einem Stromausfall
-								sofort zubereiten könntest. Überlege dir auch, ob und
-								wie oft du warme Speisen zubereiten kannst. Je nach dem
-								solltest du auch darauf achten, dass deine Vorräte kalt
-								verzehrt werden können. <br />
-								<br />
-								Die angegebenen Mengen sind praxisnahe Empfehlungen
-								basierend auf Angaben des{" "}
-								<a
-									href="https://www.ernaehrungsvorsorge.de/private-vorsorge/notvorrat/vorratskalkulator"
-									target="_blank"
-								>
-									BKK
-								</a>
-								, der{" "}
-								<a href="https://www.dge.de/" target="_blank">
-									DGE
-								</a>{" "}
-								und eigenen Überlegungen. Für eine alltagstaugliche
-								Einkaufsliste haben wir diese Mengen in übliche
-								Packungsgrößen umgerechnet. Du kannst wählen, ob du
-								lieber die Grammangabe oder die Packungen anzeigen
-								lassen möchtest.
-								<br />
-								<br />
-								<br />
-								Für deinen {state.people.length}-Personen-Haushalt, um{" "}
-								{state.days} Tage zu überbrücken
-							</p>
-						</div>
+
 						<Switcher
 							switcher={() => setShowQuantity(!showQuantity)}
 							label1="Menge/Gewicht"
 							label2="Packungseinheiten"
 						/>
+
+						<div className="progress">
+							{(() => {
+								const total = visibleFood.reduce((sum, cat) => sum + cat.items.length, 0);
+								const checked = visibleFood.reduce((sum, cat) => sum + (state.shoppingList[cat.category as keyof ShoppingList]?.length ?? 0), 0);
+								const pct = total > 0 ? Math.round((checked / total) * 100) : 0;
+								const r = 28;
+								const circ = 2 * Math.PI * r;
+								const offset = circ * (1 - pct / 100);
+								return (
+									<>
+										<div className="progressRing">
+											<svg width="100" height="100" viewBox="0 0 72 72">
+												<circle cx="36" cy="36" r={r} className="progressTrack" />
+												<circle
+													cx="36" cy="36" r={r}
+													className="progressFill"
+													strokeDasharray={circ}
+													strokeDashoffset={offset}
+													transform="rotate(-90 36 36)"
+												/>
+											</svg>
+											<div className="progressPct">
+												<span>{pct}%</span>
+											</div>
+										</div>
+										<div className="progressText">
+											<strong>{checked} von {total} erledigt</strong>
+											<span>Hake ab, was du hast — den Rest bekommst du später als Einkaufsliste.</span>
+										</div>
+									</>
+								);
+							})()}
+						</div>
+
 					</div>
 					{!loading && !error && (
 						<div className={styles.foodListWrapper}>
@@ -258,6 +299,7 @@ function FoodList({ reduced }: { reduced?: boolean }) {
 												icon={icon}
 												big={true}
 												startOpen={index === 0}
+												colorOpen={true}
 											>
 												<div className={styles.checkboxes}>
 													{items.map(

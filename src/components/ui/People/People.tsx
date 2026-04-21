@@ -1,6 +1,12 @@
 import { useAppContext } from "../../../context/AppContext";
 import Toggle from "../Toggle/Toggle";
-import { PersonIcon, PersonPlusIcon, TrashIcon } from "../../ui/Icon/Icon";
+import {
+	PersonIcon,
+	PersonPlusIcon,
+	TrashIcon,
+	PetIconBig,
+	BabyIconBig,
+} from "../../ui/Icon/Icon";
 import styles from "./People.module.scss";
 
 function People() {
@@ -31,7 +37,7 @@ function People() {
 									<PersonIcon />
 									<strong>{`Person ${index + 1}`}</strong>
 								</div>
-								{index > 0 && (
+								{state.people.length > 1 && (
 									<button
 										className={styles.peopleRemove}
 										onClick={() => removePerson(index)}
@@ -58,28 +64,36 @@ function People() {
 			</button>
 
 			<div className={styles.peopleCheckboxes}>
-				<label className={styles.peopleCheckbox}>
-					<input
-						type="checkbox"
-						name="baby"
-						checked={state.baby}
-						onChange={() => dispatch({type: "toggle_baby"})}
-					/>
-					<div className={styles.peopleCheckboxLabel}>
-						<span>Babies oder Kleinkinder</span>
-					</div>
-				</label>
-				<label className={styles.peopleCheckbox}>
-					<input
-						type="checkbox"
-						name="pet"
-						checked={state.pet}
-						onChange={() => dispatch({type: "toggle_pet"})}
-					/>
-					<div className={styles.peopleCheckboxLabel}>
-						<span>Haustiere</span>
-					</div>
-				</label>
+				<div className={styles.peopleHeader}>
+					<h2>Weitere Bewohner</h2>
+				</div>
+				<div className={styles.peopleCheckboxesInner}>
+					<label className={styles.peopleCheckbox}>
+						<BabyIconBig />
+						<input
+							type="checkbox"
+							name="baby"
+							checked={state.baby}
+							onChange={() => dispatch({ type: "toggle_baby" })}
+						/>
+						<div className={styles.peopleCheckboxLabel}>
+							<span>Babies oder Kleinkinder</span>
+						</div>
+					</label>
+
+					<label className={styles.peopleCheckbox}>
+						<PetIconBig />
+						<input
+							type="checkbox"
+							name="pet"
+							checked={state.pet}
+							onChange={() => dispatch({ type: "toggle_pet" })}
+						/>
+						<div className={styles.peopleCheckboxLabel}>
+							<span>Haustiere</span>
+						</div>
+					</label>
+				</div>
 			</div>
 		</div>
 	);

@@ -9,16 +9,18 @@ import { getVisibleCategories } from "../../../utils/dietFilter";
 
 import Accordion from "../../ui/Accordion/Accordion";
 import {
-	HelpIcon,
-	FoodIcon,
-	GearsIcon,
-	GuideIcon,
-	ContactIcon,
+	HelpIconSvg,
+	GearsIconSvg,
+	GuideIconSvg,
+	contactIconSvg,
 	ErrorIcon,
 	ArrowForwardIcon,
-	IdeaIcon,
+	IdeaIconSvg,
+	FoodIconSvg,
+	PersonIcon,
 } from "../../ui/Icon/Icon";
 import styles from "./Step05.module.scss";
+import StepHeader from "../../ui/StepHeader/StepHeader";
 
 function Step05() {
 	const { state } = useAppContext();
@@ -32,7 +34,9 @@ function Step05() {
 		loading: themesLoading,
 		error: themesError,
 	} = useThemes();
-	const selectedTheme = themes.find(({ label }) => label === state.theme);
+	const selectedThemes = themes.filter(({ label }) =>
+		state.themes.includes(label),
+	);
 
 	const { data: food } = useFood();
 	const { missingFoodList } = useMissingFood();
@@ -42,7 +46,7 @@ function Step05() {
 			...(state.baby
 				? [
 						{
-							label: "Baby futter",
+							label: "Baby- und Kleinkindnahrung (z. B. Milchpulver + zusätzliches Wasser, Fertignahrung, Snacks)",
 							unit: "",
 							perPersonPerDay: 0,
 							decimals: 0,
@@ -52,7 +56,7 @@ function Step05() {
 			...(state.pet
 				? [
 						{
-							label: "Tierfutter",
+							label: "Haustierfutter",
 							unit: "",
 							perPersonPerDay: 0,
 							decimals: 0,
@@ -74,7 +78,6 @@ function Step05() {
 		0,
 	);
 	const percentFood = Math.floor((totList / totFood) * 100);
-	const missingFoodNumber = totFood - totList;
 
 	const houseResults = [
 		...new Set(
@@ -85,267 +88,285 @@ function Step05() {
 						.filter(({ label }) =>
 							state.house.subcategory?.includes(label),
 						)
-						.flatMap(
-							({ results }) =>
-								results[state.theme as keyof TypeResults] ?? [],
+						.flatMap(({ results }) =>
+							state.themes.flatMap(
+								(theme) => results[theme as keyof TypeResults] ?? [],
+							),
 						),
 				),
 		),
 	];
 
-	const { missingGears, missingExtraGears, percentGears } = useMissingGear();
+	const { missingGears, missingExtraGears, percentGears, totalGearsCount } = useMissingGear();
 
 	return (
 		<div className="step">
-			<div className="stepHeader">
-				<div className="stepHeaderTop">
-					<h2>Übersicht und Auswertung</h2>
-					<span>Schritt {state.step}/5</span>
-				</div>
-				<div className="stepHeaderBottom">
-					<p>
-						Hier siehst du eine Zusammenfassung mit Tipps basierend auf
-						deinen Einstellungen. Am Ende dieser Seite kannst du dir ein
-						PDF mit deinen persönlichen Vorsorge-Hinweisen herunterladen.
-						Du kannst dich außerdem von uns in regelmäßigen Abständen
-						daran erinnern lassen, deine Notfallvorbereitung zu überprüfen
-						und aufzufrischen. Dafür benötigen wir deine Emailadresse.
-						<br />
-						<br />
-						Du kannst außerdem den Link zu dieser Seite samt deinen
-						persönlichen Voreinstellungen speichern, ihn jederzeit wieder
-						aufrufen und die Einstellungen verändern. Oder ihn mit
-						Freunden und Bekannten teilen.
-					</p>
-				</div>
-			</div>
-
+			<StepHeader
+				title="Übersicht und Auswertung"
+				text={
+					<div className="stepHeaderBottom">
+						<div className="text">
+							<p>
+								Hier siehst du eine Zusammenfassung mit Tipps basierend
+								auf deinen Einstellungen. Am Ende dieser Seite kannst du
+								dir ein PDF mit deinen persönlichen Vorsorge-Hinweisen
+								herunterladen. Du kannst dich außerdem von uns in
+								regelmäßigen Abständen daran erinnern lassen, deine
+								Notfallvorbereitung zu überprüfen und aufzufrischen.
+								Dafür benötigen wir deine Emailadresse.
+								<br />
+								<br />
+								Du kannst außerdem den Link zu dieser Seite samt deinen
+								persönlichen Voreinstellungen speichern, ihn jederzeit
+								wieder aufrufen und die Einstellungen verändern. Oder
+								ihn mit Freunden und Bekannten teilen.
+							</p>
+						</div>
+					</div>
+				}
+			/>
 			<div className="stepMain">
 				<div className={styles.sections}>
-					<div className={styles.section}>
-						<div className={styles.sectionMain}>
-							<div className={styles.sectionIcon}>
-								<HelpIcon />
-							</div>
-							<strong>Wichtige Verhaltenstipps</strong>
-						</div>
-						<div className={styles.sectionBottom}>
-							<Accordion label="Tipps">
-								<div className={styles.sectionBottomSub}>
-									{!themesLoading &&
-										!themesError &&
-										selectedTheme?.tips.map(({ label, list }) => (
-											<div>
-												<strong>{label}</strong>
-												<ul className={styles.list}>
-													{list.map((item) => (
-														<li
-															key={item}
-															className={`${styles.listItem} ${styles.alt}`}
-														>
-															<span>{item}</span>
-														</li>
-													))}
-												</ul>
+				
+					{/* RESULT */}
+					<div className={styles.result}>
+						<h2>Dein Vorsoge-Status</h2>
+						<div className="progress big">
+							{(() => {
+								const pct = Math.round((percentFood + percentGears) / 2);
+								const r = 28;
+								const circ = 2 * Math.PI * r;
+								const offset = circ * (1 - pct / 100);
+								return (
+									<>
+										<div className="progressRing">
+											<svg width="140" height="140" viewBox="0 0 72 72">
+												<circle cx="36" cy="36" r={r} className="progressTrack" />
+												<circle
+													cx="36" cy="36" r={r}
+													className="progressFill"
+													strokeDasharray={circ}
+													strokeDashoffset={offset}
+													transform="rotate(-90 36 36)"
+												/>
+											</svg>
+											<div className="progressPct">
+												<span>{pct}%</span>
+												<small>Vorbereitet</small>
 											</div>
-										))}
-								</div>
-							</Accordion>
+										</div>
+										<div className="progressText">
+											<strong>
+												{pct === 0 ? 'Hauptsache anfangen.' :
+												pct <= 30 ? 'Der Anfang ist gemacht.' :
+												pct <= 50 ? 'Erste Vorkehrungen sind getroffen.' :
+												pct <= 75 ? 'Es fehlt nicht mehr viel.' :
+												pct < 100 ? 'Fast perfekt vorbereitet.' :
+												'Perfekt vorbereitet.'}
+											</strong>
+										</div>
+									</>
+								);
+							})()}
+						</div>
+						<div className={styles.resultText}>
+							<PersonIcon />
+							<div>
+								<small>Dein Plan</small>
+								<span>{state.people.length} {state.people.length > 1 ? 'Personen' : 'Person'} · {state.days} Tage autark · {state.people.length*state.days} Personentage Vorrat</span>
+							</div>
 						</div>
 					</div>
 
-					<div className={styles.section}>
-						<div className={styles.sectionMain}>
-							<div className={styles.sectionIcon}>
-								<FoodIcon />
-							</div>
-							<strong>Vorräte</strong>
-							<span>
-								<span className={styles.percentNumber}>
-									{`${percentFood}%`}{" "}
-								</span>
-								<small>Vollständig</small>
-							</span>
-							<div className={styles.percent}>
-								<span
-									className={`${styles.percentInner} ${styles.blue}`}
-									style={{ width: `${percentFood}%` }}
-								></span>
-							</div>
-							{missingFoodNumber > 0 && (
-								<div className={styles.missing}>
-									<ErrorIcon />
-									<span>
-										{missingFoodNumber} Artikel{" "}
-										{missingFoodNumber === 1 ? "fehlen" : "fehlt"}
-									</span>
-								</div>
-							)}
-						</div>
-						<div className={styles.sectionBottom}>
-							<Accordion label="Einkaufsliste">
-								<div>
-									{missingFoodList.length > 0 && (
-										<ul className={styles.list}>
-											{missingFoodList.map(({ label, total }) => {
-												return (
+					{/* HELP */}
+					<Accordion
+						label="Wichtige Verhaltenstipps"
+						sublabel2={`${selectedThemes.length} ${selectedThemes.length > 1 ? 'Szenarien' : 'Szenario'}`}
+						icon={HelpIconSvg}
+						big={true}
+					>
+						<div className={styles.sectionBottomSub}>
+							{!themesLoading &&
+								!themesError &&
+								selectedThemes.flatMap((t) =>
+									t.tips.map(({ label, list }) => (
+										<div key={`${t.label}-${label}`}>
+											<strong>{label}</strong>
+											<ul className={styles.list}>
+												{list.map((item) => (
 													<li
-														key={label}
+														key={item}
 														className={`${styles.listItem} ${styles.alt}`}
 													>
-														<span>{label}</span>
-														{total && <strong>{total}</strong>}
+														<span>{item}</span>
 													</li>
-												);
-											})}
-										</ul>
-									)}
-								</div>
-							</Accordion>
+												))}
+											</ul>
+										</div>
+									)),
+								)}
 						</div>
-					</div>
+					</Accordion>
 
-					<div className={styles.section}>
-						<div className={styles.sectionMain}>
-							<div className={styles.sectionIcon}>
-								<GearsIcon />
-							</div>
-							<strong>Ausrüstung</strong>
-							<span>
-								<span className={styles.percentNumber}>
-									{`${percentGears}%`}{" "}
-								</span>
-								<small>Vollständig</small>
-							</span>
-							<div className={styles.percent}>
-								<span
-									className={`${styles.percentInner} ${styles.orange}`}
-									style={{ width: `${percentGears}%` }}
-								></span>
-							</div>
-						</div>
-						{(missingGears.length > 0 ||
-							missingExtraGears.length > 0) && (
-							<div className={styles.sectionBottom}>
-								<Accordion label="Was mir noch fehlt">
-									<div>
-										<ul className={styles.list}>
-											{missingGears.map(({ label, icon }) => (
-												<li key={label} className={styles.listItem}>
-													<span
-														dangerouslySetInnerHTML={{
-															__html: icon,
-														}}
-													></span>
-													<span>{label}</span>
-												</li>
-											))}
-											{missingExtraGears.map(({ label, icon }) => (
-												<li key={label} className={styles.listItem}>
-													<span>{icon}</span>
-													<span>{label}</span>
-												</li>
-											))}
-										</ul>
-									</div>
-								</Accordion>
-							</div>
-						)}
-					</div>
-
-					<div className={styles.section}>
-						<div className={styles.sectionMain}>
-							<div className={styles.sectionIcon}>
-								<IdeaIcon />
-							</div>
-							<strong>Tipps für deine Wohnsituation</strong>
-						</div>
-						<div className={styles.sectionBottom}>
-							<Accordion label="Tipps">
+					{/* FOOD */}
+					<Accordion
+						label="Vorräte"
+						sublabel2={`${totList}/${totFood} Produkte `}
+						icon={FoodIconSvg}
+						big={true}
+						percent={percentFood}
+					>
+						<div className={styles.sectionBottomSub}>
+							{missingFoodList.length > 0 ? (
 								<div>
+									<strong>Einkaufsliste</strong>
 									<ul className={styles.list}>
-										{!optionsLoading &&
-											!optionsError &&
-											(houseResults.length === 0 ? (
-												<div
-													className={`${styles.missing} ${styles.alt}`}
-												>
-													<ErrorIcon />
-													<span>
-														Wohnsituation noch nicht angegeben -
-														bitte Schritt 2 ausfüllen.
-													</span>
-												</div>
-											) : (
-												houseResults.map((result, index) => (
-													<li
-														key={index}
-														className={styles.listItem}
-													>
-														{result}
-													</li>
-												))
-											))}
-									</ul>
-								</div>
-							</Accordion>
-						</div>
-					</div>
-
-					<div className={styles.section}>
-						<div className={styles.sectionMain}>
-							<GuideIcon />
-							<strong>Stromausfall-Guide</strong>
-						</div>
-						<div className={styles.sectionBottom}>
-							<Accordion label="Guide">
-								<div>
-									<ul className={styles.list}>
-										{!themesLoading &&
-											!themesError &&
-											selectedTheme?.guides.map(({ label, url }) => (
+										{missingFoodList.map(({ label, total }) => {
+											return (
 												<li
 													key={label}
 													className={`${styles.listItem} ${styles.alt}`}
 												>
-													<a href={url}>
-														<ArrowForwardIcon />
-														<span>{label}</span>
-													</a>
+													<span>{label}</span>
+													{total && <strong>{total}</strong>}
 												</li>
-											))}
+											);
+										})}
 									</ul>
 								</div>
-							</Accordion>
+							) : (
+								<div><strong>Du hast alles vorbereitet!</strong></div>
+							)}
 						</div>
-					</div>
+					</Accordion>
 
-					<div className={styles.section}>
-						<div className={styles.sectionMain}>
-							<div className={styles.sectionIcon}>
-								<ContactIcon />
-							</div>
-							<strong>Wichtige Kontakte</strong>
-						</div>
-						<div className={styles.sectionBottom}>
-							<Accordion label="Kontakte">
+					{/* GEARS */}
+					<Accordion
+						label="Ausrüstung"
+						sublabel2={`${totalGearsCount - missingGears.length - missingExtraGears.length}/${totalGearsCount} Artikel`}
+						icon={GearsIconSvg}
+						big={true}
+						percent={percentGears}
+					>
+						<div className={styles.sectionBottomSub}>
+							{missingGears.length > 0 || missingExtraGears.length > 0 ? (
 								<div>
+									<strong>Was mir noch fehlt</strong>
 									<ul className={styles.list}>
-										{!themesLoading &&
-											!themesError &&
-											selectedTheme?.contacts.map((contact) => (
-												<li
-													key={contact}
-													className={`${styles.listItem} ${styles.alt}`}
-												>
-													<span>{contact}</span>
-												</li>
-											))}
+										{missingGears.map(({ label, icon }) => (
+											<li key={label} className={styles.listItem}>
+												<span
+													dangerouslySetInnerHTML={{
+														__html: icon,
+													}}
+												></span>
+												<span>{label}</span>
+											</li>
+										))}
+										{missingExtraGears.map(({ label, icon }) => (
+											<li key={label} className={styles.listItem}>
+												<span>{icon}</span>
+												<span>{label}</span>
+											</li>
+										))}
 									</ul>
 								</div>
-							</Accordion>
+							) : (
+								<div><strong>Du hast alles vorbereitet!</strong></div>
+							)}
 						</div>
-					</div>
+					</Accordion>
+
+					{/* HOUSE */}
+					<Accordion
+						label="Wohnsituations-Tipps"
+						sublabel2={`${houseResults.length} ${houseResults.length > 1 ? 'Tipps' : 'Tipp'}`}
+						icon={IdeaIconSvg}
+						big={true}
+					>
+						<div>
+							<ul className={styles.list}>
+								{!optionsLoading &&
+									!optionsError &&
+									(houseResults.length === 0 ? (
+										<div
+											className={`${styles.missing} ${styles.alt}`}
+										>
+											<ErrorIcon />
+											<span>
+												Wohnsituation noch nicht angegeben -
+												bitte Schritt 2 ausfüllen.
+											</span>
+										</div>
+									) : (
+										houseResults.map((result, index) => (
+											<li
+												key={index}
+												className={styles.listItem}
+											>
+												{result}
+											</li>
+										))
+									))}
+							</ul>
+						</div>
+					</Accordion>
+
+					{/* GUIDES */}
+					<Accordion
+						label="Guide"
+						sublabel2={`${[...new Set(selectedThemes.flatMap((t) => t.guides))].length} ${[...new Set(selectedThemes.flatMap((t) => t.guides))].length > 1 ? 'Links' : 'Link'}`}
+						icon={GuideIconSvg}
+						big={true}
+					>
+						<div>
+							<ul className={styles.list}>
+								{!themesLoading &&
+									!themesError &&
+									selectedThemes.flatMap((t) =>
+										t.guides.map(({ label, url }) => (
+											<li
+												key={`${t.label}-${label}`}
+												className={`${styles.listItem} ${styles.alt}`}
+											>
+												<a href={url} target="_blank">
+													<ArrowForwardIcon />
+													<span>{label}</span>
+												</a>
+											</li>
+										)),
+									)}
+							</ul>
+						</div>
+					</Accordion>
+
+					{/* CONTACTS */}
+					<Accordion
+						label="Wichtige Kontakte"
+						sublabel2={`${[...new Set(selectedThemes.flatMap((t) => t.contacts))].length} ${[...new Set(selectedThemes.flatMap((t) => t.contacts))].length > 1 ? 'Nummern' : 'Nummer'}`}
+						icon={contactIconSvg}
+						big={true}
+					>
+						<div>
+							<ul className={styles.list}>
+								{!themesLoading &&
+									!themesError &&
+									[
+										...new Set(
+											selectedThemes.flatMap((t) => t.contacts),
+										),
+									].map((contact) => (
+										<li
+											key={contact}
+											className={`${styles.listItem} ${styles.alt}`}
+										>
+											<span>{contact}</span>
+										</li>
+									))}
+							</ul>
+						</div>
+					</Accordion>
+
 				</div>
 			</div>
 		</div>

@@ -1,6 +1,7 @@
 import { useAppContext } from "../../../context/AppContext";
 import { useOptions } from "../../../hooks/useOptions";
 import People from "../../ui/People/People";
+import StepHeader from "../../ui/StepHeader/StepHeader";
 import styles from "./Step02.module.scss";
 
 function Step02() {
@@ -31,12 +32,9 @@ function Step02() {
 
 	return (
 		<div className="step">
-			<div className="stepHeader">
-				<div className="stepHeaderTop">
-					<h2>Wie ist deine Wohnsituation?</h2>
-					<span>Schritt {state.step}/5</span>
-				</div>
-			</div>
+			<StepHeader
+				title="Wie ist deine Wohnsituation?"
+			/>
 			{!loading && !error && (
 				<div className="stepMain">
 					<div className={styles.radios}>

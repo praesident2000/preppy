@@ -1,17 +1,11 @@
-import { useAppContext } from "../../../context/AppContext";
 import GearList from "../../ui/GearList/GearList";
+import StepHeader from "../../ui/StepHeader/StepHeader";
 
 function Step04() {
-	const { state } = useAppContext();
 
 	return (
 		<div className="step">
-			<div className="stepHeader">
-				<div className="stepHeaderTop">
-					<h2>Die folgende Ausrüstung solltest du immer bereit halten.</h2>
-					<span>Schritt {state.step}/5</span>
-				</div>
-			</div>
+			<StepHeader title="Die folgende Ausrüstung solltest du immer bereit halten." />
 			<GearList />
 		</div>
 	);

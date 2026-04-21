@@ -4,10 +4,12 @@ import { useSetUrl } from "../../../hooks/useSetUrl";
 import {
 	ArrowForwardIcon,
 	ArrowBackIcon,
-	LinkIcon,
+	RestartIcon,
 	DownloadIcon,
 	PdfIcon,
 	CopyIcon,
+	ShareIcon,
+	CalendarIcon2,
 } from "../../ui/Icon/Icon";
 import styles from "./Navigation.module.scss";
 
@@ -84,22 +86,10 @@ function Navigation({
 
 	return (
 		<div className={styles.nav}>
-			<div className={styles.navTop}>
-				{state.step !== 5 && (
-					<button
-						className={`${styles.navButton} ${styles.color}`}
-						onClick={() => {
-							dispatch({ type: "step_increment" });
-							requestAnimationFrame(scrollToApp);
-						}}
-					>
-						<span>weiter</span>
-						<ArrowForwardIcon />
-					</button>
-				)}
-				{state.step === 5 && (
-					<div className={styles.navTopWrapper}>
-						<div className={styles.navTopInner}>
+			{state.step === 5 && (
+				<>
+					<div className={styles.navPdf}>
+						<div className={styles.navPdfInner}>
 							<PdfIcon />
 							<p>
 								<strong>Dein persönlicher Ratgeber</strong>
@@ -110,62 +100,130 @@ function Navigation({
 							</p>
 						</div>
 						<button
-							className={`${styles.navButton} ${styles.color} ${styles.big}`}
+							className={`${styles.navButtonBig}`}
 							onClick={printSummary}
 						>
 							<span>Pdf herunterladen</span>
 							<DownloadIcon />
 						</button>
 					</div>
-				)}
-			</div>
-
-			{state.step !== 1 && (
-				<>
-					<div className={styles.navBottom}>
+					<div className={styles.navTop}>
 						<button
-							className={styles.navButton}
-							onClick={() => {
-								dispatch({ type: "step_decrement" });
-								requestAnimationFrame(scrollToApp);
-							}}
-						>
-							<ArrowBackIcon />
-							<span>zurück</span>
-						</button>
-						<button
-							className={styles.navButton}
+							className={styles.navTopButton}
+							title="Link speichern"
 							onClick={handleOpenPopup}
 						>
-							<LinkIcon />
-							<span>Link Speichern</span>
+							<CopyIcon />
+							<span>
+								<strong>Link Speichern</strong>
+								<small>Jederzeit zurückkehren und Plan anpassen.</small>
+							</span>
 						</button>
-					</div>
-
-					<div
-						className={`${styles.popup} ${popupOpen ? styles.active : ""}`}
-						onClick={() => setPopupOpen(false)}
-					>
-						<div
-							className={styles.popupInner}
-							onClick={(e) => e.stopPropagation()}
+						<button
+							className={styles.navTopButton}
+							title="Link speichern"
 						>
-							<textarea
-								className={styles.popupText}
-								readOnly
-								value={generatedUrl}
-							/>
-							<button
-								className={`${styles.navButton} ${styles.color}`}
-								onClick={handleCopyUrl}
-							>
-								<CopyIcon />
-								<span>Link Kopieren</span>
-							</button>
-						</div>
+							<ShareIcon />
+							<span>
+								<strong>Mit Familie oder Nachbarn teilen</strong>
+								<small>Gemeinsam plant es sich besser — und sicherer.</small>
+							</span>
+						</button>
+						<button
+							className={styles.navTopButton}
+							title="Link speichern"
+						>
+							<CalendarIcon2 />
+							<span>
+								<strong>Erinnere mich im Oktober 2026</strong>
+								<small>Vorräte und Batterien regelmäßig prüfen.</small>
+							</span>
+						</button>
 					</div>
 				</>
 			)}
+
+			<div
+				className={[
+					styles.navBottom,
+					state.step === 1 ? styles.centered : "",
+				]
+					.join(" ")
+					.trim()}
+			>
+				{state.step !== 1 && (
+					<button
+						className={styles.navButton}
+						title="Zurück"
+						onClick={() => {
+							dispatch({ type: "step_decrement" });
+							requestAnimationFrame(scrollToApp);
+						}}
+					>
+						<ArrowBackIcon />
+					</button>
+				)}
+				{state.step !== 5 && (
+					<button
+						className={[
+							styles.navButtonAlt,
+							state.themes.length === 0 && state.step === 1
+								? styles.disabled
+								: "",
+						]
+							.join(" ")
+							.trim()}
+						onClick={() => {
+							dispatch({ type: "step_increment" });
+							requestAnimationFrame(scrollToApp);
+						}}
+					>
+						<span>{state.step === 4 ? "zur Auswertung" : "weiter"}</span>
+						<ArrowForwardIcon />
+					</button>
+				)}
+				{state.step !== 1 && state.step !== 5 && (
+					<button
+						className={styles.navButton}
+						title="Link speichern"
+						onClick={handleOpenPopup}
+					>
+						<CopyIcon />
+					</button>
+				)}
+				{state.step === 5 && (
+					<button
+						className={styles.navButton}
+						title="Neustart"
+						onClick={() => {
+							dispatch({ type: "step_restart" });
+							requestAnimationFrame(scrollToApp);
+						}}
+					>
+						<RestartIcon />
+					</button>
+				)}
+			</div>
+
+			<div
+				className={`${styles.popup} ${popupOpen ? styles.active : ""}`}
+				onClick={() => setPopupOpen(false)}
+			>
+				<div
+					className={styles.popupInner}
+					onClick={(e) => e.stopPropagation()}
+				>
+					<textarea
+						className={styles.popupText}
+						readOnly
+						value={generatedUrl}
+					/>
+					<button className={styles.navButtonAlt} onClick={handleCopyUrl}>
+						<CopyIcon />
+						<span>Link Kopieren</span>
+					</button>
+				</div>
+			</div>
 		</div>
 	);
 }

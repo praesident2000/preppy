@@ -38,10 +38,44 @@ function GearList({ reduced }: { reduced?: boolean }) {
 				!loading &&
 				!error && (
 					<div className="stepMain">
+
 						<div className={styles.options}>
 							<span className={styles.optionsText}>
 								Welche Ausrüstung hast du bereits?
 							</span>
+							<div className="progress">
+								{(() => {
+									const total = gears.length + (state.baby ? 1 : 0) + (state.pet ? 1 : 0);
+									const checked = state.equipment.length;
+									const pct = total > 0 ? Math.round((checked / total) * 100) : 0;
+									const r = 28;
+									const circ = 2 * Math.PI * r;
+									const offset = circ * (1 - pct / 100);
+									return (
+										<>
+											<div className="progressRing">
+												<svg width="100" height="100" viewBox="0 0 72 72">
+													<circle cx="36" cy="36" r={r} className="progressTrack" />
+													<circle
+														cx="36" cy="36" r={r}
+														className="progressFill"
+														strokeDasharray={circ}
+														strokeDashoffset={offset}
+														transform="rotate(-90 36 36)"
+													/>
+												</svg>
+												<div className="progressPct">
+													<span>{pct}%</span>
+												</div>
+											</div>
+											<div className="progressText">
+												<strong>{checked} von {total} erledigt</strong>
+												<span>Hake ab, was du hast — den Rest bekommst du später als Einkaufsliste.</span>
+											</div>
+										</>
+									);
+								})()}
+							</div>
 							<div className={styles.optionsWrapper}>
 								{gears.map(({ label, subtitle, icon }) => (
 									<label key={label} className={styles.optionsItem}>

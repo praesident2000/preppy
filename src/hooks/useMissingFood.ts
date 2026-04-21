@@ -9,8 +9,8 @@ export function useMissingFood() {
 	const visibleFood = getVisibleCategories(food, state.people).map((cat) => {
 		if (cat.category !== "miscellaneous") return cat;
 		const extras = [
-			...(state.baby ? [{ label: "Baby futter", unit: "", perPersonPerDay: 0, decimals: 0 }] : []),
-			...(state.pet ? [{ label: "Tierfutter", unit: "", perPersonPerDay: 0, decimals: 0 }] : []),
+			...(state.baby ? [{ label: "Baby- und Kleinkindnahrung (z. B. Milchpulver + zusätzliches Wasser, Fertignahrung, Snacks)", unit: "", perPersonPerDay: 0, decimals: 0 }] : []),
+			...(state.pet ? [{ label: "Haustierfutter", unit: "", perPersonPerDay: 0, decimals: 0 }] : []),
 		];
 		return extras.length > 0 ? { ...cat, items: [...cat.items, ...extras] } : cat;
 	});

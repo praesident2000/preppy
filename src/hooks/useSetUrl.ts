@@ -2,7 +2,7 @@ import type { State } from "../reducer";
 
 const PARAM_CONFIG_SET = [
 	{ key: "step", serialize: (v: number) => v.toString() },
-	{ key: "theme", serialize: (v: string) => v },
+	{ key: "themes", serialize: (v: string[]) => v.join(",") },
 	{ key: "days", serialize: (v: number) => v.toString() },
 	{ key: "people", serialize: (v: string[]) => v.join(",") },
 	{ key: "equipment", serialize: (v: string[]) => v.join(",") },
@@ -14,7 +14,7 @@ export function useSetUrl(state: State) {
 
 		const STATE = {
 			step: state.step,
-			theme: state.theme,
+			themes: state.themes,
 			days: state.days,
 			people: state.people,
 			shoppinglist: state.shoppingList,
@@ -45,13 +45,6 @@ export function useSetUrl(state: State) {
 		const url = `${window.location.origin}${window.location.pathname}#${params.toString()}`;
 
 		return url
-
-		// try {
-		// 	await navigator.clipboard.writeText(url);
-		// 	alert("Link kopiert!");
-		// } catch {
-		// 	alert("Link konnte nicht kopiert werden.");
-		// }
 	};
 
 	return { setUrl };

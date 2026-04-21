@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import styles from "./Accordion.module.scss";
+import { InfoIcon } from "../Icon/Icon";
 
 type AccordionProps = {
 	label: string;
@@ -9,6 +10,8 @@ type AccordionProps = {
 	big?: boolean;
 	icon?: string;
 	startOpen?: boolean;
+	colorOpen?: boolean;
+	percent?: number;
 };
 
 function Accordion({
@@ -19,11 +22,28 @@ function Accordion({
 	big,
 	icon,
 	startOpen,
+	colorOpen,
+	percent,
 }: AccordionProps) {
 	const [isOpen, setIsOpen] = useState(startOpen);
+	const contentRef = useRef<HTMLDivElement>(null);
+	const [contentHeight, setContentHeight] = useState<number | undefined>(
+		startOpen ? undefined : 0,
+	);
+
+	useEffect(() => {
+		if (!contentRef.current) return;
+		if (isOpen) {
+			setContentHeight(contentRef.current.scrollHeight);
+		} else {
+			setContentHeight(0);
+		}
+	}, [isOpen]);
 
 	return (
-		<div className={`${styles.accordion} ${isOpen ? styles.open : ""} ${big ? styles.big : ""}`}>
+		<div
+			className={`${styles.accordion} ${isOpen ? styles.open : ""} ${big ? styles.big : ""} ${colorOpen ? styles.color : ""}`}
+		>
 			<button
 				onClick={() => setIsOpen(!isOpen)}
 				className={styles.accordionButton}
@@ -35,18 +55,31 @@ function Accordion({
 								__html: icon ?? "",
 							}}
 						></span>
-						<span>
+						<div className={styles.accordionButtonLabelInner}>
 							<strong>{label}</strong>
 							<small>{sublabel1}</small>
 							<small>{sublabel2}</small>
-						</span>
+							{!!percent && percent > 0 && (
+								<div className={styles.percent}>
+									<span
+										className={`${styles.percentInner} ${styles.blue}`}
+										style={{ width: `${percent}%` }}
+									></span>
+								</div>
+							)}
+						</div>
 					</div>
 				) : (
-					<span className={styles.accordionButtonLabel}>{label}</span>
+					<div className={styles.accordionButtonLabel}>
+						<InfoIcon />
+						<span>{label}</span>
+					</div>
 				)}
 			</button>
 			<div
-				className={`${styles.accordionContent} ${isOpen ? styles.open : ""}`}
+				ref={contentRef}
+				className={styles.accordionContent}
+				style={{ maxHeight: contentHeight }}
 			>
 				{children}
 			</div>

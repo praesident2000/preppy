@@ -17,7 +17,7 @@ function Summary({
 	const { missingGears, missingExtraGears } = useMissingGear();
 	
 	const { data: themes } = useThemes();
-	const selectedTheme = themes.find(({ label }) => label === state.theme);
+	const selectedThemes = themes.filter(({ label }) => state.themes.includes(label));
 
 
 	return (
@@ -30,7 +30,7 @@ function Summary({
 				<ul className={styles.summaryList}>
 					<li className={`${styles.summaryListItem} ${styles.alt}`}>
 						<span>Worauf möchtest du vorbereitet sein? </span>
-						<strong>{selectedTheme?.title}</strong>
+						<strong>{selectedThemes.map(t => t.title).join(', ')}</strong>
 					</li>
 					<li className={`${styles.summaryListItem} ${styles.alt}`}>
 						<span>Wie ist deine Wohnsituation? </span>
@@ -96,7 +96,7 @@ function Summary({
 				<div className={styles.summaryCols}>
 					<div>
 						<h2>Ausrüstung beim Szenario{" "}
-							<span>{selectedTheme?.title}</span>{" "}
+							<span>{selectedThemes.map(t => t.title).join(', ')}</span>{" "}
 						</h2>
 						<GearList reduced={true} />
 					</div>
@@ -129,7 +129,7 @@ function Summary({
 			<div className={styles.summarySection}>
 				<h2 className={styles.summaryTitle}>Wichtige Kontakte</h2>
 				<ul className={styles.summaryList}>
-					{selectedTheme?.contacts.map((contact) => (
+					{selectedThemes.flatMap(t => t.contacts).map((contact: string) => (
 						<li key={contact} className={`${styles.summaryListItem} ${styles.alt}`}>
 							<span>{contact}</span>
 						</li>

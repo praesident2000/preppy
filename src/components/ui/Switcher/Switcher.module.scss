@@ -1,15 +1,21 @@
 @use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
 
 .switcher {
 	width: 100%;
 	display: flex;
 	align-items: center;
 	background-color: rgba($gray, 0.3);
-	border-radius: 10px;
+	border-radius: 100px;
 	padding: 3px;
 	cursor: pointer;
 	position: relative;
 
+	@include respond-to(lg) {
+		max-width: 500px;
+		margin: auto;
+		margin-top: 30px;
+	}
 	input {
 		display: none;
 	}
@@ -29,8 +35,8 @@
 		bottom: 3px;
 		width: calc(50% - 3px);
 		background: $white;
-		border-radius: 10px;
-		box-shadow: 0 1px 4px rgba($black, 0.05);
+		border-radius: 100px;
+		box-shadow: $shadow;
 		transition: transform 0.2s ease;
 		transform: translateX(0);
 	}
