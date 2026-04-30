@@ -2,6 +2,7 @@ export type TypeGear = {
    label: string;
    subtitle: string;
    icon: string;
+   category: "grundausstattung" | "informiert" | "ernstfall";
 };
 
 import fetchConfig from "./fetchConfig";

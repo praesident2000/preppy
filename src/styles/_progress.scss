@@ -1,28 +1,39 @@
 @use "./variables" as *;
 @use "./mixins" as *;
 
-.progress {
+.progressChart {
+	width: 100%;
 	display: flex;
 	align-items: center;
 	gap: 16px;
+	padding: 10px;
+	border: 1px solid $gray;
+	border-radius: $radius;
+	background-color: $white;
+	box-shadow: $shadow;
 
 	&.big {
 		flex-direction: column;
 		justify-content: center;
 		gap: 10px;
+		padding: unset;
+		border: none;
+		border-radius: unset;
+		background-color: transparent;
+		box-shadow: unset;
 
-		.progressTrack {
+		.progressChartTrack {
 			stroke-width: 8;
 		}
-		.progressFill {
+		.progressChartFill {
 			stroke: $yellow;
 			stroke-width: 8;
 		}
-		.progressRing {
+		.progressChartRing {
 			width: 140px;
 			height: 140px;
 		}
-		.progressPct {
+		.progressChartPct {
 			color: $white;
 			display: flex;
 			flex-direction: column;
@@ -36,7 +47,7 @@
 		}
 	}
 }
-.progressRing {
+.progressChartRing {
 	position: relative;
 	flex-shrink: 0;
 	width: 100px;
@@ -45,19 +56,19 @@
 	align-items: center;
 	justify-content: center;
 }
-.progressTrack {
+.progressChartTrack {
 	fill: none;
 	stroke: $lightgray;
 	stroke-width: 5;
 }
-.progressFill {
+.progressChartFill {
 	fill: none;
 	stroke: $blue;
 	stroke-width: 5;
 	stroke-linecap: round;
 	transition: stroke-dashoffset 0.4s ease;
 }
-.progressPct {
+.progressChartPct {
 	position: absolute;
 
 	span {
@@ -66,7 +77,7 @@
 		font-weight: bold;
 	}
 }
-.progressText {
+.progressChartText {
 	display: flex;
 	flex-direction: column;
 	gap: 4px;

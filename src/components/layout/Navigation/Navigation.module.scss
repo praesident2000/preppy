@@ -1,4 +1,5 @@
 @use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
 
 .nav {
 	display: flex;
@@ -40,6 +41,11 @@
 		font-size: 14px;
 		line-height: 18px;
 		width: calc(100% - 60px);
+
+		@include respond-to(lg) {
+			font-size: 16px;
+			line-height: 20px;
+		}
 	}
 }
 .navPdf {
@@ -146,33 +152,40 @@
 .popupInner {
 	background-color: $white;
 	padding: 30px;
-	border-radius: 12px;
+	border-radius: $radius;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	gap: 30px;
 	width: 90%;
-	max-width: 500px;
+	max-width: 380px;
 }
 .popupText {
 	width: 100%;
-	min-height: 150px;
-	border: 1px solid rgba($black, 0.2);
-	border-radius: 6px;
+	min-height: 200px;
+	border: 1px solid $gray;
+	background-color: transparent;
+	border-radius: $radius;
 	padding: 10px;
 	font-size: 13px;
 	line-height: 18px;
 	resize: none;
 	box-sizing: border-box;
 }
-.popupButton {
-	background-color: $red;
-	color: $white;
-	border: none;
-	padding: 10px 24px;
-	border-radius: 100px;
-	font-size: 16px;
-	font-weight: bold;
-	cursor: pointer;
+.popupBottom {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	width: 100%;
+
+	.navButtonAlt {
+		width: 100%;
+
+		&:last-child {
+			@include respond-to(md) {
+				display: none;
+			}
+		}
+	}
 }

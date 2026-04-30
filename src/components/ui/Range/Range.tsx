@@ -28,12 +28,9 @@ function Range() {
 
 	return (
 		<div className={styles.range}>
-			<div className={styles.rangeLabel}>
-				<div>
-					<CalendarIcon />
-					<span>Vorratsziel</span>
-				</div>
-				<strong>{state.days} <small>Tage</small></strong>
+			<div className={styles.rangeTitle}>
+				<CalendarIcon />
+				<span>Vorratsziel</span>
 			</div>
 			<div className={styles.rangeWrapper}>
 				<span className={styles.rangeInfo}>Für wie viele Tage möchtest du Lebensmittel und Wasser vorrätig haben?</span>
@@ -47,11 +44,7 @@ function Range() {
 					onChange={handleChange}
 					style={{ "--fill": `${initialPct}%` } as React.CSSProperties}
 				/>
-				<div>
-					<span>3 Tage</span>
-					<strong>10 Tage (Empfohlen)</strong>
-					<span>14 Tage</span>
-				</div>
+				<strong className={styles.rangeLabel}>{state.days} Tage</strong>
 				<div className={styles.rangeText}>
 					{state.days < 10 && <span>Ein guter Anfang. Die Empfehlung liegt bei 10 Tagen.</span>}
 					{state.days === 10 && <span>Das entspricht der Empfehlung des BBK.</span>}

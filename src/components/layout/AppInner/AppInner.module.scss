@@ -14,15 +14,15 @@
 	gap: 40px;
 
 	@include respond-to(sm) {
-		max-width: 540px;
+		max-width: 510px;
 	}
 	@include respond-to(md) {
-		max-width: 720px;
+		max-width: 690px;
 	}
 	@include respond-to(lg) {
-		max-width: 960px;
+		max-width: 930px;
 	}
 	@include respond-to(xl) {
-		max-width: 1180px;
+		max-width: 1150px;
 	}
 }

@@ -8,8 +8,8 @@ import {
 	DownloadIcon,
 	PdfIcon,
 	CopyIcon,
-	ShareIcon,
 	CalendarIcon2,
+	ShareIcon,
 } from "../../ui/Icon/Icon";
 import styles from "./Navigation.module.scss";
 
@@ -45,6 +45,16 @@ function Navigation({
 			setPopupOpen(false);
 		} catch {
 			// fallback for browsers without clipboard API
+		}
+	};
+
+	const handleShare = async () => {
+		if (navigator.share) {
+			try {
+				await navigator.share({ url: generatedUrl });
+			} catch {
+				// user cancelled or share not supported
+			}
 		}
 	};
 
@@ -115,18 +125,8 @@ function Navigation({
 						>
 							<CopyIcon />
 							<span>
-								<strong>Link Speichern</strong>
+								<strong>Link Speichern oder Teilen</strong>
 								<small>Jederzeit zurückkehren und Plan anpassen.</small>
-							</span>
-						</button>
-						<button
-							className={styles.navTopButton}
-							title="Link speichern"
-						>
-							<ShareIcon />
-							<span>
-								<strong>Mit Familie oder Nachbarn teilen</strong>
-								<small>Gemeinsam plant es sich besser — und sicherer.</small>
 							</span>
 						</button>
 						<button
@@ -194,7 +194,7 @@ function Navigation({
 				{state.step === 5 && (
 					<button
 						className={styles.navButton}
-						title="Neustart"
+						title="Neustart: alle Inhalte werden zurück gesetzt."
 						onClick={() => {
 							dispatch({ type: "step_restart" });
 							requestAnimationFrame(scrollToApp);
@@ -218,10 +218,16 @@ function Navigation({
 						readOnly
 						value={generatedUrl}
 					/>
-					<button className={styles.navButtonAlt} onClick={handleCopyUrl}>
-						<CopyIcon />
-						<span>Link Kopieren</span>
-					</button>
+					<div className={styles.popupBottom}>
+						<button className={styles.navButtonAlt} onClick={handleCopyUrl}>
+							<CopyIcon />
+							<span>Link Kopieren</span>
+						</button>
+						<button className={styles.navButtonAlt} onClick={handleShare}>
+							<ShareIcon />
+							<span>Link teilen</span>
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>

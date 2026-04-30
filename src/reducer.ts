@@ -38,7 +38,7 @@ export const initialState: State = {
 		category: "",
 		subcategory: [],
 	},
-	days: 3,
+	days: 10,
 	people: ["omnivore"],
 	baby: false,
 	pet: false,
@@ -74,10 +74,7 @@ export function reducer(state: State, action: Action): State {
 				step: Math.min(5, state.step + 1),
 			};
 		case "step_restart":
-			return {
-				...state,
-				step: 1,
-			};
+			return initialState;
 		case "toggle_themes": {
 			const exists = state.themes.includes(action.payload);
 			return {

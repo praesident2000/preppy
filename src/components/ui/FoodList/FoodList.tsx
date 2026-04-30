@@ -192,26 +192,23 @@ function FoodList({ reduced }: { reduced?: boolean }) {
 											href="https://www.ernaehrungsvorsorge.de/private-vorsorge/notvorrat/vorratskalkulator"
 											target="_blank"
 										>
-											BKK
-										</a>
-										, der{" "}
+											BBK
+										</a>{" "}
+										(Bundesamt für Bevölkerungsschutz und Katastrophenhilfe), der{" "}
 										<a href="https://www.dge.de/" target="_blank">
 											DGE
 										</a>{" "}
-										und eigenen Überlegungen. Für eine
+										(Deutsche Gesellschaft für Ernährung) und eigenen Überlegungen. Für eine
 										alltagstaugliche Einkaufsliste haben wir diese
 										Mengen in übliche Packungsgrößen umgerechnet. Du
 										kannst wählen, ob du lieber die Grammangabe oder
 										die Packungen anzeigen lassen möchtest.
-										<br />
-										<br />
-										<br />
-										Für deinen {state.people.length}
-										-Personen-Haushalt, um {state.days} Tage zu
-										überbrücken
 									</p>
 								</div>
 							</Accordion>
+							<p className={styles.foodHeaderBottom}>
+								Für deinen <strong>{state.people.length}-Personen-Haushalt</strong>, um <strong>{state.days} Tage</strong> zu überbrücken
+							</p>
 						</div>
 
 						<Switcher
@@ -220,40 +217,66 @@ function FoodList({ reduced }: { reduced?: boolean }) {
 							label2="Packungseinheiten"
 						/>
 
-						<div className="progress">
+						<div className="progressChart">
 							{(() => {
-								const total = visibleFood.reduce((sum, cat) => sum + cat.items.length, 0);
-								const checked = visibleFood.reduce((sum, cat) => sum + (state.shoppingList[cat.category as keyof ShoppingList]?.length ?? 0), 0);
-								const pct = total > 0 ? Math.round((checked / total) * 100) : 0;
+								const total = visibleFood.reduce(
+									(sum, cat) => sum + cat.items.length,
+									0,
+								);
+								const checked = visibleFood.reduce(
+									(sum, cat) =>
+										sum +
+										(state.shoppingList[
+											cat.category as keyof ShoppingList
+										]?.length ?? 0),
+									0,
+								);
+								const pct =
+									total > 0 ? Math.round((checked / total) * 100) : 0;
 								const r = 28;
 								const circ = 2 * Math.PI * r;
 								const offset = circ * (1 - pct / 100);
 								return (
 									<>
-										<div className="progressRing">
-											<svg width="100" height="100" viewBox="0 0 72 72">
-												<circle cx="36" cy="36" r={r} className="progressTrack" />
+										<div className="progressChartRing">
+											<svg
+												width="100"
+												height="100"
+												viewBox="0 0 72 72"
+											>
 												<circle
-													cx="36" cy="36" r={r}
-													className="progressFill"
+													cx="36"
+													cy="36"
+													r={r}
+													className="progressChartTrack"
+												/>
+												<circle
+													cx="36"
+													cy="36"
+													r={r}
+													className="progressChartFill"
 													strokeDasharray={circ}
 													strokeDashoffset={offset}
 													transform="rotate(-90 36 36)"
 												/>
 											</svg>
-											<div className="progressPct">
+											<div className="progressChartPct">
 												<span>{pct}%</span>
 											</div>
 										</div>
-										<div className="progressText">
-											<strong>{checked} von {total} erledigt</strong>
-											<span>Hake ab, was du hast — den Rest bekommst du später als Einkaufsliste.</span>
+										<div className="progressChartText">
+											<strong>
+												{checked} von {total} erledigt
+											</strong>
+											<span>
+												Hake ab, was du hast — den Rest bekommst du
+												später als Einkaufsliste.
+											</span>
 										</div>
 									</>
 								);
 							})()}
 						</div>
-
 					</div>
 					{!loading && !error && (
 						<div className={styles.foodListWrapper}>

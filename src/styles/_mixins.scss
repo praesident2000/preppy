@@ -1,10 +1,11 @@
 @use "variables" as *;
+@use "sass:map";
 
 /* ===========================
    Responsive breakpoint mixin
    =========================== */
 @mixin respond-to($breakpoint, $direction: min) {
-	@media screen and (#{$direction}-width: map-get($breakpoints, $breakpoint)) {
+	@media screen and (#{$direction}-width: map.get($breakpoints, $breakpoint)) {
 		@content;
 	}
 }

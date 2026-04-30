@@ -9,15 +9,14 @@ import { getVisibleCategories } from "../../../utils/dietFilter";
 
 import Accordion from "../../ui/Accordion/Accordion";
 import {
-	HelpIconSvg,
 	GearsIconSvg,
 	GuideIconSvg,
-	contactIconSvg,
+	ContactIconSvg,
 	ErrorIcon,
 	ArrowForwardIcon,
 	IdeaIconSvg,
 	FoodIconSvg,
-	PersonIcon,
+	PeopleIcon,
 } from "../../ui/Icon/Icon";
 import styles from "./Step05.module.scss";
 import StepHeader from "../../ui/StepHeader/StepHeader";
@@ -131,7 +130,7 @@ function Step05() {
 					{/* RESULT */}
 					<div className={styles.result}>
 						<h2>Dein Vorsoge-Status</h2>
-						<div className="progress big">
+						<div className="progressChart big">
 							{(() => {
 								const pct = Math.round((percentFood + percentGears) / 2);
 								const r = 28;
@@ -139,23 +138,23 @@ function Step05() {
 								const offset = circ * (1 - pct / 100);
 								return (
 									<>
-										<div className="progressRing">
+										<div className="progressChartRing">
 											<svg width="140" height="140" viewBox="0 0 72 72">
-												<circle cx="36" cy="36" r={r} className="progressTrack" />
+												<circle cx="36" cy="36" r={r} className="progressChartTrack" />
 												<circle
 													cx="36" cy="36" r={r}
-													className="progressFill"
+													className="progressChartFill"
 													strokeDasharray={circ}
 													strokeDashoffset={offset}
 													transform="rotate(-90 36 36)"
 												/>
 											</svg>
-											<div className="progressPct">
+											<div className="progressChartPct">
 												<span>{pct}%</span>
 												<small>Vorbereitet</small>
 											</div>
 										</div>
-										<div className="progressText">
+										<div className="progressChartText">
 											<strong>
 												{pct === 0 ? 'Hauptsache anfangen.' :
 												pct <= 30 ? 'Der Anfang ist gemacht.' :
@@ -170,7 +169,7 @@ function Step05() {
 							})()}
 						</div>
 						<div className={styles.resultText}>
-							<PersonIcon />
+							<PeopleIcon />
 							<div>
 								<small>Dein Plan</small>
 								<span>{state.people.length} {state.people.length > 1 ? 'Personen' : 'Person'} · {state.days} Tage autark · {state.people.length*state.days} Personentage Vorrat</span>
@@ -179,34 +178,35 @@ function Step05() {
 					</div>
 
 					{/* HELP */}
-					<Accordion
-						label="Wichtige Verhaltenstipps"
-						sublabel2={`${selectedThemes.length} ${selectedThemes.length > 1 ? 'Szenarien' : 'Szenario'}`}
-						icon={HelpIconSvg}
-						big={true}
-					>
-						<div className={styles.sectionBottomSub}>
-							{!themesLoading &&
-								!themesError &&
-								selectedThemes.flatMap((t) =>
-									t.tips.map(({ label, list }) => (
-										<div key={`${t.label}-${label}`}>
-											<strong>{label}</strong>
-											<ul className={styles.list}>
-												{list.map((item) => (
-													<li
-														key={item}
-														className={`${styles.listItem} ${styles.alt}`}
-													>
-														<span>{item}</span>
-													</li>
-												))}
-											</ul>
-										</div>
-									)),
-								)}
-						</div>
-					</Accordion>
+					{!themesLoading &&
+						!themesError &&
+						selectedThemes.flatMap((t) => (
+							<Accordion
+								label="Wichtige Verhaltenstipps"
+								sublabel2={t.title}
+								icon={t.icon}
+								big={true}
+							>
+								<div className={styles.sectionBottomSub}>
+								{t.tips.map(({ label, list }) => (
+									<div key={`${t.label}-${label}`}>
+										<strong>{label}</strong>
+										<ul className={styles.list}>
+											{list.map((item) => (
+												<li
+													key={item}
+													className={`${styles.listItem} ${styles.alt}`}
+												>
+													<span>{item}</span>
+												</li>
+											))}
+										</ul>
+									</div>
+								))}
+								</div>
+							</Accordion>
+						))
+					}
 
 					{/* FOOD */}
 					<Accordion
@@ -219,7 +219,7 @@ function Step05() {
 						<div className={styles.sectionBottomSub}>
 							{missingFoodList.length > 0 ? (
 								<div>
-									<strong>Einkaufsliste</strong>
+									<strong>Was mir noch fehlt</strong>
 									<ul className={styles.list}>
 										{missingFoodList.map(({ label, total }) => {
 											return (
@@ -279,8 +279,8 @@ function Step05() {
 
 					{/* HOUSE */}
 					<Accordion
-						label="Wohnsituations-Tipps"
-						sublabel2={`${houseResults.length} ${houseResults.length > 1 ? 'Tipps' : 'Tipp'}`}
+						label="Tipps für deine Wohnsituation"
+						sublabel2={`${houseResults.length} ${houseResults.length > 1 ? 'Tipps zur Vorbereitung' : 'Tipp zur Vorbereitung'}`}
 						icon={IdeaIconSvg}
 						big={true}
 					>
@@ -344,7 +344,7 @@ function Step05() {
 					<Accordion
 						label="Wichtige Kontakte"
 						sublabel2={`${[...new Set(selectedThemes.flatMap((t) => t.contacts))].length} ${[...new Set(selectedThemes.flatMap((t) => t.contacts))].length > 1 ? 'Nummern' : 'Nummer'}`}
-						icon={contactIconSvg}
+						icon={ContactIconSvg}
 						big={true}
 					>
 						<div>

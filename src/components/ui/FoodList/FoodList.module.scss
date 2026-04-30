@@ -38,24 +38,22 @@
 	}
 }
 .foodHeaderBottom {
-	p {
+	background-color: $lightgray;
+	border: 1px solid $gray;
+	box-shadow: $shadow;
+	padding: 10px 20px;
+	font-size: 12px;
+	line-height: 16px;
+	border-radius: $radius;
+
+	span {
+		color: $black;
+		margin: auto;
+	}
+	@include respond-to(lg) {
+		padding: 20px;
 		font-size: 14px;
 		line-height: 18px;
-
-		a {
-			text-decoration: underline;
-			text-underline-offset: 2px;
-			text-decoration-thickness: 1px;
-			transition: 0.3s ease;
-
-			&:hover {
-				color: $blue;
-			}
-		}
-		@include respond-to(lg) {
-			font-size: 18px;
-			line-height: 20px;
-		}
 	}
 }
 .foodListWrapper {

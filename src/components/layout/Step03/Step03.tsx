@@ -19,7 +19,7 @@ function Step03() {
 								>
 									BKK
 								</a>{" "}
-								empfiehlt, Vorräte für 10 Tage zu Hause aufzubewahren.
+								(Bundesamt für Bevölkerungsschutz und Katastrophenhilfe) empfiehlt, Vorräte für 10 Tage zu Hause aufzubewahren.
 							</p>
 						</div>
 					</div>

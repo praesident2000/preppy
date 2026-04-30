@@ -25,7 +25,7 @@ const Tile = ({ label, title, subtitle, icon }: TileProps) => {
 			/>
 			<div className={styles.tileInner}>
 				<span dangerouslySetInnerHTML={{ __html: icon }}></span>
-				<strong>{title.toUpperCase()}</strong>
+				<strong>{title}</strong>
 				<span>{subtitle}</span>
 			</div>
 		</label>

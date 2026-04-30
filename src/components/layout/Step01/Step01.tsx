@@ -12,20 +12,6 @@ function Step01() {
 		<div className="step">
 			<StepHeader
 				title="Worauf möchtest du vorbereitet sein?"
-				text={
-					<div className="stepHeaderBottom">
-						<div className="text">
-							<p>
-								Wir haben Tipps für die in Deutschland
-								wahrscheinlichsten Krisen-Szenarien zusammengestellt. Im
-								ersten Schritt musst du dich für eines entscheiden. Am
-								besten wählst du das für dich wahrscheinlichste Szenario
-								aus. Du kannst jederzeit zurückkehren und das Szenario
-								verändern.
-							</p>
-						</div>
-					</div>
-				}
 			/>
 			{!loading && !error && (
 				<div className={styles.themes}>

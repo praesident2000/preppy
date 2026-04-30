@@ -7,14 +7,14 @@ export function useMissingGear() {
 	const { data: gears } = useGears();
 
 	const extraGears = [
-		...(state.baby ? [{ label: "Baby tools", subtitle: "Windeln, Fläschchen, Babynahrung", icon: <BabyIcon /> }] : []),
-		...(state.pet ? [{ label: "Pet tools", subtitle: "Futter, Napf, Leine", icon: <PetIcon /> }] : []),
+		...(state.baby ? [{ id: "Baby tools", label: "Baby- und Kleinkindausstattung", subtitle: "Windeln, Fläschchen, Pflegeprodukte, Schnuller.", icon: <BabyIcon /> }] : []),
+		...(state.pet ? [{ id: "Pet tools", label: "Tierausstattung", subtitle: "Hygienestreu, Transportbehälter.", icon: <PetIcon /> }] : []),
 	];
 
 	const totalGearsCount = gears.length + extraGears.length;
 	const percentGears = totalGearsCount > 0 ? Math.floor((state.equipment.length / totalGearsCount) * 100) : 0;
 	const missingGears = gears.filter(({ label }) => !state.equipment.includes(label));
-	const missingExtraGears = extraGears.filter(({ label }) => !state.equipment.includes(label));
+	const missingExtraGears = extraGears.filter(({ id }) => !state.equipment.includes(id));
 
 	return { missingGears, missingExtraGears, percentGears, totalGearsCount };
 }
