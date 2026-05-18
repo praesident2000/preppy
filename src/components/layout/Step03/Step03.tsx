@@ -17,7 +17,7 @@ function Step03() {
 									href="https://www.ernaehrungsvorsorge.de/private-vorsorge/notvorrat"
 									target="_blank"
 								>
-									BKK
+									BBK
 								</a>{" "}
 								(Bundesamt für Bevölkerungsschutz und Katastrophenhilfe) empfiehlt, Vorräte für 10 Tage zu Hause aufzubewahren.
 							</p>

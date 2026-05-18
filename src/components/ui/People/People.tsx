@@ -65,7 +65,7 @@ function People() {
 
 			<div className={styles.peopleCheckboxes}>
 				<div className={styles.peopleHeader}>
-					<h2>Weitere Bewohner</h2>
+					<h2>Weitere Bewohner:innen</h2>
 				</div>
 				<div className={styles.peopleCheckboxesInner}>
 					<label className={styles.peopleCheckbox}>

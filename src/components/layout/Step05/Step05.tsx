@@ -112,7 +112,7 @@ function Step05() {
 								herunterladen. Du kannst dich außerdem von uns in
 								regelmäßigen Abständen daran erinnern lassen, deine
 								Notfallvorbereitung zu überprüfen und aufzufrischen.
-								Dafür benötigen wir deine Emailadresse.
+								Dafür benötigen wir deine E-Mail-Adresse.
 								<br />
 								<br />
 								Du kannst außerdem den Link zu dieser Seite samt deinen
@@ -129,7 +129,7 @@ function Step05() {
 				
 					{/* RESULT */}
 					<div className={styles.result}>
-						<h2>Dein Vorsoge-Status</h2>
+						<h2>Dein Vorsorge-Status</h2>
 						<div className="progressChart big">
 							{(() => {
 								const pct = Math.round((percentFood + percentGears) / 2);
@@ -315,7 +315,7 @@ function Step05() {
 					{/* GUIDES */}
 					<Accordion
 						label="Guide"
-						sublabel2={`${[...new Set(selectedThemes.flatMap((t) => t.guides))].length} ${[...new Set(selectedThemes.flatMap((t) => t.guides))].length > 1 ? 'Links' : 'Link'}`}
+						sublabel2={`${[...new Map(selectedThemes.flatMap((t) => t.guides).map((g) => [g.label, g])).values()].length} ${[...new Map(selectedThemes.flatMap((t) => t.guides).map((g) => [g.label, g])).values()].length > 1 ? 'Links' : 'Link'}`}
 						icon={GuideIconSvg}
 						big={true}
 					>
@@ -323,19 +323,22 @@ function Step05() {
 							<ul className={styles.list}>
 								{!themesLoading &&
 									!themesError &&
-									selectedThemes.flatMap((t) =>
-										t.guides.map(({ label, url }) => (
-											<li
-												key={`${t.label}-${label}`}
-												className={`${styles.listItem} ${styles.alt}`}
-											>
-												<a href={url} target="_blank">
-													<ArrowForwardIcon />
-													<span>{label}</span>
-												</a>
-											</li>
-										)),
-									)}
+									[
+										...new Map(
+											selectedThemes.flatMap((t) => t.guides).map((g) => [g.label, g]),
+										).values(),
+									].map(({ label, url }) => (
+										<li
+											key={label}
+											className={`${styles.listItem} ${styles.alt}`}
+										>
+											<a href={url} target="_blank">
+												<ArrowForwardIcon />
+												<span>{label}</span>
+											</a>
+										</li>
+									))}
+									
 							</ul>
 						</div>
 					</Accordion>

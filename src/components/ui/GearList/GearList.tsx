@@ -9,7 +9,7 @@ const CATEGORIES: { key: TypeGear["category"]; label: string; description: strin
 	{
 		key: "grundausstattung",
 		label: "Die Grundausstattung",
-		description: "Das hast du vielleicht schon zu Hause.",
+		description: "Das hast du vielleicht schon.",
 		icon: EquipmentIconSvg,
 	},
 	{

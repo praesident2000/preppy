@@ -3,7 +3,7 @@
 		{
 			"label": "stromausfall",
 			"title": "Stromausfall",
-			"subtitle": "Ein längerer Blackout kann den Alltag massiv einschränken. Mit der richtigen Planung bleiben Sie handlungsfähig.",
+			"subtitle": "Ein längerer Blackout kann den Alltag massiv einschränken. Mit der richtigen Planung bleibt man handlungsfähig.",
 			"icon": "<svg xmlns='http://www.w3.org/2000/svg' width='202' height='202' viewBox='0 0 202 202' fill='none'><path d='M100.55 200.55C155.738 200.55 200.55 155.738 200.55 100.55C200.55 45.362 155.738 0.550003 100.55 0.550003C45.3621 0.550003 0.550049 45.362 0.550049 100.55C0.550049 155.738 45.3621 200.55 100.55 200.55Z' fill='white'/><path d='M100.55 200.55C155.738 200.55 200.55 155.738 200.55 100.55C200.55 45.362 155.738 0.550003 100.55 0.550003C45.3621 0.550003 0.550049 45.362 0.550049 100.55C0.550049 155.738 45.3621 200.55 100.55 200.55Z' stroke='#9D9D9C' stroke-width='1.1'/><path d='M83.4071 62.956V90.174C83.4071 98.8958 76.3394 105.963 67.6176 105.963H53.1816C44.4598 105.963 37.3921 98.8958 37.3921 90.174V62.956' fill='#009FE3'/><path d='M49.7229 42.3548V76.1894M71.2267 42.0539V75.8885M61.302 83.8585V124.761C61.302 143.858 76.7907 159.197 95.7381 159.197C114.685 159.197 130.174 143.708 130.174 124.761' stroke='#009FE3' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/><path d='M131.227 133.031C149.121 133.031 163.557 118.595 163.557 100.701C163.557 82.8058 149.121 68.3697 131.227 68.3697C113.332 68.3697 98.8958 82.8058 98.8958 100.701C98.8958 118.595 113.332 133.031 131.227 133.031Z' fill='#FBBA00'/><path d='M138.595 100.55L149.422 89.723L142.204 82.5049L131.227 93.3319L120.399 82.5049L113.181 89.723L124.008 100.55L113.181 111.528L120.399 118.745L131.227 107.918L142.204 118.745L149.422 111.528L138.595 100.55Z' fill='white'/></svg>",
 			"tips": [
 				{
@@ -40,14 +40,23 @@
 			],
 			"contacts": [
 				"Im Notfall: Feuerwehr & Rettungsdienst 112",
+				"Ärztlicher Bereitschaftsdienst: 116 117 (24/7)",
 				"Polizei 110",
-				"Störungsmeldung Stromnetz Berlin: 0800 36 37 638 (kostenlos, 24/7)",
-				"Bundesnetzagentur Verbraucherservice: 030 22480-500"
+				"Technisches Hilfswerk (THW): 0800 240 24 00 (kostenlos)",
+				"Servicenummer deines Netzbetreibers"
 			],
 			"guides": [
 				{
-					"label": "Guide lorem ipsum",
-					"url": "https://...."
+					"label": "Katastrophenhilfe in Deutschland",
+					"url": "https://www.diakonie-katastrophenhilfe.de/themen/katastrophenhilfe-deutschland"
+				},
+				{
+					"label": "Notfallvorsorge",
+					"url": "https://www.diakonie-katastrophenhilfe.de/fileadmin/Mediapool/20_unsere-themen/Katastrophenhilfe_Deutschland/Notfallvorsorge.pdf"
+				},
+				{
+					"label": "Stromausfall in Deutschland",
+					"url": "https://www.diakonie-katastrophenhilfe.de/was-zu-tun-ist-bei-stromausfall"
 				}
 			]
 		},
@@ -91,18 +100,22 @@
 			],
 			"contacts": [
 				"Im Notfall: Feuerwehr & Rettungsdienst 112",
-				"Polizei 110",
 				"Ärztlicher Bereitschaftsdienst: 116 117 (24/7)",
-				"Giftnotruf Berlin: 030 19240"
+				"Polizei 110",
+				"Unwetterwarnungen: DWD-App oder www.dwd.de"
 			],
 			"guides": [
 				{
-					"label": "Guide lorem ipsum",
-					"url": "https://...."
+					"label": "Katastrophenhilfe in Deutschland",
+					"url": "https://www.diakonie-katastrophenhilfe.de/themen/katastrophenhilfe-deutschland"
 				},
 				{
-					"label": "Guide lorem ipsum",
-					"url": "https://...."
+					"label": "Notfallvorsorge",
+					"url": "https://www.diakonie-katastrophenhilfe.de/fileadmin/Mediapool/20_unsere-themen/Katastrophenhilfe_Deutschland/Notfallvorsorge.pdf"
+				},
+				{
+					"label": "Hitze und Trockenheit",
+					"url": "https://www.diakonie-katastrophenhilfe.de/fileadmin/Mediapool/20_unsere-themen/Katastrophenhilfe_Deutschland/Hitze_und_Trockenheit.pdf"
 				}
 			]
 		},
@@ -149,22 +162,31 @@
 			],
 			"contacts": [
 				"Im Notfall: Feuerwehr & Rettungsdienst 112",
+				"Ärztlicher Bereitschaftsdienst: 116 117 (24/7)",
 				"Polizei 110",
 				"Technisches Hilfswerk (THW): 0800 240 24 00 (kostenlos)",
-				"Hochwassermeldedienst Berlin: 0800 500 6414 (kostenlos)"
+				"Unwetterwarnungen: DWD-App oder www.dwd.de"
 			],
 			"guides": [
 				{
-					"label": "Guide lorem ipsum",
-					"url": "https://...."
+					"label": "Katastrophenhilfe in Deutschland",
+					"url": "https://www.diakonie-katastrophenhilfe.de/themen/katastrophenhilfe-deutschland"
 				},
 				{
-					"label": "Guide lorem ipsum",
-					"url": "https://...."
+					"label": "Notfallvorsorge",
+					"url": "https://www.diakonie-katastrophenhilfe.de/fileadmin/Mediapool/20_unsere-themen/Katastrophenhilfe_Deutschland/Notfallvorsorge.pdf"
 				},
 				{
-					"label": "Guide lorem ipsum",
-					"url": "https://...."
+					"label": "Hochwasser in Deutschland",
+					"url": "https://www.diakonie-katastrophenhilfe.de/was-zu-tun-ist-bei-hochwasser"
+				},
+				{
+					"label": "Starkregen, Sturm und Sturzfluten",
+					"url": "https://www.diakonie-katastrophenhilfe.de/themen/katastrophenhilfe-deutschland/was-zu-tun-ist-bei-starkregen-sturm-und-sturzfluten"
+				},
+				{
+					"label": "Starkregen und Hochwasser",
+					"url": "https://www.diakonie-katastrophenhilfe.de/fileadmin/Mediapool/20_unsere-themen/Katastrophenhilfe_Deutschland/Starkregen_und_Hochwasser.pdf"
 				}
 			]
 		},
@@ -210,18 +232,23 @@
 			],
 			"contacts": [
 				"Im Notfall: Feuerwehr & Rettungsdienst 112",
+				"Ärztlicher Bereitschaftsdienst: 116 117 (24/7)",
 				"Polizei 110",
 				"Technisches Hilfswerk (THW): 0800 240 24 00 (kostenlos)",
 				"Unwetterwarnungen: DWD-App oder www.dwd.de"
 			],
 			"guides": [
 				{
-					"label": "Guide lorem ipsum",
-					"url": "https://...."
+					"label": "Katastrophenhilfe in Deutschland",
+					"url": "https://www.diakonie-katastrophenhilfe.de/themen/katastrophenhilfe-deutschland"
 				},
 				{
-					"label": "Guide lorem ipsum",
-					"url": "https://...."
+					"label": "Notfallvorsorge",
+					"url": "https://www.diakonie-katastrophenhilfe.de/fileadmin/Mediapool/20_unsere-themen/Katastrophenhilfe_Deutschland/Notfallvorsorge.pdf"
+				},
+				{
+					"label": "Sturm und Tornado",
+					"url": "https://www.diakonie-katastrophenhilfe.de/fileadmin/Mediapool/20_unsere-themen/Katastrophenhilfe_Deutschland/Sturm_und_Tornado.pdf"
 				}
 			]
 		}
@@ -520,7 +547,7 @@
 			"unit": "l",
 			"items": [
 				{
-					"label": "Wasser",
+					"label": "Trinkwasser",
 					"unit": "l",
 					"perPersonPerDay": 2.0,
 					"decimals": 1,
@@ -804,7 +831,7 @@
 		{
 			"category": "fats",
 			"icon": "<svg xmlns='http://www.w3.org/2000/svg' width='135' height='135' viewBox='0 0 135 135' fill='none'><path d='M67.045 133.515C103.755 133.515 133.525 103.755 133.525 67.0349C133.525 30.3149 103.755 0.564941 67.045 0.564941C30.335 0.564941 0.565002 30.3349 0.565002 67.0449C0.565002 103.755 30.325 133.525 67.035 133.525L67.045 133.515Z' fill='white'/><path d='M67.045 133.515C103.755 133.515 133.525 103.755 133.525 67.0349C133.525 30.3149 103.755 0.564941 67.045 0.564941C30.335 0.564941 0.565002 30.3349 0.565002 67.0449C0.565002 103.755 30.325 133.525 67.035 133.525L67.045 133.515Z' stroke='#939598' stroke-width='1.13'/><path d='M92.175 66.125C92.175 67.615 90.965 68.825 89.475 68.825C87.985 68.825 86.775 67.615 86.775 66.125C86.775 64.635 89.475 60.395 89.475 60.395C89.475 60.395 92.175 64.635 92.175 66.125Z' fill='#FDB913'/><path d='M92.175 83.8047C92.175 85.2947 90.965 86.5047 89.475 86.5047C87.985 86.5047 86.775 85.2947 86.775 83.8047C86.775 82.3147 89.475 78.0747 89.475 78.0747C89.475 78.0747 92.175 82.3147 92.175 83.8047Z' fill='#FDB913'/><path d='M100.335 75.645C100.335 77.135 99.125 78.345 97.635 78.345C96.145 78.345 94.935 77.135 94.935 75.645C94.935 74.155 97.635 69.915 97.635 69.915C97.635 69.915 100.335 74.155 100.335 75.645Z' fill='#FDB913'/><path d='M80.005 53.9951V105.835H54.085V53.9951H80.005Z' fill='#FDB913'/><path d='M71.335 28.1651V23.2451H62.755V28.1651H71.335Z' fill='#FDB913'/><path d='M53.985 109.115H80.105' stroke='#808285' stroke-width='3.74' stroke-miterlimit='10' stroke-linecap='round'/><path d='M70.365 39.8348H63.725V29.6948H70.365V39.8348Z' fill='#A7A9AC'/><path d='M54.085 51.965C54.085 44.735 59.885 41.395 67.045 41.395C74.205 41.395 80.005 44.735 80.005 51.965H54.085Z' fill='#808285'/><path d='M70.065 77.605C70.065 79.275 68.715 80.605 67.025 80.595C65.355 80.595 64.015 79.245 64.025 77.565C64.025 75.865 65.375 74.535 67.085 74.545C68.755 74.555 70.075 75.905 70.065 77.595V77.605Z' fill='white'/><path d='M71.465 69.645C72.115 71.805 71.125 73.685 69.685 74.105C69.035 74.295 68.885 74.225 68.735 73.585C68.485 72.525 68.835 71.615 69.605 70.925C70.145 70.435 70.815 70.085 71.465 69.655V69.645Z' fill='white'/><path d='M59.225 82.0447C59.755 80.6547 60.515 79.5247 62.075 79.2347C62.625 79.1347 63.305 79.1047 63.585 79.5747C63.855 80.0347 63.465 80.5947 63.135 81.0247C62.335 82.0647 60.635 82.5147 59.215 82.0447H59.225Z' fill='white'/><path d='M59.125 73.1449C60.845 72.5749 62.765 73.2149 63.395 74.5349C63.955 75.6949 63.705 75.8349 62.595 75.9449C61.695 76.0349 60.905 75.6449 60.335 74.9649C59.885 74.4249 59.545 73.7949 59.125 73.1449Z' fill='white'/><path d='M67.045 68.625C68.315 69.705 68.695 71.785 67.795 72.995C67.135 73.885 66.965 73.865 66.295 72.995C65.805 72.365 65.745 71.615 65.845 70.855C65.955 70.075 66.465 69.125 67.045 68.625Z' fill='white'/><path d='M62.595 69.7649C63.995 70.2949 65.155 71.0649 65.375 72.6649C65.445 73.1349 65.375 73.8449 65.065 74.0949C64.675 74.4249 64.085 74.0249 63.665 73.7249C62.565 72.9449 62.065 71.0849 62.585 69.7549L62.595 69.7649Z' fill='white'/><path d='M58.015 77.5748C59.155 76.5948 60.345 76.0548 61.805 76.4948C62.375 76.6648 63.055 77.0048 63.055 77.5648C63.055 78.1648 62.355 78.4948 61.775 78.6648C60.545 79.0448 59.455 78.6648 58.445 77.9348C58.315 77.8348 58.195 77.7248 58.005 77.5648L58.015 77.5748Z' fill='white'/><path d='M76.065 77.5849C75.095 78.4249 74.075 78.9349 72.825 78.7949C72.155 78.7149 71.595 78.4149 71.145 77.9049C70.945 77.6749 70.935 77.4949 71.145 77.2649C71.865 76.4449 72.785 76.2249 73.815 76.3949C74.665 76.5349 75.395 76.9549 76.065 77.5949V77.5849Z' fill='white'/><path d='M62.575 85.395C62.115 83.945 62.575 82.245 63.625 81.455C64.055 81.135 64.655 80.725 65.065 81.055C65.375 81.305 65.445 82.045 65.375 82.525C65.135 84.105 63.985 84.865 62.585 85.385L62.575 85.395Z' fill='white'/><path d='M71.655 85.4448C70.115 84.8648 68.995 84.0948 68.695 82.5148C68.655 82.3048 68.655 82.0848 68.685 81.8748C68.805 80.9248 69.125 80.7548 70.005 81.1748C71.025 81.6748 71.515 82.5548 71.645 83.6348C71.715 84.2048 71.655 84.7848 71.655 85.4448Z' fill='white'/><path d='M67.045 86.6049C66.095 85.4949 65.525 84.3149 65.955 82.9049C66.095 82.4549 66.465 82.0749 66.755 81.6749C66.925 81.4449 67.135 81.4849 67.355 81.6749C68.185 82.3849 68.405 83.3049 68.245 84.3349C68.115 85.1949 67.675 85.9149 67.045 86.6149V86.6049Z' fill='white'/><path d='M74.915 72.9749C74.335 74.5149 73.565 75.6349 71.995 75.9249C71.755 75.9649 71.495 75.9649 71.255 75.9249C70.395 75.7849 70.255 75.5549 70.595 74.7549C71.055 73.6849 71.935 73.1549 73.035 72.9949C73.615 72.9149 74.225 72.9849 74.915 72.9849V72.9749Z' fill='white'/><path d='M74.955 82.0151C73.285 82.5651 71.425 81.9751 70.755 80.7151C70.575 80.3651 70.375 79.8151 70.525 79.5651C70.685 79.3051 71.255 79.2151 71.645 79.2151C72.545 79.1951 73.305 79.6051 73.865 80.3051C74.275 80.8151 74.575 81.4151 74.965 82.0251L74.955 82.0151Z' fill='white'/></svg>",
-			"label": "Fette, Öl",
+			"label": "Fette, Öle",
 			"totPerPersonPerDay": 30,
 			"unit": "g",
 			"items": [
@@ -912,10 +939,16 @@
 			"icon": "<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24'><path fill='currentColor' d='M8 17q.425 0 .713-.288T9 16t-.288-.712T8 15t-.712.288T7 16t.288.713T8 17m0-4q.425 0 .713-.288T9 12t-.288-.712T8 11t-.712.288T7 12t.288.713T8 13m0-4q.425 0 .713-.288T9 8t-.288-.712T8 7t-.712.288T7 8t.288.713T8 9m4 8h4q.425 0 .713-.288T17 16t-.288-.712T16 15h-4q-.425 0-.712.288T11 16t.288.713T12 17m0-4h4q.425 0 .713-.288T17 12t-.288-.712T16 11h-4q-.425 0-.712.288T11 12t.288.713T12 13m0-4h4q.425 0 .713-.288T17 8t-.288-.712T16 7h-4q-.425 0-.712.288T11 8t.288.713T12 9M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21zm0-2h14V5H5zM5 5v14z'/></svg>"
 		},
 		{
+			"label": "Wasservorrat",
+			"category": "ernstfall",
+			"subtitle": "Zum Kochen und für die Körperhygiene. Tipp: falls sich ein Stromausfall ankündigt oder falls es zu Beginn eines Stromausfalls noch möglich ist: Leitungswasser auffangen, z. B. in Spülbecken, Duschwanne oder Badewanne.",
+			"icon": "<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24'><path fill='currentColor' d='M12.275 19q.3-.025.513-.238T13 18.25q0-.35-.225-.562T12.2 17.5q-1.025.075-2.175-.562t-1.45-2.313q-.05-.275-.262-.45T7.825 14q-.35 0-.575.263t-.15.612q.425 2.275 2 3.25t3.175.875M12 22q-3.425 0-5.712-2.35T4 13.8q0-2.5 1.988-5.437T12 2q4.025 3.425 6.013 6.363T20 13.8q0 3.5-2.287 5.85T12 22m0-2q2.6 0 4.3-1.763T18 13.8q0-1.825-1.513-4.125T12 4.65Q9.025 7.375 7.513 9.675T6 13.8q0 2.675 1.7 4.438T12 20m0-8'/></svg>"
+		},
+		{
 			"label": "Bargeldreserven",
 			"category": "ernstfall",
-			"subtitle": "Falls Kartenzahlung nicht funktioniert.",
-			"icon": "<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24'><!-- Icon from Material Design Icons by Pictogrammers - https://github.com/Templarian/MaterialDesign/blob/master/LICENSE --><path fill='currentColor' d='M5 6h18v12H5zm9 3a3 3 0 0 1 3 3a3 3 0 0 1-3 3a3 3 0 0 1-3-3a3 3 0 0 1 3-3M9 8a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2v-4a2 2 0 0 1-2-2zm-8 2h2v10h16v2H1z'/></svg>"
+			"subtitle": "Falls Kartenzahlung nicht funktioniert. Eine gute Größenordnung ist die Summe, die man als Haushalt für zwei komplette Wocheneinkäufe benötigt.",
+			"icon": "<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24'><path fill='currentColor' d='M5 6h18v12H5zm9 3a3 3 0 0 1 3 3a3 3 0 0 1-3 3a3 3 0 0 1-3-3a3 3 0 0 1 3-3M9 8a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2v-4a2 2 0 0 1-2-2zm-8 2h2v10h16v2H1z'/></svg>"
 		},
 		{
 			"label": "Wichtige Dokumente (wasserdicht)",

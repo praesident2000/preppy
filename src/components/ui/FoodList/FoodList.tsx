@@ -167,7 +167,7 @@ function FoodList({ reduced }: { reduced?: boolean }) {
 							<h2>
 								Deine benötigten Vorräte. Welche davon hast du bereits?
 							</h2>
-							<Accordion label="Warum diese Mengen?">
+							<Accordion label="Warum diese Lebensmittel und Mengen?">
 								<div className="text">
 									<p>
 										Die genannten Lebensmittel sind Vorschläge, um die
@@ -207,7 +207,7 @@ function FoodList({ reduced }: { reduced?: boolean }) {
 								</div>
 							</Accordion>
 							<p className={styles.foodHeaderBottom}>
-								Für deinen <strong>{state.people.length}-Personen-Haushalt</strong>, um <strong>{state.days} Tage</strong> zu überbrücken
+								Für deinen <strong>{state.people.length}-Personen-Haushalt</strong>, um <strong>{state.days} Tage</strong> zu überbrücken.
 							</p>
 						</div>
 
