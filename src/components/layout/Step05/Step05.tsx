@@ -98,6 +98,13 @@ function Step05() {
 
 	const { missingGears, missingExtraGears, percentGears, totalGearsCount } = useMissingGear();
 
+	const uniqueGuides = [
+		...new Map(
+			selectedThemes.flatMap((t) => t.guides).map((g) => [g.label, g]),
+		).values(),
+	];
+	const uniqueContacts = [...new Set(selectedThemes.flatMap((t) => t.contacts))];
+
 	return (
 		<div className="step">
 			<StepHeader
@@ -315,30 +322,20 @@ function Step05() {
 					{/* GUIDES */}
 					<Accordion
 						label="Guide"
-						sublabel2={`${[...new Map(selectedThemes.flatMap((t) => t.guides).map((g) => [g.label, g])).values()].length} ${[...new Map(selectedThemes.flatMap((t) => t.guides).map((g) => [g.label, g])).values()].length > 1 ? 'Links' : 'Link'}`}
+						sublabel2={`${uniqueGuides.length} ${uniqueGuides.length > 1 ? 'Links' : 'Link'}`}
 						icon={GuideIconSvg}
 						big={true}
 					>
 						<div>
 							<ul className={styles.list}>
-								{!themesLoading &&
-									!themesError &&
-									[
-										...new Map(
-											selectedThemes.flatMap((t) => t.guides).map((g) => [g.label, g]),
-										).values(),
-									].map(({ label, url }) => (
-										<li
-											key={label}
-											className={`${styles.listItem} ${styles.alt}`}
-										>
-											<a href={url} target="_blank">
-												<ArrowForwardIcon />
-												<span>{label}</span>
-											</a>
-										</li>
-									))}
-									
+								{uniqueGuides.map(({ label, url }) => (
+									<li key={label} className={`${styles.listItem} ${styles.alt}`}>
+										<a href={url} target="_blank">
+											<ArrowForwardIcon />
+											<span>{label}</span>
+										</a>
+									</li>
+								))}
 							</ul>
 						</div>
 					</Accordion>
@@ -346,26 +343,17 @@ function Step05() {
 					{/* CONTACTS */}
 					<Accordion
 						label="Wichtige Kontakte"
-						sublabel2={`${[...new Set(selectedThemes.flatMap((t) => t.contacts))].length} ${[...new Set(selectedThemes.flatMap((t) => t.contacts))].length > 1 ? 'Nummern' : 'Nummer'}`}
+						sublabel2={`${uniqueContacts.length} ${uniqueContacts.length > 1 ? 'Nummern' : 'Nummer'}`}
 						icon={ContactIconSvg}
 						big={true}
 					>
 						<div>
 							<ul className={styles.list}>
-								{!themesLoading &&
-									!themesError &&
-									[
-										...new Set(
-											selectedThemes.flatMap((t) => t.contacts),
-										),
-									].map((contact) => (
-										<li
-											key={contact}
-											className={`${styles.listItem} ${styles.alt}`}
-										>
-											<span>{contact}</span>
-										</li>
-									))}
+								{uniqueContacts.map((contact) => (
+									<li key={contact} className={`${styles.listItem} ${styles.alt}`}>
+										<span>{contact}</span>
+									</li>
+								))}
 							</ul>
 						</div>
 					</Accordion>

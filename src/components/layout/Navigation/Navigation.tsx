@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useAppContext } from "../../../context/AppContext";
 import { useSetUrl } from "../../../hooks/useSetUrl";
+import { usePdfData } from "../../../hooks/usePdfData";
+import { generatePrepPDF } from "../../../utils/generatePDF";
 import {
 	ArrowForwardIcon,
 	ArrowBackIcon,
@@ -14,13 +16,12 @@ import {
 import styles from "./Navigation.module.scss";
 
 function Navigation({
-	summaryRef,
 	appRef,
 }: {
-	summaryRef: React.RefObject<HTMLDivElement>;
 	appRef: React.RefObject<HTMLDivElement>;
 }) {
 	const { state, dispatch } = useAppContext();
+	const { getPdfData } = usePdfData();
 
 	const scrollToApp = () => {
 		window.scrollTo({
@@ -58,42 +59,6 @@ function Navigation({
 		}
 	};
 
-	const printSummary = () => {
-		const element = summaryRef.current;
-		if (!element) return;
-
-		const printWindow = window.open("", "_blank", "width=900,height=700");
-		if (!printWindow) return;
-
-		const styles = Array.from(
-			document.querySelectorAll("link[rel='stylesheet'], style"),
-		)
-			.map((node) => node.outerHTML)
-			.join("");
-
-		printWindow.document.write(`
-			<html>
-				<head>
-					<title>Preppy Summary</title>
-					${styles}
-					<style>
-						@page { margin: 15mm; }
-						body { margin: 0; padding: 0; }
-					</style>
-				</head>
-				<body>${element.outerHTML}</body>
-			</html>
-		`);
-
-		printWindow.document.close();
-
-		printWindow.onload = () => {
-			printWindow.focus();
-			printWindow.print();
-			printWindow.close();
-		};
-	};
-
 	return (
 		<div className={styles.nav}>
 			{state.step === 5 && (
@@ -111,7 +76,7 @@ function Navigation({
 						</div>
 						<button
 							className={`${styles.navButtonBig}`}
-							onClick={printSummary}
+							onClick={() => generatePrepPDF(getPdfData())}
 						>
 							<span>Pdf herunterladen</span>
 							<DownloadIcon />

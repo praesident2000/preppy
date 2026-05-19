@@ -39,9 +39,9 @@
 				}
 			],
 			"contacts": [
-				"Im Notfall: Feuerwehr & Rettungsdienst 112",
+				"Feuerwehr & Rettungsdienst: 112",
+				"Polizei: 110",
 				"Ärztlicher Bereitschaftsdienst: 116 117 (24/7)",
-				"Polizei 110",
 				"Technisches Hilfswerk (THW): 0800 240 24 00 (kostenlos)",
 				"Servicenummer deines Netzbetreibers"
 			],
@@ -99,9 +99,9 @@
 				}
 			],
 			"contacts": [
-				"Im Notfall: Feuerwehr & Rettungsdienst 112",
+				"Feuerwehr & Rettungsdienst: 112",
+				"Polizei: 110",
 				"Ärztlicher Bereitschaftsdienst: 116 117 (24/7)",
-				"Polizei 110",
 				"Unwetterwarnungen: DWD-App oder www.dwd.de"
 			],
 			"guides": [
@@ -161,9 +161,9 @@
 				}
 			],
 			"contacts": [
-				"Im Notfall: Feuerwehr & Rettungsdienst 112",
+				"Feuerwehr & Rettungsdienst: 112",
+				"Polizei: 110",
 				"Ärztlicher Bereitschaftsdienst: 116 117 (24/7)",
-				"Polizei 110",
 				"Technisches Hilfswerk (THW): 0800 240 24 00 (kostenlos)",
 				"Unwetterwarnungen: DWD-App oder www.dwd.de"
 			],
@@ -231,9 +231,9 @@
 				}
 			],
 			"contacts": [
-				"Im Notfall: Feuerwehr & Rettungsdienst 112",
+				"Feuerwehr & Rettungsdienst: 112",
+				"Polizei: 110",
 				"Ärztlicher Bereitschaftsdienst: 116 117 (24/7)",
-				"Polizei 110",
 				"Technisches Hilfswerk (THW): 0800 240 24 00 (kostenlos)",
 				"Unwetterwarnungen: DWD-App oder www.dwd.de"
 			],
@@ -285,22 +285,22 @@
 					"results": {
 						"stromausfall": [
 							"Überprüfe deinen Versicherungsschutz und halte die Unterlagen aktuell und in Reichweite, falls du im Schadensfall schnell Klarheit benötigst.",
-							"Mach dir eine einfache Checkliste, wie du im Falle eines Stromausfalls vorgehen willst. → Zum Beispiel: Wo befinden sich Taschenlampen, Kerzen und Batterien? Wie lange reichen deine Lebensmittelvorräte ohne Kühlung? Wie funktioniert deine Heizung ohne Strom?",
+							"Mach dir eine einfache Checkliste, wie du im Falle eines Stromausfalls vorgehen willst. > Zum Beispiel: Wo befinden sich Taschenlampen, Kerzen und Batterien? Wie lange reichen deine Lebensmittelvorräte ohne Kühlung? Wie funktioniert deine Heizung ohne Strom?",
 							"Halte diese Checkliste an einem Ort bereit, den du nicht vergessen oder übersehen kannst."
 						],
 						"hitze": [
 							"Überprüfe deinen Versicherungsschutz und halte die Unterlagen aktuell und in Reichweite.",
-							"Mach dir eine einfache Checkliste, wie du dein Zuhause bei extremer Hitze schützen und kühlen kannst. → Zum Beispiel: Sind Rollläden, Jalousien oder Vorhänge vorhanden? Gibt es kühle Räume im Haus (z. B. Keller)? Wie lässt sich das Haus in den Abend- und Nachtstunden gut durchlüften?",
+							"Mach dir eine einfache Checkliste, wie du dein Zuhause bei extremer Hitze schützen und kühlen kannst. > Zum Beispiel: Sind Rollläden, Jalousien oder Vorhänge vorhanden? Gibt es kühle Räume im Haus (z. B. Keller)? Wie lässt sich das Haus in den Abend- und Nachtstunden gut durchlüften?",
 							"Halte diese Checkliste an einem Ort bereit, den du nicht vergessen oder übersehen kannst."
 						],
 						"starkregen_hochwasser": [
 							"Überprüfe deinen Versicherungsschutz und halte die Unterlagen aktuell und in Reichweite, falls du im Schadensfall schnell Klarheit benötigst.",
-							"Mach dir eine einfache Checkliste, wie du im Falle eines Hochwassers oder bei anderen Naturgefahren vorgehen willst. → Zum Beispiel bei Hochwasser: Sind die Fenster im Keller und Erdgeschoss geschlossen? Sind elektrische Geräte und gefährliche Stoffe in höheren Etagen in Sicherheit? Wo lagern Sandsäcke oder andere mobile Absperrungen?",
+							"Mach dir eine einfache Checkliste, wie du im Falle eines Hochwassers oder bei anderen Naturgefahren vorgehen willst. > Zum Beispiel bei Hochwasser: Sind die Fenster im Keller und Erdgeschoss geschlossen? Sind elektrische Geräte und gefährliche Stoffe in höheren Etagen in Sicherheit? Wo lagern Sandsäcke oder andere mobile Absperrungen?",
 							"Halte diese Checkliste an einem Ort bereit, den du nicht vergessen oder übersehen kannst."
 						],
 						"sturm_tornado": [
 							"Überprüfe deinen Versicherungsschutz und halte die Unterlagen aktuell und in Reichweite, falls du im Schadensfall schnell Klarheit benötigst.",
-							"Mach dir eine einfache Checkliste, wie du im Falle eines Sturms oder Tornados vorgehen willst. → Zum Beispiel: Können Gartenmöbel, Trampoline und andere Gegenstände schnell gesichert oder verstaut werden? Welcher Raum im Haus ist am sichersten (z. B. Keller, innenliegender Raum ohne Fenster)? Wann wurde das Dach zuletzt auf Schäden geprüft?",
+							"Mach dir eine einfache Checkliste, wie du im Falle eines Sturms oder Tornados vorgehen willst. > Zum Beispiel: Können Gartenmöbel, Trampoline und andere Gegenstände schnell gesichert oder verstaut werden? Welcher Raum im Haus ist am sichersten (z. B. Keller, innenliegender Raum ohne Fenster)? Wann wurde das Dach zuletzt auf Schäden geprüft?",
 							"Halte diese Checkliste an einem Ort bereit, den du nicht vergessen oder übersehen kannst."
 						]
 					}
@@ -360,22 +360,22 @@
 						"stromausfall": [
 							"Kontaktiere den Eigentümer oder Vermieter und frage, was du im Falle eines Stromausfalls beachten solltest (z. B. Aufzug, Tiefgarage, Heizung).",
 							"Bewahre diese Hinweise an einem Ort auf, den du nicht vergessen oder übersehen kannst, oder mache dir zusätzlich noch eigene Notizen.",
-							"Stimme dich mit weiteren Hausbewohnern ab, wie ihr bei einem Stromausfall vorgehen wollt. → Zum Beispiel: Wer kümmert sich um ältere oder hilfsbedürftige Nachbarn? Wie kommt man ohne Aufzug sicher aus dem Gebäude? Wo sind Notbeleuchtung und Sicherungskästen?"
+							"Stimme dich mit weiteren Hausbewohnern ab, wie ihr bei einem Stromausfall vorgehen wollt. > Zum Beispiel: Wer kümmert sich um ältere oder hilfsbedürftige Nachbarn? Wie kommt man ohne Aufzug sicher aus dem Gebäude? Wo sind Notbeleuchtung und Sicherungskästen?"
 						],
 						"hitze": [
 							"Kontaktiere den Eigentümer oder Vermieter und frage, welche Möglichkeiten zur Kühlung oder Beschattung der Wohnung vorhanden sind.",
 							"Bewahre diese Hinweise an einem Ort auf, den du nicht vergessen oder übersehen kannst, oder mache dir zusätzlich noch eigene Notizen.",
-							"Stimme dich mit weiteren Hausbewohnern ab - besonders ältere oder kranke Nachbarn könnten bei Hitze Unterstützung benötigen. → Zum Beispiel: Gibt es im Gebäude kühle Gemeinschaftsräume? Wie lässt sich das Treppenhaus gut durchlüften? Wer schaut regelmäßig nach älteren oder hilfsbedürftigen Nachbarn?"
+							"Stimme dich mit weiteren Hausbewohnern ab - besonders ältere oder kranke Nachbarn könnten bei Hitze Unterstützung benötigen. > Zum Beispiel: Gibt es im Gebäude kühle Gemeinschaftsräume? Wie lässt sich das Treppenhaus gut durchlüften? Wer schaut regelmäßig nach älteren oder hilfsbedürftigen Nachbarn?"
 						],
 						"starkregen_hochwasser": [
 							"Kontaktiere den Eigentümer oder Vermieter und frage, was du im Falle eines Hochwassers oder bei anderen Naturgefahren beachten solltest.",
 							"Bewahre diese Hinweise an einem Ort auf, den du nicht vergessen oder übersehen kannst oder mache dir zusätzlich noch eigene Notizen.",
-							"Stimme dich mit weiteren Hausbewohnern ab, wie ihr bei Naturgefahren vorgehen wollt. → Zum Beispiel bei Hochwasser: Sind die Fenster im Keller und Erdgeschoss geschlossen? Können elektrische Geräte und gefährliche Stoffe in höher gelegenen Wohnungen in Sicherheit gebracht werden? Wo und wie können sich Bewohner aus den unteren Stockwerken in Sicherheit bringen?"
+							"Stimme dich mit weiteren Hausbewohnern ab, wie ihr bei Naturgefahren vorgehen wollt. > Zum Beispiel bei Hochwasser: Sind die Fenster im Keller und Erdgeschoss geschlossen? Können elektrische Geräte und gefährliche Stoffe in höher gelegenen Wohnungen in Sicherheit gebracht werden? Wo und wie können sich Bewohner aus den unteren Stockwerken in Sicherheit bringen?"
 						],
 						"sturm_tornado": [
 							"Kontaktiere den Eigentümer oder Vermieter und frage, was du im Falle eines schweren Sturms oder Tornados beachten solltest.",
 							"Bewahre diese Hinweise an einem Ort auf, den du nicht vergessen oder übersehen kannst, oder mache dir zusätzlich noch eigene Notizen.",
-							"Stimme dich mit weiteren Hausbewohnern ab, wie ihr bei Sturm oder Tornado vorgehen wollt. → Zum Beispiel: Welcher Bereich des Gebäudes ist am sichersten (z. B. Keller, innenliegendes Treppenhaus)? Wer warnt Bewohner in den oberen Stockwerken? Wie werden Balkone und Gemeinschaftsflächen rechtzeitig gesichert?"
+							"Stimme dich mit weiteren Hausbewohnern ab, wie ihr bei Sturm oder Tornado vorgehen wollt. > Zum Beispiel: Welcher Bereich des Gebäudes ist am sichersten (z. B. Keller, innenliegendes Treppenhaus)? Wer warnt Bewohner in den oberen Stockwerken? Wie werden Balkone und Gemeinschaftsflächen rechtzeitig gesichert?"
 						]
 					}
 				},
@@ -384,22 +384,22 @@
 					"results": {
 						"stromausfall": [
 							"Mach dir eine einfache Checkliste, wie du im Falle eines Stromausfalls vorgehen willst.",
-							"Stimme dich mit der Eigentümergemeinschaft oder weiteren Hausbewohnern ab, wie ihr bei einem Stromausfall vorgehen wollt. → Zum Beispiel: Wer kümmert sich um ältere oder hilfsbedürftige Nachbarn? Wie kommt man ohne Aufzug sicher aus dem Gebäude? Wo sind Notbeleuchtung und Sicherungskästen?",
+							"Stimme dich mit der Eigentümergemeinschaft oder weiteren Hausbewohnern ab, wie ihr bei einem Stromausfall vorgehen wollt. > Zum Beispiel: Wer kümmert sich um ältere oder hilfsbedürftige Nachbarn? Wie kommt man ohne Aufzug sicher aus dem Gebäude? Wo sind Notbeleuchtung und Sicherungskästen?",
 							"Halte diese Checkliste an einem Ort bereit, den du nicht vergessen oder übersehen kannst."
 						],
 						"hitze": [
 							"Mach dir eine einfache Checkliste, wie du deine Wohnung bei extremer Hitze schützen und kühlen kannst.",
-							"Stimme dich mit der Eigentümergemeinschaft oder weiteren Hausbewohnern ab, wie ihr gemeinsam mit Hitzewellen umgehen wollt. → Zum Beispiel: Gibt es im Gebäude kühle Gemeinschaftsräume? Wie lässt sich das Treppenhaus gut durchlüften? Wer schaut regelmäßig nach älteren oder hilfsbedürftigen Nachbarn?",
+							"Stimme dich mit der Eigentümergemeinschaft oder weiteren Hausbewohnern ab, wie ihr gemeinsam mit Hitzewellen umgehen wollt. > Zum Beispiel: Gibt es im Gebäude kühle Gemeinschaftsräume? Wie lässt sich das Treppenhaus gut durchlüften? Wer schaut regelmäßig nach älteren oder hilfsbedürftigen Nachbarn?",
 							"Halte diese Checkliste an einem Ort bereit, den du nicht vergessen oder übersehen kannst."
 						],
 						"starkregen_hochwasser": [
 							"Mach dir eine einfache Checkliste, wie du im Falle eines Hochwassers oder bei anderen Naturgefahren vorgehen willst.",
-							"Stimme dich mit der Eigentümergemeinschaft oder weiteren Hausbewohnern ab, wie ihr bei Naturgefahren vorgehen wollt. → Zum Beispiel bei Hochwasser: Sind die Fenster im Keller und Erdgeschoss geschlossen? Können elektrische Geräte und gefährliche Stoffe in höher gelegenen Wohnungen in Sicherheit gebracht werden? Wo lagern Sandsäcke oder andere mobile Absperrungen? Wo und wie können sich Bewohner aus den unteren Stockwerken in Sicherheit bringen?",
+							"Stimme dich mit der Eigentümergemeinschaft oder weiteren Hausbewohnern ab, wie ihr bei Naturgefahren vorgehen wollt. > Zum Beispiel bei Hochwasser: Sind die Fenster im Keller und Erdgeschoss geschlossen? Können elektrische Geräte und gefährliche Stoffe in höher gelegenen Wohnungen in Sicherheit gebracht werden? Wo lagern Sandsäcke oder andere mobile Absperrungen? Wo und wie können sich Bewohner aus den unteren Stockwerken in Sicherheit bringen?",
 							"Halte diese Checkliste an einem Ort bereit, den du nicht vergessen oder übersehen kannst."
 						],
 						"sturm_tornado": [
 							"Mach dir eine einfache Checkliste, wie du im Falle eines Sturms oder Tornados vorgehen willst.",
-							"Stimme dich mit der Eigentümergemeinschaft oder weiteren Hausbewohnern ab, wie ihr gemeinsam vorgehen wollt. → Zum Beispiel: Welcher Bereich des Gebäudes ist am sichersten (z. B. Keller, innenliegendes Treppenhaus)? Wer warnt Bewohner in den oberen Stockwerken? Wie werden Balkone und Gemeinschaftsflächen rechtzeitig gesichert?",
+							"Stimme dich mit der Eigentümergemeinschaft oder weiteren Hausbewohnern ab, wie ihr gemeinsam vorgehen wollt. > Zum Beispiel: Welcher Bereich des Gebäudes ist am sichersten (z. B. Keller, innenliegendes Treppenhaus)? Wer warnt Bewohner in den oberen Stockwerken? Wie werden Balkone und Gemeinschaftsflächen rechtzeitig gesichert?",
 							"Halte diese Checkliste an einem Ort bereit, den du nicht vergessen oder übersehen kannst."
 						]
 					}
@@ -438,22 +438,22 @@
 						"stromausfall": [
 							"Kontaktiere deinen Vermieter oder Betreuer und frage, was du im Falle eines Stromausfalls beachten solltest.",
 							"Bewahre diese Hinweise an einem Ort auf, den du nicht vergessen oder übersehen kannst, oder mache dir zusätzlich noch eigene Notizen.",
-							"Stimme dich mit deinem Betreuer oder weiteren Bewohnern ab, wie ihr bei einem Stromausfall vorgehen wollt. → Zum Beispiel: Wo sind Taschenlampen und Kerzen im Wohnheim? Wie funktioniert die Heizung ohne Strom? Wie kommt man ohne Aufzug sicher aus dem Gebäude?"
+							"Stimme dich mit deinem Betreuer oder weiteren Bewohnern ab, wie ihr bei einem Stromausfall vorgehen wollt. > Zum Beispiel: Wo sind Taschenlampen und Kerzen im Wohnheim? Wie funktioniert die Heizung ohne Strom? Wie kommt man ohne Aufzug sicher aus dem Gebäude?"
 						],
 						"hitze": [
 							"Kontaktiere deinen Vermieter oder Betreuer und frage, welche Möglichkeiten zur Kühlung vorhanden sind und was du bei extremer Hitze beachten solltest.",
 							"Bewahre diese Hinweise an einem Ort auf, den du nicht vergessen oder übersehen kannst, oder mache dir zusätzlich noch eigene Notizen.",
-							"Stimme dich mit deinem Betreuer oder weiteren Bewohnern ab, wie ihr bei extremer Hitze vorgehen wollt. → Zum Beispiel: Gibt es kühle Gemeinschaftsräume im Wohnheim? Wie lässt sich die eigene Wohnung kühlen? Wer sorgt dafür, dass alle ausreichend trinken und auf Warnsignale achten?"
+							"Stimme dich mit deinem Betreuer oder weiteren Bewohnern ab, wie ihr bei extremer Hitze vorgehen wollt. > Zum Beispiel: Gibt es kühle Gemeinschaftsräume im Wohnheim? Wie lässt sich die eigene Wohnung kühlen? Wer sorgt dafür, dass alle ausreichend trinken und auf Warnsignale achten?"
 						],
 						"starkregen_hochwasser": [
 							"Kontaktiere deinen Vermieter oder Betreuer und frage, was du im Falle eines Hochwassers oder bei anderen Naturgefahren beachten solltest.",
 							"Bewahre diese Hinweise an einem Ort auf, den du nicht vergessen oder übersehen kannst oder mache dir zusätzlich noch eigene Notizen.",
-							"Stimme dich mit deinem Betreuer oder weiteren Bewohnern ab, wie ihr bei Naturgefahren vorgehen wollt. → Zum Beispiel bei Hochwasser: Sind die Fenster im Keller und Erdgeschoss geschlossen? Können elektrische Geräte und gefährliche Stoffe in höher gelegenen Zimmern oder Wohnungen in Sicherheit gebracht werden? Wo und wie können sich Bewohner aus den unteren Stockwerken in Sicherheit bringen?"
+							"Stimme dich mit deinem Betreuer oder weiteren Bewohnern ab, wie ihr bei Naturgefahren vorgehen wollt. > Zum Beispiel bei Hochwasser: Sind die Fenster im Keller und Erdgeschoss geschlossen? Können elektrische Geräte und gefährliche Stoffe in höher gelegenen Zimmern oder Wohnungen in Sicherheit gebracht werden? Wo und wie können sich Bewohner aus den unteren Stockwerken in Sicherheit bringen?"
 						],
 						"sturm_tornado": [
 							"Kontaktiere deinen Vermieter oder Betreuer und frage, was du im Falle eines schweren Sturms oder Tornados beachten solltest.",
 							"Bewahre diese Hinweise an einem Ort auf, den du nicht vergessen oder übersehen kannst, oder mache dir zusätzlich noch eigene Notizen.",
-							"Stimme dich mit deinem Betreuer oder weiteren Bewohnern ab, wie ihr bei Sturm oder Tornado vorgehen wollt. → Zum Beispiel: Welcher Bereich des Wohnheims ist am sichersten? Wer warnt alle Bewohner rechtzeitig? Wie werden Außenbereiche und Gemeinschaftsflächen gesichert?"
+							"Stimme dich mit deinem Betreuer oder weiteren Bewohnern ab, wie ihr bei Sturm oder Tornado vorgehen wollt. > Zum Beispiel: Welcher Bereich des Wohnheims ist am sichersten? Wer warnt alle Bewohner rechtzeitig? Wie werden Außenbereiche und Gemeinschaftsflächen gesichert?"
 						]
 					}
 				},

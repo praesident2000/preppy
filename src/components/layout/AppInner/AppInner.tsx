@@ -7,13 +7,10 @@ import Step03 from "../Step03/Step03";
 import Step04 from "../Step04/Step04";
 import Step05 from "../Step05/Step05";
 import Navigation from "../Navigation/Navigation";
-import Summary from "../Summary/Summary";
 import styles from "./AppInner.module.scss";
 
 function AppInner() {
 	const { state, dispatch } = useAppContext();
-
-	const summaryRef = useRef<HTMLDivElement>(null!);
 	const appRef = useRef<HTMLDivElement>(null!);
 
 	useUrlParams(dispatch);
@@ -26,9 +23,8 @@ function AppInner() {
 				{state.step === 3 && <Step03 />}
 				{state.step === 4 && <Step04 />}
 				{state.step === 5 && <Step05 />}
-				<Navigation summaryRef={summaryRef} appRef={appRef} />
+				<Navigation appRef={appRef} />
 			</div>
-			<Summary summaryRef={summaryRef} />
 		</div>
 	);
 }

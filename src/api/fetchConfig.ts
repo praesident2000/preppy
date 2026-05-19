@@ -11,8 +11,8 @@ type Config = {
 };
 
 let cache: Promise<Config> | null = null;
-let CONFIG_URL: string = "/config.json";
-// let CONFIG_URL: string = "https://www.diakonie-katastrophenhilfe.de/fileadmin/Mediapool/testdateien/preppy-test/config.json";
+// let CONFIG_URL: string = "/config.json";
+let CONFIG_URL: string = "https://www.diakonie-katastrophenhilfe.de/fileadmin/Mediapool/testdateien/preppy-test/config.json";
 
 export default function fetchConfig(): Promise<Config> {
 	if (!cache) {
