@@ -37,10 +37,14 @@ export function usePdfData() {
     }
 
     // Food need: missing items with a computed total
-    const foodNeed = missingFoodList.map((item) => ({
-      label: item.label,
-      amount: item.total ?? "",
-    }));
+    const foodNeed = missingFoodList.map((item) => {
+      let packInfo: string | undefined;
+      if (item.totalPacks > 0 && item.packSize && item.packLabelPlural && item.packLabelSingular) {
+        const packSizeFormatted = Number(item.packSize).toLocaleString("de-DE");
+        packInfo = `${item.totalPacks} ${item.packLabelPlural} (${packSizeFormatted}${item.unit}/${item.packLabelSingular})`;
+      }
+      return { label: item.label, amount: item.total ?? "", packInfo };
+    });
 
     // Food have: items checked as already owned, with computed totals
     const visibleFood = getVisibleCategories(food, state.people);
@@ -49,9 +53,8 @@ export function usePdfData() {
       if (category === "miscellaneous") return [];
       return items
         .filter((item) => state.shoppingList[category]?.includes(item.label))
-        .map((item) => ({
-          label: item.label,
-          amount: `${computeItemTotal(
+        .map((item) => {
+          const totalNum = computeItemTotal(
             category,
             item.label,
             item.perPersonPerDay,
@@ -59,8 +62,19 @@ export function usePdfData() {
             state.days,
             food,
             activeMerges,
-          ).toLocaleString("de-DE")} ${item.unit}`,
-        }));
+          );
+          let packInfo: string | undefined;
+          if (item.packSize && item.packLabelPlural && item.packLabelSingular) {
+            const totalPacks = Math.ceil(totalNum / Number(item.packSize));
+            const packSizeFormatted = Number(item.packSize).toLocaleString("de-DE");
+            packInfo = `${totalPacks} ${item.packLabelPlural} (${packSizeFormatted}${item.unit}/${item.packLabelSingular})`;
+          }
+          return {
+            label: item.label,
+            amount: `${totalNum.toLocaleString("de-DE")} ${item.unit}`,
+            packInfo,
+          };
+        });
     });
 
     // Gear

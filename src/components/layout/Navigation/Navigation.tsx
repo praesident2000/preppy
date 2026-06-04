@@ -70,7 +70,7 @@ function Navigation({
 								<strong>Dein persönlicher Ratgeber</strong>
 								<span>
 									Lade dir deine individuelle Check- und
-									Einkaufslistesowie Notfallpläne als PDF herunter.
+									Einkaufsliste sowie Notfallpläne als PDF herunter.
 								</span>
 							</p>
 						</div>

@@ -96,6 +96,7 @@
 	&.alt {
 		justify-content: space-between;
 		align-items: flex-start;
+		gap: 30px;
 
 		strong {
 			white-space: nowrap;
@@ -107,6 +108,9 @@
 				line-height: 16px;
 			}
 		}
+		small {
+			white-space: nowrap;
+		}
 	}
 	a {
 		display: grid;
@@ -117,6 +121,17 @@
 			height: 15px;
 			transform: rotate(-45deg);
 		}
+	}
+}
+.listUnit {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	text-align: right;
+
+	strong {
+		padding: 0;
+		margin: 0;
 	}
 }
 .missing {

@@ -228,14 +228,18 @@ function Step05() {
 								<div>
 									<strong>Was mir noch fehlt</strong>
 									<ul className={styles.list}>
-										{missingFoodList.map(({ label, total }) => {
+										{missingFoodList.map(({ label, total, totalPacks, packSize, unit, packLabelSingular, packLabelPlural, category }) => {
 											return (
 												<li
 													key={label}
 													className={`${styles.listItem} ${styles.alt}`}
 												>
 													<span>{label}</span>
-													{total && <strong>{total}</strong>}
+													{category !== "miscellaneous" && (
+														state.showQuantity
+															? <div className={styles.listUnit}><strong>{totalPacks} {totalPacks > 1 ? packLabelPlural : packLabelSingular}</strong><small>({packSize}{unit}/{packLabelSingular})</small></div>
+															: <strong>{total}</strong>
+													)}
 												</li>
 											);
 										})}

@@ -8,8 +8,8 @@ export type PdfData = {
   selected_themes: string[];
   tips: Record<string, { title: string; sections: { label: string; items: string[] }[] }>;
   food: {
-    need: { label: string; amount: string }[];
-    have: { label: string; amount: string }[];
+    need: { label: string; amount: string; packInfo?: string }[];
+    have: { label: string; amount: string; packInfo?: string }[];
   };
   gear: { need: string[]; have: string[] };
   housing_tips: string[];
@@ -117,9 +117,10 @@ function drawChecklistRow(
   doc: jsPDF,
   y: number,
   text: string,
-  opts: { checked?: boolean; missing?: boolean; amount?: string } = {},
+  opts: { checked?: boolean; missing?: boolean; amount?: string; packInfo?: string } = {},
 ): number {
-  y = checkY(doc, y, 7);
+  const hasPackInfo = !!opts.packInfo;
+  y = checkY(doc, y, hasPackInfo ? 12 : 7);
   drawCheckbox(doc, ML, y, opts.checked ?? false);
 
   doc.setFontSize(9);
@@ -131,6 +132,19 @@ function drawChecklistRow(
     doc.setFont("helvetica", "bold");
     setColor(doc, opts.missing ? RED : GREEN);
     doc.text(opts.amount, PW - MR, y, { align: "right" });
+  }
+
+  if (hasPackInfo) {
+    const y2 = y + 4;
+    doc.setFontSize(7);
+    doc.setFont("helvetica", "normal");
+    setColor(doc, opts.missing ? RED : GREEN);
+    doc.text(opts.packInfo!, PW - MR, y2, { align: "right" });
+    const lineY = y2 + 2.5;
+    setDraw(doc, GRAY_LIGHT);
+    doc.setLineWidth(0.15);
+    doc.line(ML, lineY, PW - MR, lineY);
+    return lineY + 4.5;
   }
 
   const lineY = y + 2.5;
@@ -292,7 +306,7 @@ function buildGuides(doc: jsPDF, data: PdfData, y: number): number {
     doc.setFontSize(9);
     setColor(doc, DARK);
     doc.setFont("helvetica", "normal");
-    doc.text("→", ML + 1, y);
+    doc.text("•", ML + 1, y);
     doc.setFont("helvetica", "bold");
     doc.text(g.label, ML + 5, y);
     y += 4;
@@ -380,7 +394,11 @@ function buildCTA(doc: jsPDF, y: number): number {
   }
   ty += 1;
   doc.setFont("helvetica", "bold");
-  doc.text("diakonie-katastrophenhilfe.de/preppy", PW / 2, ty, { align: "center" });
+  const linkText = "diakonie-katastrophenhilfe.de/preppy";
+  const linkUrl = "https://diakonie-katastrophenhilfe.de/preppy";
+  const linkX = PW / 2 - doc.getTextWidth(linkText) / 2;
+  doc.text(linkText, PW / 2, ty, { align: "center" });
+  doc.link(linkX, ty - 3.5, doc.getTextWidth(linkText), 5, { url: linkUrl });
 
   return y + boxH + 4;
 }
@@ -401,6 +419,16 @@ function buildTeil2Header(doc: jsPDF, data: PdfData, y: number): number {
 }
 
 function buildFood(doc: jsPDF, data: PdfData, y: number): number {
+  y += 2;
+  y = checkY(doc, y, 12);
+  doc.setFontSize(16);
+  doc.setFont("helvetica", "bold");
+  setColor(doc, DARK);
+  doc.text("Vorräte", ML, y);
+  y += 4;
+  y = drawHR(doc, y);
+  y += 5;
+
   if (data.food.need.length > 0) {
     y = checkY(doc, y, 10);
     doc.setFontSize(10);
@@ -410,7 +438,7 @@ function buildFood(doc: jsPDF, data: PdfData, y: number): number {
     y += 8;
 
     for (const item of data.food.need) {
-      y = drawChecklistRow(doc, y, item.label, { checked: false, missing: true, amount: item.amount });
+      y = drawChecklistRow(doc, y, item.label, { checked: false, missing: true, amount: item.amount, packInfo: item.packInfo });
     }
   }
 
@@ -425,7 +453,7 @@ function buildFood(doc: jsPDF, data: PdfData, y: number): number {
     y += 8;
 
     for (const item of data.food.have) {
-      y = drawChecklistRow(doc, y, item.label, { checked: true, missing: false, amount: item.amount });
+      y = drawChecklistRow(doc, y, item.label, { checked: true, missing: false, amount: item.amount, packInfo: item.packInfo });
     }
   }
 
@@ -484,7 +512,6 @@ function buildFooter(doc: jsPDF, y: number): number {
   setColor(doc, GRAY);
   const ftParts = [
     "Die Empfehlungen basieren auf den Erfahrungen der Diakonie Katastrophenhilfe. Sie erheben keinen Anspruch auf Vollständigkeit.",
-    "Weitere Informationen: diakonie-katastrophenhilfe.de",
   ];
   for (const part of ftParts) {
     const lines = doc.splitTextToSize(part, CW) as string[];
@@ -493,6 +520,15 @@ function buildFooter(doc: jsPDF, y: number): number {
       y += 3;
     }
   }
+  const ftLinkFull = "Weitere Informationen: diakonie-katastrophenhilfe.de";
+  const ftLinkUrl = "https://diakonie-katastrophenhilfe.de";
+  const ftLinkDomain = "diakonie-katastrophenhilfe.de";
+  doc.text(ftLinkFull, PW / 2, y, { align: "center" });
+  const ftFullW = doc.getTextWidth(ftLinkFull);
+  const ftPrefixW = doc.getTextWidth("Weitere Informationen: ");
+  const ftLinkX = PW / 2 - ftFullW / 2 + ftPrefixW;
+  doc.link(ftLinkX, y - 2.5, doc.getTextWidth(ftLinkDomain), 3.5, { url: ftLinkUrl });
+  y += 3;
   return y;
 }
 

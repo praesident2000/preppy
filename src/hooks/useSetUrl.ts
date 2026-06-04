@@ -1,7 +1,7 @@
 import type { State } from "../reducer";
 
 const PARAM_CONFIG_SET = [
-	{ key: "step", serialize: (v: number) => v.toString() },
+	// { key: "step", serialize: (v: number) => v.toString() },
 	{ key: "themes", serialize: (v: string[]) => v.join(",") },
 	{ key: "days", serialize: (v: number) => v.toString() },
 	{ key: "people", serialize: (v: string[]) => v.join(",") },
@@ -13,7 +13,7 @@ export function useSetUrl(state: State) {
 		const params = new URLSearchParams();
 
 		const STATE = {
-			step: state.step,
+			step: 5,
 			themes: state.themes,
 			days: state.days,
 			people: state.people,

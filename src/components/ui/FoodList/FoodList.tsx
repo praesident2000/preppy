@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useAppContext } from "../../../context/AppContext";
 import { useFood } from "../../../hooks/useFood";
 import Accordion from "../Accordion/Accordion";
@@ -17,7 +16,6 @@ function FoodList({ reduced }: { reduced?: boolean }) {
 	const { state, dispatch } = useAppContext();
 
 	const { data: food, loading, error } = useFood();
-	const [showQuantity, setShowQuantity] = useState<boolean>(false);
 
 	function handleChange(category: keyof ShoppingList, element: string) {
 		dispatch({ type: "toggle_shoppinglist", payload: { category, element } });
@@ -212,7 +210,8 @@ function FoodList({ reduced }: { reduced?: boolean }) {
 						</div>
 
 						<Switcher
-							switcher={() => setShowQuantity(!showQuantity)}
+							switcher={() => dispatch({ type: "toggle_show_quantity" })}
+							checked={state.showQuantity}
 							label1="Menge/Gewicht"
 							label2="Packungseinheiten"
 						/>
@@ -367,7 +366,7 @@ function FoodList({ reduced }: { reduced?: boolean }) {
 																		{category !==
 																			"miscellaneous" && (
 																			<small>
-																				{showQuantity
+																				{state.showQuantity
 																					? `(${packSize}${unit}/${packLabelSingular}) ${totalPacks} ${totalPacks > 1 ? packLabelPlural : packLabelSingular}`
 																					: `${total.toLocaleString("de-DE")} ${unit}`}
 																			</small>

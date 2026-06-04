@@ -10,6 +10,7 @@ export type State = {
 	pet: boolean;
 	shoppingList: ShoppingList;
 	equipment: string[];
+	showQuantity: boolean;
 };
 
 export type Action =
@@ -29,7 +30,8 @@ export type Action =
 	| { type: "toggle_shoppinglist"; payload: { category: keyof ShoppingList; element: string } }
 	| { type: "set_shoppinglist"; payload: ShoppingList }
 	| { type: "toggle_equipment"; payload: string }
-	| { type: "set_equipment"; payload: string[] };
+	| { type: "set_equipment"; payload: string[] }
+	| { type: "toggle_show_quantity" };
 
 export const initialState: State = {
 	step: 1,
@@ -57,6 +59,7 @@ export const initialState: State = {
 		miscellaneous: [],
 	},
 	equipment: [],
+	showQuantity: false,
 };
 
 export function reducer(state: State, action: Action): State {
@@ -148,9 +151,11 @@ export function reducer(state: State, action: Action): State {
 		}
 		case "set_equipment":
 			return {
-				...state, 
-				equipment: action.payload 
+				...state,
+				equipment: action.payload
 			};
+		case "toggle_show_quantity":
+			return { ...state, showQuantity: !state.showQuantity };
 		default:
 			return state;
 	}
