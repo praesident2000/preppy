@@ -94,16 +94,18 @@ function Navigation({
 								<small>Jederzeit zurückkehren und Plan anpassen.</small>
 							</span>
 						</button>
-						<button
+						<a 
+							href="https://www.diakonie-katastrophenhilfe.de/krisenvorsorge-guide/newsletter"
+							target="_blank"
 							className={styles.navTopButton}
 							title="Link speichern"
 						>
 							<CalendarIcon2 />
 							<span>
-								<strong>Erinnere mich im Oktober 2026</strong>
+								<strong>Erinnere mich in 6 Monaten</strong>
 								<small>Vorräte und Batterien regelmäßig prüfen.</small>
 							</span>
-						</button>
+						</a>
 					</div>
 				</>
 			)}
