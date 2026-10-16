@@ -33,7 +33,7 @@ function Step02() {
 	return (
 		<div className="step">
 			<StepHeader
-				title="Wie ist deine Wohnsituation?"
+				title="Wie ist Ihre Wohnsituation?"
 			/>
 			{!loading && !error && (
 				<div className="stepMain">

@@ -67,9 +67,9 @@ function Navigation({
 						<div className={styles.navPdfInner}>
 							<PdfIcon />
 							<p>
-								<strong>Dein persönlicher Ratgeber</strong>
+								<strong>Ihr persönlicher Ratgeber</strong>
 								<span>
-									Lade dir deine individuelle Check- und
+									Laden Sie sich Ihre individuelle Check- und
 									Einkaufsliste sowie Notfallpläne als PDF herunter.
 								</span>
 							</p>

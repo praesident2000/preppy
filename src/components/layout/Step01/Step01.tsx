@@ -11,7 +11,7 @@ function Step01() {
 	return (
 		<div className="step">
 			<StepHeader
-				title="Worauf möchtest du vorbereitet sein?"
+				title="Worauf möchten Sie vorbereitet sein?"
 			/>
 			{!loading && !error && (
 				<div className={styles.themes}>

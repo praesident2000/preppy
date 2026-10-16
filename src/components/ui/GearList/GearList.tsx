@@ -9,19 +9,19 @@ const CATEGORIES: { key: TypeGear["category"]; label: string; description: strin
 	{
 		key: "grundausstattung",
 		label: "Die Grundausstattung",
-		description: "Das hast du vielleicht schon.",
+		description: "Das haben Sie vielleicht schon.",
 		icon: EquipmentIconSvg,
 	},
 	{
 		key: "informiert",
 		label: "Informiert bleiben",
-		description: "Damit du weißt, was draußen passiert.",
+		description: "Damit Sie wissen, was draußen passiert.",
 		icon: InformedIconSvg,
 	},
 	{
 		key: "ernstfall",
 		label: "Für den Ernstfall",
-		description: "Damit du auf alles vorbereitet bist.",
+		description: "Damit Sie auf alles vorbereitet sind.",
 		icon: EmergencyIconSvg,
 	},
 ];
@@ -82,7 +82,7 @@ function GearList({ reduced }: { reduced?: boolean }) {
 					<div className="stepMain">
 						<div className={styles.options}>
 							<span className={styles.optionsText}>
-								Welche Ausrüstung hast du bereits?
+								Welche Ausrüstung haben Sie bereits?
 							</span>
 							<div className="progressChart">
 								{(() => {
@@ -111,7 +111,7 @@ function GearList({ reduced }: { reduced?: boolean }) {
 											</div>
 											<div className="progressChartText">
 												<strong>{checked} von {total} erledigt</strong>
-												<span>Hake ab, was du hast — den Rest bekommst du später als Einkaufsliste.</span>
+												<span>Haken Sie ab, was Sie haben — den Rest bekommen Sie später als Einkaufsliste.</span>
 											</div>
 										</>
 									);

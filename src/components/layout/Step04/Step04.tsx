@@ -5,7 +5,7 @@ function Step04() {
 
 	return (
 		<div className="step">
-			<StepHeader title="Die folgende Ausrüstung solltest du immer bereit halten." />
+			<StepHeader title="Die folgende Ausrüstung sollten Sie immer bereit halten." />
 			<GearList />
 		</div>
 	);

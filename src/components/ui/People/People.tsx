@@ -26,7 +26,7 @@ function People() {
 	return (
 		<div className={styles.people}>
 			<div className={styles.peopleHeader}>
-				<h2>Wie viele Personen leben in deinem Haushalt?</h2>
+				<h2>Wie viele Personen leben in Ihrem Haushalt?</h2>
 			</div>
 			<ul className={styles.peopleList}>
 				{state.people.map((person: string, index: number) => {

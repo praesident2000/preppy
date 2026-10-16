@@ -33,7 +33,7 @@ function Range() {
 				<span>Vorratsziel</span>
 			</div>
 			<div className={styles.rangeWrapper}>
-				<span className={styles.rangeInfo}>Für wie viele Tage möchtest du Lebensmittel und Wasser vorrätig haben?</span>
+				<span className={styles.rangeInfo}>Für wie viele Tage möchten Sie Lebensmittel und Wasser vorrätig haben?</span>
 				<input
 					ref={inputRef}
 					type="range"

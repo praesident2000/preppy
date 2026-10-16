@@ -69,7 +69,7 @@ function newPage(doc: jsPDF, isFirst: boolean) {
     doc.setFontSize(7);
     setColor(doc, GRAY);
     doc.setFont("helvetica", "normal");
-    doc.text("Dein persönlicher Krisenvorsorge-Guide", 15, 8);
+    doc.text("Ihr persönlicher Krisenvorsorge-Guide", 15, 8);
     doc.text("Diakonie Katastrophenhilfe", PW - 15, 8, { align: "right" });
   }
 
@@ -171,14 +171,14 @@ function buildCover(doc: jsPDF, data: PdfData, y: number): number {
   doc.setFontSize(24);
   doc.setFont("helvetica", "bold");
   setColor(doc, DARK);
-  doc.text("Dein persönlicher", ML, y);
+  doc.text("Ihr persönlicher", ML, y);
   y += 9;
   doc.text("Krisenvorsorge-Guide", ML, y);
   y += 12;
 
   doc.setFontSize(11);
   doc.setFont("helvetica", "normal");
-  const sub = "Hier siehst du eine Zusammenfassung mit Tipps basierend auf deinen Einstellungen. Die Empfehlungen basieren auf den Erfahrungen der Diakonie Katastrophenhilfe.";
+  const sub = "Hier sehen Sie eine Zusammenfassung mit Tipps basierend auf Ihren Einstellungen. Die Empfehlungen basieren auf den Erfahrungen der Diakonie Katastrophenhilfe.";
   y = drawWrapped(doc, ML, y, sub, CW, 5);
   y += 5;
 
@@ -270,7 +270,7 @@ function buildHousing(doc: jsPDF, data: PdfData, y: number): number {
   doc.setFontSize(16);
   doc.setFont("helvetica", "bold");
   setColor(doc, DARK);
-  doc.text("Tipps für deine Wohnsituation", ML, y);
+  doc.text("Tipps für Ihre Wohnsituation", ML, y);
   y += 4;
   y = drawHR(doc, y);
   y += 5;
@@ -386,7 +386,7 @@ function buildCTA(doc: jsPDF, y: number): number {
 
   doc.setFontSize(9);
   doc.setFont("helvetica", "normal");
-  const txt = "Ob neue Mitbewohner:innen, ein Umzug oder verbrauchte Vorräte – passe deinen Plan regelmäßig an. Auf der Website kannst du jederzeit Personen hinzufügen, weitere Szenarien auswählen oder deine Vorräte neu berechnen.";
+  const txt = "Ob neue Mitbewohner:innen, ein Umzug oder verbrauchte Vorräte – passen Sie Ihren Plan regelmäßig an. Auf der Website können Sie jederzeit Personen hinzufügen, weitere Szenarien auswählen oder Ihre Vorräte neu berechnen.";
   const lines = doc.splitTextToSize(txt, CW - 16) as string[];
   for (const l of lines) {
     doc.text(l, PW / 2, ty, { align: "center" });
@@ -407,13 +407,13 @@ function buildTeil2Header(doc: jsPDF, data: PdfData, y: number): number {
   doc.setFontSize(24);
   doc.setFont("helvetica", "bold");
   setColor(doc, DARK);
-  doc.text("Deine Vorräte & Ausrüstung", ML, y);
+  doc.text("Ihre Vorräte & Ausrüstung", ML, y);
   y += 8;
 
   doc.setFontSize(11);
   doc.setFont("helvetica", "normal");
   setColor(doc, DARK);
-  const intro = `Basierend auf deinem Plan: ${data.persons} Person(en), ${data.days} Tage autark. Hake ab, was du schon hast – den Rest nimmst du mit zum Einkaufen. Die komplette Liste kannst du außerdem direkt bei Vorräten und Ausrüstung aufbewahren. So hast du immer alles im Blick.`;
+  const intro = `Basierend auf Ihrem Plan: ${data.persons} Person(en), ${data.days} Tage autark. Haken Sie ab, was Sie schon haben – den Rest nehmen Sie mit zum Einkaufen. Die komplette Liste können Sie außerdem direkt bei Vorräten und Ausrüstung aufbewahren. So haben Sie immer alles im Blick.`;
   y = drawWrapped(doc, ML, y, intro, CW, 5);
   return y + 6;
 }
@@ -449,7 +449,7 @@ function buildFood(doc: jsPDF, data: PdfData, y: number): number {
     doc.setFontSize(10);
     doc.setFont("helvetica", "bold");
     setColor(doc, GREEN);
-    doc.text("Was du schon hast", ML, y);
+    doc.text("Was Sie schon haben", ML, y);
     y += 8;
 
     for (const item of data.food.have) {
@@ -491,7 +491,7 @@ function buildGear(doc: jsPDF, data: PdfData, y: number): number {
     doc.setFontSize(10);
     doc.setFont("helvetica", "bold");
     setColor(doc, GREEN);
-    doc.text("Was du schon hast", ML, y);
+    doc.text("Was Sie schon haben", ML, y);
     y += 8;
 
     for (const item of data.gear.have) {
@@ -539,7 +539,7 @@ export function generatePrepPDF(data: PdfData) {
 
   const doc = new jsPDF({ orientation: "portrait", unit: "mm", format: "a4" });
   doc.setProperties({
-    title: "Dein persönlicher Krisenvorsorge-Guide",
+    title: "Ihr persönlicher Krisenvorsorge-Guide",
     author: "Diakonie Katastrophenhilfe",
     subject: "Krisenvorsorge-Auswertung",
   });

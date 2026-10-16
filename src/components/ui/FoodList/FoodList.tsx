@@ -163,25 +163,25 @@ function FoodList({ reduced }: { reduced?: boolean }) {
 					<div className={styles.foodHeader}>
 						<div className={styles.foodHeaderTop}>
 							<h2>
-								Deine benötigten Vorräte. Welche davon hast du bereits?
+								Ihre benötigten Vorräte. Welche davon haben Sie bereits?
 							</h2>
 							<Accordion label="Warum diese Lebensmittel und Mengen?">
 								<div className="text">
 									<p>
 										Die genannten Lebensmittel sind Vorschläge, um die
 										einzelnen Kategorien abwechslungsreich zu
-										gestalten. Du solltest natürlich Lebensmittel
-										wählen, die du gerne isst. Es müssen nicht nur
-										Konserven sein: Was und wieviel würdest du ohnehin
+										gestalten. Sie sollten natürlich Lebensmittel
+										wählen, die Sie gerne essen. Es müssen nicht nur
+										Konserven sein: Was und wieviel würden Sie ohnehin
 										einkaufen? Wie lange sind diese Produkte haltbar?{" "}
 										<br />
 										<br />
-										Überlege auch, was du immer im Kühlschrank und
-										Tiefkühler hast, das du z. B. bei einem
-										Stromausfall sofort zubereiten könntest. Überlege
-										dir auch, ob und wie oft du warme Speisen
-										zubereiten kannst. Je nach dem solltest du auch
-										darauf achten, dass deine Vorräte kalt verzehrt
+										Überlegen Sie auch, was Sie immer im Kühlschrank und
+										Tiefkühler haben, das Sie z. B. bei einem
+										Stromausfall sofort zubereiten könnten. Überlegen
+										Sie sich auch, ob und wie oft Sie warme Speisen
+										zubereiten können. Je nach dem sollten Sie auch
+										darauf achten, dass Ihre Vorräte kalt verzehrt
 										werden können. <br />
 										<br />
 										Die angegebenen Mengen sind praxisnahe
@@ -198,14 +198,14 @@ function FoodList({ reduced }: { reduced?: boolean }) {
 										</a>{" "}
 										(Deutsche Gesellschaft für Ernährung) und eigenen Überlegungen. Für eine
 										alltagstaugliche Einkaufsliste haben wir diese
-										Mengen in übliche Packungsgrößen umgerechnet. Du
-										kannst wählen, ob du lieber die Grammangabe oder
-										die Packungen anzeigen lassen möchtest.
+										Mengen in übliche Packungsgrößen umgerechnet. Sie
+										können wählen, ob Sie lieber die Grammangabe oder
+										die Packungen anzeigen lassen möchten.
 									</p>
 								</div>
 							</Accordion>
 							<p className={styles.foodHeaderBottom}>
-								Für deinen <strong>{state.people.length}-Personen-Haushalt</strong>, um <strong>{state.days} Tage</strong> zu überbrücken.
+								Für Ihren <strong>{state.people.length}-Personen-Haushalt</strong>, um <strong>{state.days} Tage</strong> zu überbrücken.
 							</p>
 						</div>
 
@@ -268,7 +268,7 @@ function FoodList({ reduced }: { reduced?: boolean }) {
 												{checked} von {total} erledigt
 											</strong>
 											<span>
-												Hake ab, was du hast — den Rest bekommst du
+												Haken Sie ab, was Sie haben — den Rest bekommen Sie
 												später als Einkaufsliste.
 											</span>
 										</div>

@@ -113,16 +113,16 @@ function Step05() {
 					<div className="stepHeaderBottom">
 						<div className="text">
 							<p>
-								Hier siehst du eine Zusammenfassung mit Tipps basierend
-								auf deinen Einstellungen. Am Ende dieser Seite kannst du
-								dir ein PDF mit deinen persönlichen Vorsorge-Hinweisen
-								herunterladen. Du kannst dich außerdem von uns in
-								regelmäßigen Abständen daran erinnern lassen, deine
+								Hier sehen Sie eine Zusammenfassung mit Tipps basierend
+								auf Ihren Einstellungen. Am Ende dieser Seite können Sie
+								sich ein PDF mit Ihren persönlichen Vorsorge-Hinweisen
+								herunterladen. Sie können sich außerdem von uns in
+								regelmäßigen Abständen daran erinnern lassen, Ihre
 								Notfallvorbereitung zu überprüfen und aufzufrischen.
-								Dafür benötigen wir deine E-Mail-Adresse.
+								Dafür benötigen wir Ihre E-Mail-Adresse.
 								<br />
 								<br />
-								Du kannst außerdem den Link zu dieser Seite samt deinen
+								Sie können außerdem den Link zu dieser Seite samt Ihren
 								persönlichen Voreinstellungen speichern, ihn jederzeit
 								wieder aufrufen und die Einstellungen verändern. Oder
 								ihn mit Freunden und Bekannten teilen.
@@ -136,7 +136,7 @@ function Step05() {
 				
 					{/* RESULT */}
 					<div className={styles.result}>
-						<h2>Dein Vorsorge-Status</h2>
+						<h2>Ihr Vorsorge-Status</h2>
 						<div className="progressChart big">
 							{(() => {
 								const pct = Math.round((percentFood + percentGears) / 2);
@@ -178,7 +178,7 @@ function Step05() {
 						<div className={styles.resultText}>
 							<PeopleIcon />
 							<div>
-								<small>Dein Plan</small>
+								<small>Ihr Plan</small>
 								<span>{state.people.length} {state.people.length > 1 ? 'Personen' : 'Person'} · {state.days} Tage autark · {state.people.length*state.days} Personentage Vorrat</span>
 							</div>
 						</div>
@@ -246,7 +246,7 @@ function Step05() {
 									</ul>
 								</div>
 							) : (
-								<div><strong>Du hast alles vorbereitet!</strong></div>
+								<div><strong>Sie haben alles vorbereitet!</strong></div>
 							)}
 						</div>
 					</Accordion>
@@ -283,14 +283,14 @@ function Step05() {
 									</ul>
 								</div>
 							) : (
-								<div><strong>Du hast alles vorbereitet!</strong></div>
+								<div><strong>Sie haben alles vorbereitet!</strong></div>
 							)}
 						</div>
 					</Accordion>
 
 					{/* HOUSE */}
 					<Accordion
-						label="Tipps für deine Wohnsituation"
+						label="Tipps für Ihre Wohnsituation"
 						sublabel2={`${houseResults.length} ${houseResults.length > 1 ? 'Tipps zur Vorbereitung' : 'Tipp zur Vorbereitung'}`}
 						icon={IdeaIconSvg}
 						big={true}

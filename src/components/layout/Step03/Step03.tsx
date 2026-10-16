@@ -6,7 +6,7 @@ function Step03() {
 	return (
 		<div className="step">
 			<StepHeader
-				title="Planen wir deine Vorräte. Wie lange möchtest du autark sein?"
+				title="Planen wir Ihre Vorräte. Wie lange möchten Sie autark sein?"
 				text={
 					<div className="stepHeaderBottom">
 						<div className="text">

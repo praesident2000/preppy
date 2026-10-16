@@ -9,11 +9,11 @@
 				{
 					"label": "Wenn eine Warnung vor dem Stromausfall kommt",
 					"list": [
-						"Lade dein Handy und andere Geräte vollständig auf",
-						"Stelle sicher, dass Taschenlampen und Kerzen griffbereit sind.",
-						"Fülle Wasservorräte auf - elektrische Pumpen können bei einem Ausfall versagen.",
-						"Lege wichtige Medikamente bereit, die gekühlt werden müssen, und überlege, wie du sie alternativ lagern kannst.",
-						"Informiere dich über die voraussichtliche Dauer des Ausfalls, z. B. über den Netzbetreiber oder Warn-Apps."
+						"Laden Sie Ihr Handy und andere Geräte vollständig auf",
+						"Stellen Sie sicher, dass Taschenlampen und Kerzen griffbereit sind.",
+						"Füllen Sie Wasservorräte auf - elektrische Pumpen können bei einem Ausfall versagen.",
+						"Legen Sie wichtige Medikamente bereit, die gekühlt werden müssen, und überlegen Sie, wie Sie sie alternativ lagern können.",
+						"Informieren Sie sich über die voraussichtliche Dauer des Ausfalls, z. B. über den Netzbetreiber oder Warn-Apps."
 					]
 				},
 				{
@@ -22,19 +22,19 @@
 						"Keine Panik. Erstmal die Taschenlampe suchen und Licht machen, falls es dunkel ist.",
 						"Falls der Stromausfall länger andauert: Informationen sammeln. Zum Beispiel über eine Warn-App oder übers Radio.",
 						"Bitte belaste nicht die Notrufe, wenn keine Lebensgefahr besteht. Ein Stromausfall wird durch den zuständigen Netzbetreiber in der Regel sofort erkannt und schnellstmöglich behoben.",
-						"Schalte unnötige Elektrogeräte aus oder trenne sie vom Netz - so vermeidest du Schäden durch Stromstöße beim Wiedereinschalten.",
-						"Öffne den Kühlschrank und die Tiefkühltruhe so selten wie möglich, um die Kälte zu bewahren.",
-						"Vermeide den Einsatz von Kerzen in der Nähe brennbarer Materialien und lasse sie nie unbeaufsichtigt brennen.",
-						"Nutze Powerbanks und Batterieradios sparsam."
+						"Schalten Sie unnötige Elektrogeräte aus oder trennen Sie sie vom Netz - so vermeiden Sie Schäden durch Stromstöße beim Wiedereinschalten.",
+						"Öffnen Sie den Kühlschrank und die Tiefkühltruhe so selten wie möglich, um die Kälte zu bewahren.",
+						"Vermeiden Sie den Einsatz von Kerzen in der Nähe brennbarer Materialien und lassen Sie sie nie unbeaufsichtigt brennen.",
+						"Nutzen Sie Powerbanks und Batterieradios sparsam."
 					]
 				},
 				{
 					"label": "Nach dem Stromausfall",
 					"list": [
-						"Überprüfe Kühl- und Tiefkühlware auf Verderb - im Zweifel wegwerfen.",
-						"Schalte Geräte nach und nach wieder ein, um das Netz nicht zu überlasten.",
-						"Prüfe, ob elektrische Geräte durch den Stromausfall beschädigt wurden.",
-						"Fülle verbrauchte Vorräte (Batterien, Taschenlampen, Kerzen) wieder auf."
+						"Überprüfen Sie Kühl- und Tiefkühlware auf Verderb - im Zweifel wegwerfen.",
+						"Schalten Sie Geräte nach und nach wieder ein, um das Netz nicht zu überlasten.",
+						"Prüfen Sie, ob elektrische Geräte durch den Stromausfall beschädigt wurden.",
+						"Füllen Sie verbrauchte Vorräte (Batterien, Taschenlampen, Kerzen) wieder auf."
 					]
 				}
 			],
@@ -43,7 +43,7 @@
 				"Polizei: 110",
 				"Ärztlicher Bereitschaftsdienst: 116 117 (24/7)",
 				"Technisches Hilfswerk (THW): 0800 240 24 00 (kostenlos)",
-				"Servicenummer deines Netzbetreibers"
+				"Servicenummer Ihres Netzbetreibers"
 			],
 			"guides": [
 				{
@@ -69,32 +69,32 @@
 				{
 					"label": "Wenn eine Hitze-Warnung kommt",
 					"list": [
-						"Besorge ausreichend Wasser und kühlende Getränke (z. B. Elektrolytgetränke).",
-						"Verdunkle Räume, die nach Süden oder Westen ausgerichtet sind, mit Rollos oder Vorhängen.",
-						"Kümmere dich um besonders gefährdete Personen in deinem Umfeld: ältere Menschen, Kleinkinder, kranke Personen.",
-						"Erkundige dich bei deiner Gemeinde, ob es Kühlräume oder Hitzeschutz-Angebote gibt.",
-						"Lege körperliche Aktivitäten in die frühen Morgenstunden oder den Abend."
+						"Besorgen Sie ausreichend Wasser und kühlende Getränke (z. B. Elektrolytgetränke).",
+						"Verdunkeln Sie Räume, die nach Süden oder Westen ausgerichtet sind, mit Rollos oder Vorhängen.",
+						"Kümmern Sie sich um besonders gefährdete Personen in Ihrem Umfeld: ältere Menschen, Kleinkinder, kranke Personen.",
+						"Erkundigen Sie sich bei Ihrer Gemeinde, ob es Kühlräume oder Hitzeschutz-Angebote gibt.",
+						"Legen Sie körperliche Aktivitäten in die frühen Morgenstunden oder den Abend."
 					]
 				},
 				{
 					"label": "Wenn die Hitze kommt",
 					"list": [
-						"Trinke regelmäßig und ausreichend - auch ohne Durstgefühl mindestens 1,5-2 Liter pro Tag.",
-						"Halte Fenster tagsüber geschlossen und lüfte nur in den kühlen Morgen- und Nachtstunden.",
-						"Vermeide körperliche Anstrengung in der Mittagshitze (ca. 11-17 Uhr).",
-						"Trage leichte, helle und luftige Kleidung sowie einen Sonnenhut im Freien.",
-						"Verwende feuchte Tücher oder kühle Fußbäder zur Abkühlung.",
-						"Lass niemals Kinder, ältere Menschen oder Tiere in geparkten Fahrzeugen zurück - selbst kurz!",
-						"Achte auf Warnsignale wie Schwindel, Übelkeit oder Kopfschmerzen - das können Zeichen eines Hitzschlags sein. Im Notfall sofort 112 rufen."
+						"Trinken Sie regelmäßig und ausreichend - auch ohne Durstgefühl mindestens 1,5-2 Liter pro Tag.",
+						"Halten Sie Fenster tagsüber geschlossen und lüften Sie nur in den kühlen Morgen- und Nachtstunden.",
+						"Vermeiden Sie körperliche Anstrengung in der Mittagshitze (ca. 11-17 Uhr).",
+						"Tragen Sie leichte, helle und luftige Kleidung sowie einen Sonnenhut im Freien.",
+						"Verwenden Sie feuchte Tücher oder kühle Fußbäder zur Abkühlung.",
+						"Lassen Sie niemals Kinder, ältere Menschen oder Tiere in geparkten Fahrzeugen zurück - selbst kurz!",
+						"Achten Sie auf Warnsignale wie Schwindel, Übelkeit oder Kopfschmerzen - das können Zeichen eines Hitzschlags sein. Im Notfall sofort 112 rufen."
 					]
 				},
 				{
 					"label": "Nach der Hitzewelle",
 					"list": [
-						"Stelle sicher, dass alle Personen in deinem Umfeld die Hitzewelle gut überstanden haben.",
-						"Lüfte Räume gründlich, sobald die Außentemperatur sinkt.",
-						"Ergänze Wasservorräte und kühlende Mittel für zukünftige Hitzewellen.",
-						"Überlege langfristig, ob bauliche Maßnahmen (Rollos, Außenjalousien, Bepflanzung) sinnvoll sind."
+						"Stellen Sie sicher, dass alle Personen in Ihrem Umfeld die Hitzewelle gut überstanden haben.",
+						"Lüften Sie Räume gründlich, sobald die Außentemperatur sinkt.",
+						"Ergänzen Sie Wasservorräte und kühlende Mittel für zukünftige Hitzewellen.",
+						"Überlegen Sie langfristig, ob bauliche Maßnahmen (Rollos, Außenjalousien, Bepflanzung) sinnvoll sind."
 					]
 				}
 			],
@@ -128,35 +128,35 @@
 				{
 					"label": "Wenn eine Warnung vor Starkregen & Hochwasser kommt",
 					"list": [
-						"Bringe Wertsachen und wichtige Dokumente in Sicherheit.",
-						"Bringe gefährliche Stoffe und Materialien (z. B. Lacke, Farben, Benzinkanister) an einen Ort, der vor Überflutung geschützt ist.",
-						"Sichere Kellereingänge und Lichtschächte mit Sandsäcken oder Abdichtmitteln, wenn vorhanden.",
-						"Parke dein Fahrzeug auf höher gelegenem Gelände.",
-						"Informiere dich über mögliche Evakuierungsrouten und halte das Auto bei Bedarf fahrbereit.",
-						"Schalte gas- und strombetriebene Geräte im Keller vorsorglich ab.",
-						"Lade Handy und Powerbank vorsorglich auf."
+						"Bringen Sie Wertsachen und wichtige Dokumente in Sicherheit.",
+						"Bringen Sie gefährliche Stoffe und Materialien (z. B. Lacke, Farben, Benzinkanister) an einen Ort, der vor Überflutung geschützt ist.",
+						"Sichern Sie Kellereingänge und Lichtschächte mit Sandsäcken oder Abdichtmitteln, wenn vorhanden.",
+						"Parken Sie Ihr Fahrzeug auf höher gelegenem Gelände.",
+						"Informieren Sie sich über mögliche Evakuierungsrouten und halten Sie das Auto bei Bedarf fahrbereit.",
+						"Schalten Sie gas- und strombetriebene Geräte im Keller vorsorglich ab.",
+						"Laden Sie Handy und Powerbank vorsorglich auf."
 					]
 				},
 				{
 					"label": "Wenn das Wasser steigt",
 					"list": [
-						"Bleib auf dem Laufenden und sammle Informationen. Zum Beispiel über eine Warn-App oder übers Radio.",
-						"Trenne deine Elektrogeräte vom Netz.",
-						"Bleibe in höher gelegenen Räumen und dort, wo du Gebäude im Notfall schnell verlassen kannst.",
-						"Vermeide das Waten im Wasser (z. B. in überfluteten Kellern)! Es drohen Stromschläge.",
-						"Fahre nicht durch überflutete Straßen - schon 30 cm Wasser können ein Fahrzeug fortreißen.",
-						"Halte dich von Flüssen, Bächen und Entwässerungsgräben fern - die Strömung ist oft stärker als sie aussieht.",
-						"Folge den Anweisungen der Behörden und leiste im Ernstfall Folge bei Evakuierungsaufforderungen."
+						"Bleiben Sie auf dem Laufenden und sammeln Sie Informationen. Zum Beispiel über eine Warn-App oder übers Radio.",
+						"Trennen Sie Ihre Elektrogeräte vom Netz.",
+						"Bleiben Sie in höher gelegenen Räumen und dort, wo Sie Gebäude im Notfall schnell verlassen können.",
+						"Vermeiden Sie das Waten im Wasser (z. B. in überfluteten Kellern)! Es drohen Stromschläge.",
+						"Fahren Sie nicht durch überflutete Straßen - schon 30 cm Wasser können ein Fahrzeug fortreißen.",
+						"Halten Sie sich von Flüssen, Bächen und Entwässerungsgräben fern - die Strömung ist oft stärker als sie aussieht.",
+						"Folgen Sie den Anweisungen der Behörden und leisten Sie im Ernstfall Folge bei Evakuierungsaufforderungen."
 					]
 				},
 				{
 					"label": "Nach dem Hochwasser",
 					"list": [
-						"Betritt überflutete Bereiche erst, wenn die Behörden grünes Licht geben.",
-						"Lass Elektroinstallationen, die mit Wasser in Berührung kamen, von einem Fachmann prüfen, bevor du den Strom wieder einschaltest.",
-						"Dokumentiere alle Schäden fotografisch für die Versicherung.",
-						"Entferne Schlamm und Schmutz zügig und desinfiziere betroffene Bereiche - Hochwasser kann Krankheitserreger mitführen.",
-						"Kontaktiere deine Versicherung und prüfe mögliche Hilfsangebote der Gemeinde oder des Landes."
+						"Betreten Sie überflutete Bereiche erst, wenn die Behörden grünes Licht geben.",
+						"Lassen Sie Elektroinstallationen, die mit Wasser in Berührung kamen, von einem Fachmann prüfen, bevor Sie den Strom wieder einschalten.",
+						"Dokumentieren Sie alle Schäden fotografisch für die Versicherung.",
+						"Entfernen Sie Schlamm und Schmutz zügig und desinfizieren Sie betroffene Bereiche - Hochwasser kann Krankheitserreger mitführen.",
+						"Kontaktieren Sie Ihre Versicherung und prüfen Sie mögliche Hilfsangebote der Gemeinde oder des Landes."
 					]
 				}
 			],
@@ -199,34 +199,34 @@
 				{
 					"label": "Wenn eine Warnung vor Sturm & Tornado kommt",
 					"list": [
-						"Sichere Gegenstände im Außenbereich: Gartenmöbel, Fahrräder, Blumentöpfe und ähnliches ins Haus oder fest verzurren.",
-						"Halte dich von Fenstern und Glastüren fern und schließe alle Fenster und Türen.",
-						"Stelle dein Fahrzeug in einer Garage oder geschützten Umgebung ab - weg von Bäumen.",
-						"Lade Handy und Powerbank vorsorglich auf.",
-						"Informiere dich regelmäßig über aktuelle Warnmeldungen per App, Radio oder TV."
+						"Sichern Sie Gegenstände im Außenbereich: Gartenmöbel, Fahrräder, Blumentöpfe und ähnliches ins Haus oder fest verzurren.",
+						"Halten Sie sich von Fenstern und Glastüren fern und schließen Sie alle Fenster und Türen.",
+						"Stellen Sie Ihr Fahrzeug in einer Garage oder geschützten Umgebung ab - weg von Bäumen.",
+						"Laden Sie Handy und Powerbank vorsorglich auf.",
+						"Informieren Sie sich regelmäßig über aktuelle Warnmeldungen per App, Radio oder TV."
 					]
 				},
 				{
 					"label": "Wenn der Wind stärker wird",
 					"list": [
-						"Bleibe in Innenräumen und meide Fenster sowie Außenwände.",
-						"Suche bei einem Tornado den tiefsten und innersten Raum des Gebäudes auf - z. B. den Keller oder ein innenliegendes Badezimmer ohne Fenster.",
-						"Schütze deinen Kopf und Nacken, z. B. mit einem Kissen oder den Armen.",
-						"Verlasse auf keinen Fall das Gebäude während des Sturms.",
-						"Bleibe in deinem Auto, wenn du unterwegs bist, und fahre nicht unter Brücken oder Überführungen.",
-						"Suche eine Vertiefung (z. B. Graben) auf, wenn ein Tornado direkt auf dich zukommt.",
-						"Halte Abstand von umgestürzten Bäumen, herabgefallenen Ästen und Stromleitungen."
+						"Bleiben Sie in Innenräumen und meiden Sie Fenster sowie Außenwände.",
+						"Suchen Sie bei einem Tornado den tiefsten und innersten Raum des Gebäudes auf - z. B. den Keller oder ein innenliegendes Badezimmer ohne Fenster.",
+						"Schützen Sie Ihren Kopf und Nacken, z. B. mit einem Kissen oder den Armen.",
+						"Verlassen Sie auf keinen Fall das Gebäude während des Sturms.",
+						"Bleiben Sie in Ihrem Auto, wenn Sie unterwegs sind, und fahren Sie nicht unter Brücken oder Überführungen.",
+						"Suchen Sie eine Vertiefung (z. B. Graben) auf, wenn ein Tornado direkt auf Sie zukommt.",
+						"Halten Sie Abstand von umgestürzten Bäumen, herabgefallenen Ästen und Stromleitungen."
 					]
 				},
 				{
 					"label": "Nach dem Sturm",
 					"list": [
-						"Betritt beschädigte Gebäude erst, wenn du sicher bist, dass keine Einsturzgefahr besteht.",
-						"Berühre keine herabgefallenen oder beschädigten Stromleitungen - Lebensgefahr!",
-						"Melde Schäden an Infrastruktur (Straßen, Leitungen, Gebäude) den zuständigen Behörden.",
-						"Dokumentiere Schäden am Eigentum für die Versicherung.",
-						"Helfe Nachbarn, insbesondere älteren oder hilfsbedürftigen Personen, bei der Schadensbeseitigung",
-						"Entferne beschädigte Äste und geschwächte Bäume auf deinem Grundstück fachgerecht, um Folgeschäden zu vermeiden."
+						"Betreten Sie beschädigte Gebäude erst, wenn Sie sicher sind, dass keine Einsturzgefahr besteht.",
+						"Berühren Sie keine herabgefallenen oder beschädigten Stromleitungen - Lebensgefahr!",
+						"Melden Sie Schäden an Infrastruktur (Straßen, Leitungen, Gebäude) den zuständigen Behörden.",
+						"Dokumentieren Sie Schäden am Eigentum für die Versicherung.",
+						"Helfen Sie Nachbarn, insbesondere älteren oder hilfsbedürftigen Personen, bei der Schadensbeseitigung",
+						"Entfernen Sie beschädigte Äste und geschwächte Bäume auf Ihrem Grundstück fachgerecht, um Folgeschäden zu vermeiden."
 					]
 				}
 			],
@@ -257,26 +257,26 @@
 		{
 			"category": "Einfamilienhaus",
 			"icon": "<svg width='135' height='135' viewBox='0 0 135 135' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M67.045 133.515C103.755 133.515 133.525 103.755 133.525 67.0349C133.525 30.3149 103.755 0.564941 67.045 0.564941C30.335 0.564941 0.565002 30.3349 0.565002 67.0449C0.565002 103.755 30.325 133.525 67.035 133.525L67.045 133.515Z' fill='white'/><path d='M67.045 133.515C103.755 133.515 133.525 103.755 133.525 67.0349C133.525 30.3149 103.755 0.564941 67.045 0.564941C30.335 0.564941 0.565002 30.3349 0.565002 67.0449C0.565002 103.755 30.325 133.525 67.035 133.525L67.045 133.515Z' stroke='#9D9D9C' stroke-width='1.13'/><path d='M31.255 56.085L67.995 37.415L104.605 56.325L31.255 56.085ZM102.905 101.635H31.255V55.735H102.905V101.635ZM105.745 60.045L67.085 40.075L28.295 59.785L25.305 53.905L67.115 32.665L108.775 54.185L105.745 60.045Z' stroke='white' stroke-width='4.15'/><path d='M31.255 56.085L67.995 37.415L104.605 56.325L31.255 56.085Z' fill='#646363'/><path d='M102.905 91.0349L31.255 91.0249V55.7349L102.905 55.7449V91.0349Z' fill='#646363'/><mask id='mask0_639_21' style='mask-type:luminance' maskUnits='userSpaceOnUse' x='31' y='55' width='72' height='37'><path d='M102.905 91.0349L31.255 91.0249V55.7349L102.905 55.7449V91.0349Z' fill='white'/></mask><g mask='url(#mask0_639_21)'><path d='M93.885 91.9247L80.425 91.8847L80.475 63.6147L93.935 63.6647L93.885 91.9247Z' fill='#B2B2B2'/><path d='M93.885 91.9247L80.425 91.8847L80.475 63.6147L93.935 63.6647L93.885 91.9247Z' stroke='white' stroke-width='1.04' stroke-miterlimit='10'/></g><path d='M105.745 60.045L67.085 40.085L28.295 59.795L25.305 53.905L67.115 32.665L108.775 54.185L105.745 60.045Z' fill='#B2B2B2'/><path d='M105.745 60.045L67.085 40.085L28.295 59.795L25.305 53.905L67.115 32.665L108.775 54.185L105.745 60.045Z' stroke='white' stroke-width='1.04' stroke-miterlimit='10'/><path d='M53.685 77.1147L40.235 77.0747L40.275 63.6147L53.735 63.6647L53.685 77.1147Z' fill='#A1DAF8'/><path d='M53.685 77.1147L40.235 77.0747L40.275 63.6147L53.735 63.6647L53.685 77.1147Z' stroke='white' stroke-width='1.04' stroke-miterlimit='10'/><path d='M73.785 77.1147L60.335 77.0747L60.375 63.6147L73.835 63.6647L73.785 77.1147Z' fill='#A1DAF8'/><path d='M73.785 77.1147L60.335 77.0747L60.375 63.6147L73.835 63.6647L73.785 77.1147Z' stroke='white' stroke-width='1.04' stroke-miterlimit='10'/></svg>",
-			"text": "Überprüfe das Risiko für Hochwasser, Starkregen und andere Naturereignisse für deinen Standort.",
+			"text": "Überprüfen Sie das Risiko für Hochwasser, Starkregen und andere Naturereignisse für Ihren Standort.",
 			"subcategories": [
 				{
 					"label": "zur Miete",
 					"results": {
 						"stromausfall": [
-							"Kontaktiere den Eigentümer oder Vermieter und frage, was du im Falle eines Stromausfalls beachten solltest (z. B. Heizung, Warmwasser, Keller).",
-							"Bewahre diese Hinweise an einem Ort auf, den du nicht vergessen oder übersehen kannst, oder mache dir zusätzlich noch eigene Notizen."
+							"Kontaktieren Sie den Eigentümer oder Vermieter und fragen Sie, was Sie im Falle eines Stromausfalls beachten sollten (z. B. Heizung, Warmwasser, Keller).",
+							"Bewahren Sie diese Hinweise an einem Ort auf, den Sie nicht vergessen oder übersehen können, oder machen Sie sich zusätzlich noch eigene Notizen."
 						],
 						"hitze": [
-							"Kontaktiere den Eigentümer oder Vermieter und frage, welche Möglichkeiten zur Kühlung oder Beschattung des Hauses vorhanden sind und was du bei extremer Hitze beachten solltest.",
-							"Bewahre diese Hinweise an einem Ort auf, den du nicht vergessen oder übersehen kannst, oder mache dir zusätzlich noch eigene Notizen."
+							"Kontaktieren Sie den Eigentümer oder Vermieter und fragen Sie, welche Möglichkeiten zur Kühlung oder Beschattung des Hauses vorhanden sind und was Sie bei extremer Hitze beachten sollten.",
+							"Bewahren Sie diese Hinweise an einem Ort auf, den Sie nicht vergessen oder übersehen können, oder machen Sie sich zusätzlich noch eigene Notizen."
 						],
 						"starkregen_hochwasser": [
-							"Kontaktiere den Eigentümer oder Vermieter und frage, was du im Falle eines Hochwassers oder bei anderen Naturgefahren beachten solltest.",
-							"Bewahre diese Hinweise an einem Ort auf, den du nicht vergessen oder übersehen kannst oder mache dir zusätzlich noch eigene Notizen."
+							"Kontaktieren Sie den Eigentümer oder Vermieter und fragen Sie, was Sie im Falle eines Hochwassers oder bei anderen Naturgefahren beachten sollten.",
+							"Bewahren Sie diese Hinweise an einem Ort auf, den Sie nicht vergessen oder übersehen können oder machen Sie sich zusätzlich noch eigene Notizen."
 						],
 						"sturm_tornado": [
-							"Kontaktiere den Eigentümer oder Vermieter und frage, was du im Falle eines schweren Sturms oder Tornados beachten solltest (z. B. Dachzustand, Keller, Sturmsicherungen).",
-							"Bewahre diese Hinweise an einem Ort auf, den du nicht vergessen oder übersehen kannst, oder mache dir zusätzlich noch eigene Notizen."
+							"Kontaktieren Sie den Eigentümer oder Vermieter und fragen Sie, was Sie im Falle eines schweren Sturms oder Tornados beachten sollten (z. B. Dachzustand, Keller, Sturmsicherungen).",
+							"Bewahren Sie diese Hinweise an einem Ort auf, den Sie nicht vergessen oder übersehen können, oder machen Sie sich zusätzlich noch eigene Notizen."
 						]
 					}
 				},
@@ -284,24 +284,24 @@
 					"label": "im Eigentum",
 					"results": {
 						"stromausfall": [
-							"Überprüfe deinen Versicherungsschutz und halte die Unterlagen aktuell und in Reichweite, falls du im Schadensfall schnell Klarheit benötigst.",
-							"Mach dir eine einfache Checkliste, wie du im Falle eines Stromausfalls vorgehen willst. > Zum Beispiel: Wo befinden sich Taschenlampen, Kerzen und Batterien? Wie lange reichen deine Lebensmittelvorräte ohne Kühlung? Wie funktioniert deine Heizung ohne Strom?",
-							"Halte diese Checkliste an einem Ort bereit, den du nicht vergessen oder übersehen kannst."
+							"Überprüfen Sie Ihren Versicherungsschutz und halten Sie die Unterlagen aktuell und in Reichweite, falls Sie im Schadensfall schnell Klarheit benötigen.",
+							"Machen Sie sich eine einfache Checkliste, wie Sie im Falle eines Stromausfalls vorgehen möchten. > Zum Beispiel: Wo befinden sich Taschenlampen, Kerzen und Batterien? Wie lange reichen Ihre Lebensmittelvorräte ohne Kühlung? Wie funktioniert Ihre Heizung ohne Strom?",
+							"Halten Sie diese Checkliste an einem Ort bereit, den Sie nicht vergessen oder übersehen können."
 						],
 						"hitze": [
-							"Überprüfe deinen Versicherungsschutz und halte die Unterlagen aktuell und in Reichweite.",
-							"Mach dir eine einfache Checkliste, wie du dein Zuhause bei extremer Hitze schützen und kühlen kannst. > Zum Beispiel: Sind Rollläden, Jalousien oder Vorhänge vorhanden? Gibt es kühle Räume im Haus (z. B. Keller)? Wie lässt sich das Haus in den Abend- und Nachtstunden gut durchlüften?",
-							"Halte diese Checkliste an einem Ort bereit, den du nicht vergessen oder übersehen kannst."
+							"Überprüfen Sie Ihren Versicherungsschutz und halten Sie die Unterlagen aktuell und in Reichweite.",
+							"Machen Sie sich eine einfache Checkliste, wie Sie Ihr Zuhause bei extremer Hitze schützen und kühlen können. > Zum Beispiel: Sind Rollläden, Jalousien oder Vorhänge vorhanden? Gibt es kühle Räume im Haus (z. B. Keller)? Wie lässt sich das Haus in den Abend- und Nachtstunden gut durchlüften?",
+							"Halten Sie diese Checkliste an einem Ort bereit, den Sie nicht vergessen oder übersehen können."
 						],
 						"starkregen_hochwasser": [
-							"Überprüfe deinen Versicherungsschutz und halte die Unterlagen aktuell und in Reichweite, falls du im Schadensfall schnell Klarheit benötigst.",
-							"Mach dir eine einfache Checkliste, wie du im Falle eines Hochwassers oder bei anderen Naturgefahren vorgehen willst. > Zum Beispiel bei Hochwasser: Sind die Fenster im Keller und Erdgeschoss geschlossen? Sind elektrische Geräte und gefährliche Stoffe in höheren Etagen in Sicherheit? Wo lagern Sandsäcke oder andere mobile Absperrungen?",
-							"Halte diese Checkliste an einem Ort bereit, den du nicht vergessen oder übersehen kannst."
+							"Überprüfen Sie Ihren Versicherungsschutz und halten Sie die Unterlagen aktuell und in Reichweite, falls Sie im Schadensfall schnell Klarheit benötigen.",
+							"Machen Sie sich eine einfache Checkliste, wie Sie im Falle eines Hochwassers oder bei anderen Naturgefahren vorgehen möchten. > Zum Beispiel bei Hochwasser: Sind die Fenster im Keller und Erdgeschoss geschlossen? Sind elektrische Geräte und gefährliche Stoffe in höheren Etagen in Sicherheit? Wo lagern Sandsäcke oder andere mobile Absperrungen?",
+							"Halten Sie diese Checkliste an einem Ort bereit, den Sie nicht vergessen oder übersehen können."
 						],
 						"sturm_tornado": [
-							"Überprüfe deinen Versicherungsschutz und halte die Unterlagen aktuell und in Reichweite, falls du im Schadensfall schnell Klarheit benötigst.",
-							"Mach dir eine einfache Checkliste, wie du im Falle eines Sturms oder Tornados vorgehen willst. > Zum Beispiel: Können Gartenmöbel, Trampoline und andere Gegenstände schnell gesichert oder verstaut werden? Welcher Raum im Haus ist am sichersten (z. B. Keller, innenliegender Raum ohne Fenster)? Wann wurde das Dach zuletzt auf Schäden geprüft?",
-							"Halte diese Checkliste an einem Ort bereit, den du nicht vergessen oder übersehen kannst."
+							"Überprüfen Sie Ihren Versicherungsschutz und halten Sie die Unterlagen aktuell und in Reichweite, falls Sie im Schadensfall schnell Klarheit benötigen.",
+							"Machen Sie sich eine einfache Checkliste, wie Sie im Falle eines Sturms oder Tornados vorgehen möchten. > Zum Beispiel: Können Gartenmöbel, Trampoline und andere Gegenstände schnell gesichert oder verstaut werden? Welcher Raum im Haus ist am sichersten (z. B. Keller, innenliegender Raum ohne Fenster)? Wann wurde das Dach zuletzt auf Schäden geprüft?",
+							"Halten Sie diese Checkliste an einem Ort bereit, den Sie nicht vergessen oder übersehen können."
 						]
 					}
 				},
@@ -309,20 +309,20 @@
 					"label": "in einer Ortschaft oder Siedlung",
 					"results": {
 						"stromausfall": [
-							"Wenn es sich anbietet: sprich mit deinen Nachbarn über das Thema. Vielleicht könnt ihr euch gegenseitig unterstützen, z. B. bei der Versorgung älterer oder hilfsbedürftiger Personen.",
-							"Verschaffe dir einen Überblick, wo du im Notfall Hilfe suchen könntest, z. B. Gemeindezentrum, Turnhalle, Kirche …"
+							"Wenn es sich anbietet: sprechen Sie mit Ihren Nachbarn über das Thema. Vielleicht können Sie sich gegenseitig unterstützen, z. B. bei der Versorgung älterer oder hilfsbedürftiger Personen.",
+							"Verschaffen Sie sich einen Überblick, wo Sie im Notfall Hilfe suchen könnten, z. B. Gemeindezentrum, Turnhalle, Kirche …"
 						],
 						"hitze": [
-							"Wenn es sich anbietet: sprich mit deinen Nachbarn über das Thema. Besonders ältere oder kranke Menschen sind bei Hitze besonders gefährdet und brauchen vielleicht Unterstützung.",
-							"Verschaffe dir einen Überblick, wo es in der Nähe kühle öffentliche Orte gibt, z. B. Bibliotheken, Kirchen, Gemeindezentren …"
+							"Wenn es sich anbietet: sprechen Sie mit Ihren Nachbarn über das Thema. Besonders ältere oder kranke Menschen sind bei Hitze besonders gefährdet und brauchen vielleicht Unterstützung.",
+							"Verschaffen Sie sich einen Überblick, wo es in der Nähe kühle öffentliche Orte gibt, z. B. Bibliotheken, Kirchen, Gemeindezentren …"
 						],
 						"starkregen_hochwasser": [
-							"Wenn es sich anbietet: sprich mit deinen Nachbarn über das Thema. Vielleicht könnt ihr euch gemeinsam vorbereiten und z. B. in gefährdeten Bereichen gemeinsam Sandsäcke aufbewahren, die im Ernstfall allen helfen könnten.",
-							"Verschaffe dir einen Überblick, wo du im Notfall Hilfe suchen könntest, z. B. Gemeindezentrum, Turnhalle, Kirche …"
+							"Wenn es sich anbietet: sprechen Sie mit Ihren Nachbarn über das Thema. Vielleicht können Sie sich gemeinsam vorbereiten und z. B. in gefährdeten Bereichen gemeinsam Sandsäcke aufbewahren, die im Ernstfall allen helfen könnten.",
+							"Verschaffen Sie sich einen Überblick, wo Sie im Notfall Hilfe suchen könnten, z. B. Gemeindezentrum, Turnhalle, Kirche …"
 						],
 						"sturm_tornado": [
-							"Wenn es sich anbietet: sprich mit deinen Nachbarn über das Thema. Vielleicht könnt ihr euch gegenseitig frühzeitig warnen oder bei Schäden nach dem Sturm helfen.",
-							"Verschaffe dir einen Überblick, wo du im Notfall Schutz oder Hilfe suchen könntest, z. B. Gemeindezentrum, Turnhalle, Kirche …"
+							"Wenn es sich anbietet: sprechen Sie mit Ihren Nachbarn über das Thema. Vielleicht können Sie sich gegenseitig frühzeitig warnen oder bei Schäden nach dem Sturm helfen.",
+							"Verschaffen Sie sich einen Überblick, wo Sie im Notfall Schutz oder Hilfe suchen könnten, z. B. Gemeindezentrum, Turnhalle, Kirche …"
 						]
 					}
 				},
@@ -330,20 +330,20 @@
 					"label": "in Alleinlage oder weit außerhalb von Ortschaften",
 					"results": {
 						"stromausfall": [
-							"Überlege dir, wie du im Notfall auch ohne Strom, Telefon oder Auto kommunizieren und Hilfe bekommen kannst und wie lange das dauert.",
-							"Verschaffe dir einen Überblick, wo du im Notfall Hilfe suchen könntest, z. B. Gemeindezentrum, Turnhalle, Kirche …"
+							"Überlegen Sie sich, wie Sie im Notfall auch ohne Strom, Telefon oder Auto kommunizieren und Hilfe bekommen können und wie lange das dauert.",
+							"Verschaffen Sie sich einen Überblick, wo Sie im Notfall Hilfe suchen könnten, z. B. Gemeindezentrum, Turnhalle, Kirche …"
 						],
 						"hitze": [
-							"Überlege dir, wie du im Notfall auch ohne Auto oder Telefon Hilfe bekommen kannst und wie lange das dauert.",
-							"Verschaffe dir einen Überblick, wo du im Notfall kühle Zuflucht oder Hilfe suchen könntest, z. B. Gemeindezentrum, Turnhalle, Kirche …"
+							"Überlegen Sie sich, wie Sie im Notfall auch ohne Auto oder Telefon Hilfe bekommen können und wie lange das dauert.",
+							"Verschaffen Sie sich einen Überblick, wo Sie im Notfall kühle Zuflucht oder Hilfe suchen könnten, z. B. Gemeindezentrum, Turnhalle, Kirche …"
 						],
 						"starkregen_hochwasser": [
-							"Überlege dir, wo und wie du im Notfall auch ohne Notruf oder Auto Hilfe bekommen kannst und wie lange das dauert.",
-							"Verschaffe dir einen Überblick, wo du im Notfall Hilfe suchen könntest, z. B. Gemeindezentrum, Turnhalle, Kirche …"
+							"Überlegen Sie sich, wo und wie Sie im Notfall auch ohne Notruf oder Auto Hilfe bekommen können und wie lange das dauert.",
+							"Verschaffen Sie sich einen Überblick, wo Sie im Notfall Hilfe suchen könnten, z. B. Gemeindezentrum, Turnhalle, Kirche …"
 						],
 						"sturm_tornado": [
-							"Überlege dir, wie du im Notfall auch ohne Notruf oder Auto Hilfe bekommen kannst und wie lange das dauert.",
-							"Verschaffe dir einen Überblick, wo du im Notfall Schutz oder Hilfe suchen könntest, z. B. Gemeindezentrum, Turnhalle, Kirche …"
+							"Überlegen Sie sich, wie Sie im Notfall auch ohne Notruf oder Auto Hilfe bekommen können und wie lange das dauert.",
+							"Verschaffen Sie sich einen Überblick, wo Sie im Notfall Schutz oder Hilfe suchen könnten, z. B. Gemeindezentrum, Turnhalle, Kirche …"
 						]
 					}
 				}
@@ -352,30 +352,30 @@
 		{
 			"category": "Mehrfamilienhaus",
 			"icon": "<svg width='135' height='135' viewBox='0 0 135 135' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M67.045 133.515C103.755 133.515 133.525 103.755 133.525 67.0349C133.525 30.3149 103.755 0.564941 67.045 0.564941C30.335 0.564941 0.565002 30.3349 0.565002 67.0449C0.565002 103.755 30.325 133.525 67.035 133.525L67.045 133.515Z' fill='white'/><path d='M67.045 133.515C103.755 133.515 133.525 103.755 133.525 67.0349C133.525 30.3149 103.755 0.564941 67.045 0.564941C30.335 0.564941 0.565002 30.3349 0.565002 67.0449C0.565002 103.755 30.325 133.525 67.035 133.525L67.045 133.515Z' stroke='#9D9D9C' stroke-width='1.13'/><path d='M31.255 48.0047L67.995 29.3347L104.605 48.2447L31.255 48.0047ZM102.905 93.5647H31.255V47.6647H102.905V93.5647ZM105.745 51.9747L67.085 32.0047L28.295 51.7147L25.305 45.8347L67.115 24.5947L108.775 46.1147L105.745 51.9747Z' stroke='white' stroke-width='4.15'/><path d='M31.255 48.0047L67.995 29.3447L104.605 48.2547L31.255 48.0047Z' fill='#646363'/><path d='M102.905 98.2248L31.255 98.2148V47.6548L102.905 47.6648V98.2248Z' fill='#646363'/><mask id='mask0_639_66' style='mask-type:luminance' maskUnits='userSpaceOnUse' x='31' y='47' width='72' height='52'><path d='M102.905 98.2248L31.255 98.2148V47.6548L102.905 47.6648V98.2248Z' fill='white'/></mask><g mask='url(#mask0_639_66)'><path d='M73.755 104.905L60.295 104.855L60.335 75.2646L73.795 75.3046L73.755 104.905Z' fill='#B2B2B2'/><path d='M73.755 104.905L60.295 104.855L60.335 75.2646L73.795 75.3046L73.755 104.905Z' stroke='white' stroke-width='1.04' stroke-miterlimit='10'/></g><path d='M105.745 51.975L67.085 32.005L28.295 51.715L25.305 45.835L67.115 24.585L108.775 46.105L105.745 51.975Z' fill='#B2B2B2'/><path d='M105.745 51.975L67.085 32.005L28.295 51.715L25.305 45.835L67.115 24.585L108.775 46.105L105.745 51.975Z' stroke='white' stroke-width='1.04' stroke-miterlimit='10'/><path d='M53.685 69.0449L40.235 68.9949L40.275 55.5449L53.735 55.5849L53.685 69.0449Z' fill='#A1DAF8'/><path d='M53.685 69.0449L40.235 68.9949L40.275 55.5449L53.735 55.5849L53.685 69.0449Z' stroke='white' stroke-width='1.04' stroke-miterlimit='10'/><path d='M73.785 69.0449L60.325 68.9949L60.375 55.5449L73.825 55.5849L73.785 69.0449Z' fill='#A1DAF8'/><path d='M73.785 69.0449L60.325 68.9949L60.375 55.5449L73.825 55.5849L73.785 69.0449Z' stroke='white' stroke-width='1.04' stroke-miterlimit='10'/><path d='M53.685 88.7646L40.235 88.7246L40.275 75.2646L53.735 75.3046L53.685 88.7646Z' fill='#A1DAF8'/><path d='M53.685 88.7646L40.235 88.7246L40.275 75.2646L53.735 75.3046L53.685 88.7646Z' stroke='white' stroke-width='1.04' stroke-miterlimit='10'/><path d='M93.885 69.0449L80.425 68.9949L80.475 55.5449L93.925 55.5849L93.885 69.0449Z' fill='#A1DAF8'/><path d='M93.885 69.0449L80.425 68.9949L80.475 55.5449L93.925 55.5849L93.885 69.0449Z' stroke='white' stroke-width='1.04' stroke-miterlimit='10'/><path d='M93.885 88.7646L80.425 88.7246L80.475 75.2646L93.925 75.3046L93.885 88.7646Z' fill='#A1DAF8'/><path d='M93.885 88.7646L80.425 88.7246L80.475 75.2646L93.925 75.3046L93.885 88.7646Z' stroke='white' stroke-width='1.04' stroke-miterlimit='10'/></svg>",
-			"text": "Überprüfe das Risiko für Hochwasser, Starkregen und andere Naturereignisse für deine Wohnung.",
+			"text": "Überprüfen Sie das Risiko für Hochwasser, Starkregen und andere Naturereignisse für Ihre Wohnung.",
 			"subcategories": [
 				{
 					"label": "zur Miete",
 					"results": {
 						"stromausfall": [
-							"Kontaktiere den Eigentümer oder Vermieter und frage, was du im Falle eines Stromausfalls beachten solltest (z. B. Aufzug, Tiefgarage, Heizung).",
-							"Bewahre diese Hinweise an einem Ort auf, den du nicht vergessen oder übersehen kannst, oder mache dir zusätzlich noch eigene Notizen.",
-							"Stimme dich mit weiteren Hausbewohnern ab, wie ihr bei einem Stromausfall vorgehen wollt. > Zum Beispiel: Wer kümmert sich um ältere oder hilfsbedürftige Nachbarn? Wie kommt man ohne Aufzug sicher aus dem Gebäude? Wo sind Notbeleuchtung und Sicherungskästen?"
+							"Kontaktieren Sie den Eigentümer oder Vermieter und fragen Sie, was Sie im Falle eines Stromausfalls beachten sollten (z. B. Aufzug, Tiefgarage, Heizung).",
+							"Bewahren Sie diese Hinweise an einem Ort auf, den Sie nicht vergessen oder übersehen können, oder machen Sie sich zusätzlich noch eigene Notizen.",
+							"Stimmen Sie sich mit weiteren Hausbewohnern ab, wie Sie bei einem Stromausfall vorgehen möchten. > Zum Beispiel: Wer kümmert sich um ältere oder hilfsbedürftige Nachbarn? Wie kommt man ohne Aufzug sicher aus dem Gebäude? Wo sind Notbeleuchtung und Sicherungskästen?"
 						],
 						"hitze": [
-							"Kontaktiere den Eigentümer oder Vermieter und frage, welche Möglichkeiten zur Kühlung oder Beschattung der Wohnung vorhanden sind.",
-							"Bewahre diese Hinweise an einem Ort auf, den du nicht vergessen oder übersehen kannst, oder mache dir zusätzlich noch eigene Notizen.",
-							"Stimme dich mit weiteren Hausbewohnern ab - besonders ältere oder kranke Nachbarn könnten bei Hitze Unterstützung benötigen. > Zum Beispiel: Gibt es im Gebäude kühle Gemeinschaftsräume? Wie lässt sich das Treppenhaus gut durchlüften? Wer schaut regelmäßig nach älteren oder hilfsbedürftigen Nachbarn?"
+							"Kontaktieren Sie den Eigentümer oder Vermieter und fragen Sie, welche Möglichkeiten zur Kühlung oder Beschattung der Wohnung vorhanden sind.",
+							"Bewahren Sie diese Hinweise an einem Ort auf, den Sie nicht vergessen oder übersehen können, oder machen Sie sich zusätzlich noch eigene Notizen.",
+							"Stimmen Sie sich mit weiteren Hausbewohnern ab - besonders ältere oder kranke Nachbarn könnten bei Hitze Unterstützung benötigen. > Zum Beispiel: Gibt es im Gebäude kühle Gemeinschaftsräume? Wie lässt sich das Treppenhaus gut durchlüften? Wer schaut regelmäßig nach älteren oder hilfsbedürftigen Nachbarn?"
 						],
 						"starkregen_hochwasser": [
-							"Kontaktiere den Eigentümer oder Vermieter und frage, was du im Falle eines Hochwassers oder bei anderen Naturgefahren beachten solltest.",
-							"Bewahre diese Hinweise an einem Ort auf, den du nicht vergessen oder übersehen kannst oder mache dir zusätzlich noch eigene Notizen.",
-							"Stimme dich mit weiteren Hausbewohnern ab, wie ihr bei Naturgefahren vorgehen wollt. > Zum Beispiel bei Hochwasser: Sind die Fenster im Keller und Erdgeschoss geschlossen? Können elektrische Geräte und gefährliche Stoffe in höher gelegenen Wohnungen in Sicherheit gebracht werden? Wo und wie können sich Bewohner aus den unteren Stockwerken in Sicherheit bringen?"
+							"Kontaktieren Sie den Eigentümer oder Vermieter und fragen Sie, was Sie im Falle eines Hochwassers oder bei anderen Naturgefahren beachten sollten.",
+							"Bewahren Sie diese Hinweise an einem Ort auf, den Sie nicht vergessen oder übersehen können oder machen Sie sich zusätzlich noch eigene Notizen.",
+							"Stimmen Sie sich mit weiteren Hausbewohnern ab, wie Sie bei Naturgefahren vorgehen möchten. > Zum Beispiel bei Hochwasser: Sind die Fenster im Keller und Erdgeschoss geschlossen? Können elektrische Geräte und gefährliche Stoffe in höher gelegenen Wohnungen in Sicherheit gebracht werden? Wo und wie können sich Bewohner aus den unteren Stockwerken in Sicherheit bringen?"
 						],
 						"sturm_tornado": [
-							"Kontaktiere den Eigentümer oder Vermieter und frage, was du im Falle eines schweren Sturms oder Tornados beachten solltest.",
-							"Bewahre diese Hinweise an einem Ort auf, den du nicht vergessen oder übersehen kannst, oder mache dir zusätzlich noch eigene Notizen.",
-							"Stimme dich mit weiteren Hausbewohnern ab, wie ihr bei Sturm oder Tornado vorgehen wollt. > Zum Beispiel: Welcher Bereich des Gebäudes ist am sichersten (z. B. Keller, innenliegendes Treppenhaus)? Wer warnt Bewohner in den oberen Stockwerken? Wie werden Balkone und Gemeinschaftsflächen rechtzeitig gesichert?"
+							"Kontaktieren Sie den Eigentümer oder Vermieter und fragen Sie, was Sie im Falle eines schweren Sturms oder Tornados beachten sollten.",
+							"Bewahren Sie diese Hinweise an einem Ort auf, den Sie nicht vergessen oder übersehen können, oder machen Sie sich zusätzlich noch eigene Notizen.",
+							"Stimmen Sie sich mit weiteren Hausbewohnern ab, wie Sie bei Sturm oder Tornado vorgehen möchten. > Zum Beispiel: Welcher Bereich des Gebäudes ist am sichersten (z. B. Keller, innenliegendes Treppenhaus)? Wer warnt Bewohner in den oberen Stockwerken? Wie werden Balkone und Gemeinschaftsflächen rechtzeitig gesichert?"
 						]
 					}
 				},
@@ -383,24 +383,24 @@
 					"label": "im Eigentum",
 					"results": {
 						"stromausfall": [
-							"Mach dir eine einfache Checkliste, wie du im Falle eines Stromausfalls vorgehen willst.",
-							"Stimme dich mit der Eigentümergemeinschaft oder weiteren Hausbewohnern ab, wie ihr bei einem Stromausfall vorgehen wollt. > Zum Beispiel: Wer kümmert sich um ältere oder hilfsbedürftige Nachbarn? Wie kommt man ohne Aufzug sicher aus dem Gebäude? Wo sind Notbeleuchtung und Sicherungskästen?",
-							"Halte diese Checkliste an einem Ort bereit, den du nicht vergessen oder übersehen kannst."
+							"Machen Sie sich eine einfache Checkliste, wie Sie im Falle eines Stromausfalls vorgehen möchten.",
+							"Stimmen Sie sich mit der Eigentümergemeinschaft oder weiteren Hausbewohnern ab, wie Sie bei einem Stromausfall vorgehen möchten. > Zum Beispiel: Wer kümmert sich um ältere oder hilfsbedürftige Nachbarn? Wie kommt man ohne Aufzug sicher aus dem Gebäude? Wo sind Notbeleuchtung und Sicherungskästen?",
+							"Halten Sie diese Checkliste an einem Ort bereit, den Sie nicht vergessen oder übersehen können."
 						],
 						"hitze": [
-							"Mach dir eine einfache Checkliste, wie du deine Wohnung bei extremer Hitze schützen und kühlen kannst.",
-							"Stimme dich mit der Eigentümergemeinschaft oder weiteren Hausbewohnern ab, wie ihr gemeinsam mit Hitzewellen umgehen wollt. > Zum Beispiel: Gibt es im Gebäude kühle Gemeinschaftsräume? Wie lässt sich das Treppenhaus gut durchlüften? Wer schaut regelmäßig nach älteren oder hilfsbedürftigen Nachbarn?",
-							"Halte diese Checkliste an einem Ort bereit, den du nicht vergessen oder übersehen kannst."
+							"Machen Sie sich eine einfache Checkliste, wie Sie Ihre Wohnung bei extremer Hitze schützen und kühlen können.",
+							"Stimmen Sie sich mit der Eigentümergemeinschaft oder weiteren Hausbewohnern ab, wie Sie gemeinsam mit Hitzewellen umgehen möchten. > Zum Beispiel: Gibt es im Gebäude kühle Gemeinschaftsräume? Wie lässt sich das Treppenhaus gut durchlüften? Wer schaut regelmäßig nach älteren oder hilfsbedürftigen Nachbarn?",
+							"Halten Sie diese Checkliste an einem Ort bereit, den Sie nicht vergessen oder übersehen können."
 						],
 						"starkregen_hochwasser": [
-							"Mach dir eine einfache Checkliste, wie du im Falle eines Hochwassers oder bei anderen Naturgefahren vorgehen willst.",
-							"Stimme dich mit der Eigentümergemeinschaft oder weiteren Hausbewohnern ab, wie ihr bei Naturgefahren vorgehen wollt. > Zum Beispiel bei Hochwasser: Sind die Fenster im Keller und Erdgeschoss geschlossen? Können elektrische Geräte und gefährliche Stoffe in höher gelegenen Wohnungen in Sicherheit gebracht werden? Wo lagern Sandsäcke oder andere mobile Absperrungen? Wo und wie können sich Bewohner aus den unteren Stockwerken in Sicherheit bringen?",
-							"Halte diese Checkliste an einem Ort bereit, den du nicht vergessen oder übersehen kannst."
+							"Machen Sie sich eine einfache Checkliste, wie Sie im Falle eines Hochwassers oder bei anderen Naturgefahren vorgehen möchten.",
+							"Stimmen Sie sich mit der Eigentümergemeinschaft oder weiteren Hausbewohnern ab, wie Sie bei Naturgefahren vorgehen möchten. > Zum Beispiel bei Hochwasser: Sind die Fenster im Keller und Erdgeschoss geschlossen? Können elektrische Geräte und gefährliche Stoffe in höher gelegenen Wohnungen in Sicherheit gebracht werden? Wo lagern Sandsäcke oder andere mobile Absperrungen? Wo und wie können sich Bewohner aus den unteren Stockwerken in Sicherheit bringen?",
+							"Halten Sie diese Checkliste an einem Ort bereit, den Sie nicht vergessen oder übersehen können."
 						],
 						"sturm_tornado": [
-							"Mach dir eine einfache Checkliste, wie du im Falle eines Sturms oder Tornados vorgehen willst.",
-							"Stimme dich mit der Eigentümergemeinschaft oder weiteren Hausbewohnern ab, wie ihr gemeinsam vorgehen wollt. > Zum Beispiel: Welcher Bereich des Gebäudes ist am sichersten (z. B. Keller, innenliegendes Treppenhaus)? Wer warnt Bewohner in den oberen Stockwerken? Wie werden Balkone und Gemeinschaftsflächen rechtzeitig gesichert?",
-							"Halte diese Checkliste an einem Ort bereit, den du nicht vergessen oder übersehen kannst."
+							"Machen Sie sich eine einfache Checkliste, wie Sie im Falle eines Sturms oder Tornados vorgehen möchten.",
+							"Stimmen Sie sich mit der Eigentümergemeinschaft oder weiteren Hausbewohnern ab, wie Sie gemeinsam vorgehen möchten. > Zum Beispiel: Welcher Bereich des Gebäudes ist am sichersten (z. B. Keller, innenliegendes Treppenhaus)? Wer warnt Bewohner in den oberen Stockwerken? Wie werden Balkone und Gemeinschaftsflächen rechtzeitig gesichert?",
+							"Halten Sie diese Checkliste an einem Ort bereit, den Sie nicht vergessen oder übersehen können."
 						]
 					}
 				},
@@ -408,20 +408,20 @@
 					"label": "in einer Ortschaft oder Siedlung",
 					"results": {
 						"stromausfall": [
-							"Wenn es sich anbietet: sprich mit deinen Nachbarn über das Thema. Vielleicht könnt ihr euch gegenseitig unterstützen, z. B. bei der Versorgung älterer oder hilfsbedürftiger Personen in der Nachbarschaft.",
-							"Verschaffe dir einen Überblick, wo du im Notfall Hilfe suchen könntest, z. B. Gemeindezentrum, Turnhalle, Kirche …"
+							"Wenn es sich anbietet: sprechen Sie mit Ihren Nachbarn über das Thema. Vielleicht können Sie sich gegenseitig unterstützen, z. B. bei der Versorgung älterer oder hilfsbedürftiger Personen in der Nachbarschaft.",
+							"Verschaffen Sie sich einen Überblick, wo Sie im Notfall Hilfe suchen könnten, z. B. Gemeindezentrum, Turnhalle, Kirche …"
 						],
 						"hitze": [
-							"Wenn es sich anbietet: sprich mit deinen Nachbarn über das Thema. Besonders ältere oder kranke Menschen sind bei Hitze besonders gefährdet.",
-							"Verschaffe dir einen Überblick, wo es in der Nähe kühle öffentliche Orte gibt, z. B. Bibliotheken, Kirchen, Gemeindezentren …"
+							"Wenn es sich anbietet: sprechen Sie mit Ihren Nachbarn über das Thema. Besonders ältere oder kranke Menschen sind bei Hitze besonders gefährdet.",
+							"Verschaffen Sie sich einen Überblick, wo es in der Nähe kühle öffentliche Orte gibt, z. B. Bibliotheken, Kirchen, Gemeindezentren …"
 						],
 						"starkregen_hochwasser": [
-							"Wenn es sich anbietet: sprich mit deinen Nachbarn über das Thema. Vielleicht könnt ihr euch gemeinsam vorbereiten und z. B. in gefährdeten Bereichen gemeinsam Sandsäcke aufbewahren, die im Ernstfall allen helfen könnten.",
-							"Verschaffe dir einen Überblick, wo du im Notfall Hilfe suchen könntest, z. B. Gemeindezentrum, Turnhalle, Kirche …"
+							"Wenn es sich anbietet: sprechen Sie mit Ihren Nachbarn über das Thema. Vielleicht können Sie sich gemeinsam vorbereiten und z. B. in gefährdeten Bereichen gemeinsam Sandsäcke aufbewahren, die im Ernstfall allen helfen könnten.",
+							"Verschaffen Sie sich einen Überblick, wo Sie im Notfall Hilfe suchen könnten, z. B. Gemeindezentrum, Turnhalle, Kirche …"
 						],
 						"sturm_tornado": [
-							"Wenn es sich anbietet: sprich mit deinen Nachbarn über das Thema. Vielleicht könnt ihr euch gegenseitig frühzeitig warnen oder bei Schäden nach dem Sturm helfen.",
-							"Verschaffe dir einen Überblick, wo du im Notfall Schutz oder Hilfe suchen könntest, z. B. Gemeindezentrum, Turnhalle, Kirche …"
+							"Wenn es sich anbietet: sprechen Sie mit Ihren Nachbarn über das Thema. Vielleicht können Sie sich gegenseitig frühzeitig warnen oder bei Schäden nach dem Sturm helfen.",
+							"Verschaffen Sie sich einen Überblick, wo Sie im Notfall Schutz oder Hilfe suchen könnten, z. B. Gemeindezentrum, Turnhalle, Kirche …"
 						]
 					}
 				}
@@ -430,30 +430,30 @@
 		{
 			"category": "Wohnheim",
 			"icon": "<svg width='135' height='135' viewBox='0 0 135 135' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M67.045 133.515C103.755 133.515 133.525 103.755 133.525 67.0349C133.525 30.3149 103.755 0.564941 67.045 0.564941C30.335 0.564941 0.565002 30.3349 0.565002 67.0449C0.565002 103.755 30.325 133.525 67.035 133.525L67.045 133.515Z' fill='white'/><path d='M67.045 133.515C103.755 133.515 133.525 103.755 133.525 67.0349C133.525 30.3149 103.755 0.564941 67.045 0.564941C30.335 0.564941 0.565002 30.3349 0.565002 67.0449C0.565002 103.755 30.325 133.525 67.035 133.525L67.045 133.515Z' stroke='#9D9D9C' stroke-width='1.13'/><path d='M31.255 48.0047L67.995 29.3347L104.605 48.2447L31.255 48.0047ZM102.905 93.5647H31.255V47.6647H102.905V93.5647ZM105.745 51.9747L67.085 32.0047L28.295 51.7147L25.305 45.8347L67.115 24.5947L108.775 46.1147L105.745 51.9747Z' stroke='white' stroke-width='4.15'/><path d='M31.2549 48.0047L67.9949 29.3447L104.605 48.2547L31.2549 48.0047Z' fill='#646363'/><path d='M102.905 98.2248L31.2549 98.2148V47.6548L102.905 47.6648V98.2248Z' fill='#646363'/><mask id='mask0_639_110' style='mask-type:luminance' maskUnits='userSpaceOnUse' x='31' y='47' width='72' height='52'><path d='M102.905 98.2248L31.2549 98.2148V47.6548L102.905 47.6648V98.2248Z' fill='white'/></mask><g mask='url(#mask0_639_110)'><path d='M84.985 99.545L75.455 99.515L75.485 80.395L85.015 80.425L84.985 99.545Z' fill='#B2B2B2'/><path d='M84.985 99.545L75.455 99.515L75.485 80.395L85.015 80.425L84.985 99.545Z' stroke='white' stroke-width='0.75' stroke-miterlimit='10'/></g><path d='M105.745 51.975L67.085 32.005L28.295 51.715L25.305 45.835L67.115 24.585L108.775 46.105L105.745 51.975Z' fill='#B2B2B2'/><path d='M105.745 51.975L67.085 32.005L28.295 51.715L25.305 45.835L67.115 24.585L108.775 46.105L105.745 51.975Z' stroke='white' stroke-width='0.75' stroke-miterlimit='10'/><path d='M45.5349 63.6647L35.9949 63.6247L36.0349 54.0947L45.5649 54.1247L45.5349 63.6647Z' fill='#A1DAF8'/><path d='M45.5349 63.6647L35.9949 63.6247L36.0349 54.0947L45.5649 54.1247L45.5349 63.6647Z' stroke='white' stroke-width='0.75' stroke-miterlimit='10'/><path d='M58.6851 63.6647L49.1451 63.6247L49.1851 54.0947L58.7151 54.1247L58.6851 63.6647Z' fill='#A1DAF8'/><path d='M58.6851 63.6647L49.1451 63.6247L49.1851 54.0947L58.7151 54.1247L58.6851 63.6647Z' stroke='white' stroke-width='0.75' stroke-miterlimit='10'/><path d='M71.835 63.6647L62.305 63.6247L62.335 54.0947L71.865 54.1247L71.835 63.6647Z' fill='#A1DAF8'/><path d='M71.835 63.6647L62.305 63.6247L62.335 54.0947L71.865 54.1247L71.835 63.6647Z' stroke='white' stroke-width='0.75' stroke-miterlimit='10'/><path d='M84.985 63.6647L75.455 63.6247L75.485 54.0947L85.015 54.1247L84.985 63.6647Z' fill='#A1DAF8'/><path d='M84.985 63.6647L75.455 63.6247L75.485 54.0947L85.015 54.1247L84.985 63.6647Z' stroke='white' stroke-width='0.75' stroke-miterlimit='10'/><path d='M98.135 63.6647L88.605 63.6247L88.635 54.0947L98.165 54.1247L98.135 63.6647Z' fill='#A1DAF8'/><path d='M98.135 63.6647L88.605 63.6247L88.635 54.0947L98.165 54.1247L98.135 63.6647Z' stroke='white' stroke-width='0.75' stroke-miterlimit='10'/><path d='M45.5349 76.8151L35.9949 76.7751L36.0349 67.2451L45.5649 67.2751L45.5349 76.8151Z' fill='#A1DAF8'/><path d='M45.5349 76.8151L35.9949 76.7751L36.0349 67.2451L45.5649 67.2751L45.5349 76.8151Z' stroke='white' stroke-width='0.75' stroke-miterlimit='10'/><path d='M58.6851 76.8151L49.1451 76.7751L49.1851 67.2451L58.7151 67.2751L58.6851 76.8151Z' fill='#A1DAF8'/><path d='M58.6851 76.8151L49.1451 76.7751L49.1851 67.2451L58.7151 67.2751L58.6851 76.8151Z' stroke='white' stroke-width='0.75' stroke-miterlimit='10'/><path d='M71.835 76.8151L62.305 76.7751L62.335 67.2451L71.865 67.2751L71.835 76.8151Z' fill='#A1DAF8'/><path d='M71.835 76.8151L62.305 76.7751L62.335 67.2451L71.865 67.2751L71.835 76.8151Z' stroke='white' stroke-width='0.75' stroke-miterlimit='10'/><path d='M84.985 76.8151L75.455 76.7751L75.485 67.2451L85.015 67.2751L84.985 76.8151Z' fill='#A1DAF8'/><path d='M84.985 76.8151L75.455 76.7751L75.485 67.2451L85.015 67.2751L84.985 76.8151Z' stroke='white' stroke-width='0.75' stroke-miterlimit='10'/><path d='M98.135 76.8151L88.605 76.7751L88.635 67.2451L98.165 67.2751L98.135 76.8151Z' fill='#A1DAF8'/><path d='M98.135 76.8151L88.605 76.7751L88.635 67.2451L98.165 67.2751L98.135 76.8151Z' stroke='white' stroke-width='0.75' stroke-miterlimit='10'/><path d='M45.5349 89.965L35.9949 89.925L36.0349 80.395L45.5649 80.425L45.5349 89.965Z' fill='#A1DAF8'/><path d='M45.5349 89.965L35.9949 89.925L36.0349 80.395L45.5649 80.425L45.5349 89.965Z' stroke='white' stroke-width='0.75' stroke-miterlimit='10'/><path d='M58.6851 89.965L49.1451 89.925L49.1851 80.395L58.7151 80.425L58.6851 89.965Z' fill='#A1DAF8'/><path d='M58.6851 89.965L49.1451 89.925L49.1851 80.395L58.7151 80.425L58.6851 89.965Z' stroke='white' stroke-width='0.75' stroke-miterlimit='10'/><path d='M71.835 89.965L62.305 89.925L62.335 80.395L71.865 80.425L71.835 89.965Z' fill='#A1DAF8'/><path d='M71.835 89.965L62.305 89.925L62.335 80.395L71.865 80.425L71.835 89.965Z' stroke='white' stroke-width='0.75' stroke-miterlimit='10'/><path d='M98.135 89.965L88.605 89.925L88.635 80.395L98.165 80.425L98.135 89.965Z' fill='#A1DAF8'/><path d='M98.135 89.965L88.605 89.925L88.635 80.395L98.165 80.425L98.135 89.965Z' stroke='white' stroke-width='0.75' stroke-miterlimit='10'/></svg>",
-			"text": "Überprüfe das Risiko für Hochwasser, Starkregen und andere Naturereignisse für deine Wohnung.",
+			"text": "Überprüfen Sie das Risiko für Hochwasser, Starkregen und andere Naturereignisse für Ihre Wohnung.",
 			"subcategories": [
 				{
 					"label": "zur Miete und/oder habe eine Betreuung",
 					"results": {
 						"stromausfall": [
-							"Kontaktiere deinen Vermieter oder Betreuer und frage, was du im Falle eines Stromausfalls beachten solltest.",
-							"Bewahre diese Hinweise an einem Ort auf, den du nicht vergessen oder übersehen kannst, oder mache dir zusätzlich noch eigene Notizen.",
-							"Stimme dich mit deinem Betreuer oder weiteren Bewohnern ab, wie ihr bei einem Stromausfall vorgehen wollt. > Zum Beispiel: Wo sind Taschenlampen und Kerzen im Wohnheim? Wie funktioniert die Heizung ohne Strom? Wie kommt man ohne Aufzug sicher aus dem Gebäude?"
+							"Kontaktieren Sie Ihren Vermieter oder Betreuer und fragen Sie, was Sie im Falle eines Stromausfalls beachten sollten.",
+							"Bewahren Sie diese Hinweise an einem Ort auf, den Sie nicht vergessen oder übersehen können, oder machen Sie sich zusätzlich noch eigene Notizen.",
+							"Stimmen Sie sich mit Ihrem Betreuer oder weiteren Bewohnern ab, wie Sie bei einem Stromausfall vorgehen möchten. > Zum Beispiel: Wo sind Taschenlampen und Kerzen im Wohnheim? Wie funktioniert die Heizung ohne Strom? Wie kommt man ohne Aufzug sicher aus dem Gebäude?"
 						],
 						"hitze": [
-							"Kontaktiere deinen Vermieter oder Betreuer und frage, welche Möglichkeiten zur Kühlung vorhanden sind und was du bei extremer Hitze beachten solltest.",
-							"Bewahre diese Hinweise an einem Ort auf, den du nicht vergessen oder übersehen kannst, oder mache dir zusätzlich noch eigene Notizen.",
-							"Stimme dich mit deinem Betreuer oder weiteren Bewohnern ab, wie ihr bei extremer Hitze vorgehen wollt. > Zum Beispiel: Gibt es kühle Gemeinschaftsräume im Wohnheim? Wie lässt sich die eigene Wohnung kühlen? Wer sorgt dafür, dass alle ausreichend trinken und auf Warnsignale achten?"
+							"Kontaktieren Sie Ihren Vermieter oder Betreuer und fragen Sie, welche Möglichkeiten zur Kühlung vorhanden sind und was Sie bei extremer Hitze beachten sollten.",
+							"Bewahren Sie diese Hinweise an einem Ort auf, den Sie nicht vergessen oder übersehen können, oder machen Sie sich zusätzlich noch eigene Notizen.",
+							"Stimmen Sie sich mit Ihrem Betreuer oder weiteren Bewohnern ab, wie Sie bei extremer Hitze vorgehen möchten. > Zum Beispiel: Gibt es kühle Gemeinschaftsräume im Wohnheim? Wie lässt sich die eigene Wohnung kühlen? Wer sorgt dafür, dass alle ausreichend trinken und auf Warnsignale achten?"
 						],
 						"starkregen_hochwasser": [
-							"Kontaktiere deinen Vermieter oder Betreuer und frage, was du im Falle eines Hochwassers oder bei anderen Naturgefahren beachten solltest.",
-							"Bewahre diese Hinweise an einem Ort auf, den du nicht vergessen oder übersehen kannst oder mache dir zusätzlich noch eigene Notizen.",
-							"Stimme dich mit deinem Betreuer oder weiteren Bewohnern ab, wie ihr bei Naturgefahren vorgehen wollt. > Zum Beispiel bei Hochwasser: Sind die Fenster im Keller und Erdgeschoss geschlossen? Können elektrische Geräte und gefährliche Stoffe in höher gelegenen Zimmern oder Wohnungen in Sicherheit gebracht werden? Wo und wie können sich Bewohner aus den unteren Stockwerken in Sicherheit bringen?"
+							"Kontaktieren Sie Ihren Vermieter oder Betreuer und fragen Sie, was Sie im Falle eines Hochwassers oder bei anderen Naturgefahren beachten sollten.",
+							"Bewahren Sie diese Hinweise an einem Ort auf, den Sie nicht vergessen oder übersehen können oder machen Sie sich zusätzlich noch eigene Notizen.",
+							"Stimmen Sie sich mit Ihrem Betreuer oder weiteren Bewohnern ab, wie Sie bei Naturgefahren vorgehen möchten. > Zum Beispiel bei Hochwasser: Sind die Fenster im Keller und Erdgeschoss geschlossen? Können elektrische Geräte und gefährliche Stoffe in höher gelegenen Zimmern oder Wohnungen in Sicherheit gebracht werden? Wo und wie können sich Bewohner aus den unteren Stockwerken in Sicherheit bringen?"
 						],
 						"sturm_tornado": [
-							"Kontaktiere deinen Vermieter oder Betreuer und frage, was du im Falle eines schweren Sturms oder Tornados beachten solltest.",
-							"Bewahre diese Hinweise an einem Ort auf, den du nicht vergessen oder übersehen kannst, oder mache dir zusätzlich noch eigene Notizen.",
-							"Stimme dich mit deinem Betreuer oder weiteren Bewohnern ab, wie ihr bei Sturm oder Tornado vorgehen wollt. > Zum Beispiel: Welcher Bereich des Wohnheims ist am sichersten? Wer warnt alle Bewohner rechtzeitig? Wie werden Außenbereiche und Gemeinschaftsflächen gesichert?"
+							"Kontaktieren Sie Ihren Vermieter oder Betreuer und fragen Sie, was Sie im Falle eines schweren Sturms oder Tornados beachten sollten.",
+							"Bewahren Sie diese Hinweise an einem Ort auf, den Sie nicht vergessen oder übersehen können, oder machen Sie sich zusätzlich noch eigene Notizen.",
+							"Stimmen Sie sich mit Ihrem Betreuer oder weiteren Bewohnern ab, wie Sie bei Sturm oder Tornado vorgehen möchten. > Zum Beispiel: Welcher Bereich des Wohnheims ist am sichersten? Wer warnt alle Bewohner rechtzeitig? Wie werden Außenbereiche und Gemeinschaftsflächen gesichert?"
 						]
 					}
 				},
@@ -461,16 +461,16 @@
 					"label": "in einer Ortschaft oder Siedlung",
 					"results": {
 						"stromausfall": [
-							"Verschaffe dir einen Überblick, wo du im Notfall Hilfe suchen könntest, z. B. Gemeindezentrum, Turnhalle, Kirche …"
+							"Verschaffen Sie sich einen Überblick, wo Sie im Notfall Hilfe suchen könnten, z. B. Gemeindezentrum, Turnhalle, Kirche …"
 						],
 						"hitze": [
-							"Verschaffe dir einen Überblick, wo es in der Nähe kühle öffentliche Orte gibt, z. B. Bibliotheken, Kirchen, Gemeindezentren …"
+							"Verschaffen Sie sich einen Überblick, wo es in der Nähe kühle öffentliche Orte gibt, z. B. Bibliotheken, Kirchen, Gemeindezentren …"
 						],
 						"starkregen_hochwasser": [
-							"Verschaffe dir einen Überblick, wo du im Notfall Hilfe suchen könntest, z. B. Gemeindezentrum, Turnhalle, Kirche …"
+							"Verschaffen Sie sich einen Überblick, wo Sie im Notfall Hilfe suchen könnten, z. B. Gemeindezentrum, Turnhalle, Kirche …"
 						],
 						"sturm_tornado": [
-							"Verschaffe dir einen Überblick, wo du im Notfall Schutz oder Hilfe suchen könntest, z. B. Gemeindezentrum, Turnhalle, Kirche …"
+							"Verschaffen Sie sich einen Überblick, wo Sie im Notfall Schutz oder Hilfe suchen könnten, z. B. Gemeindezentrum, Turnhalle, Kirche …"
 						]
 					}
 				}
@@ -479,30 +479,30 @@
 		{
 			"category": "Mobilheim oder ohne Unterkunft",
 			"icon": "<svg width='135' height='135' viewBox='0 0 135 135' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M67.035 133.515C103.745 133.515 133.515 103.755 133.515 67.0349C133.515 30.3149 103.755 0.564941 67.035 0.564941C30.315 0.564941 0.565002 30.3249 0.565002 67.0349C0.565002 103.745 30.325 133.515 67.035 133.515Z' fill='white'/><path d='M67.035 133.515C103.745 133.515 133.515 103.755 133.515 67.0349C133.515 30.3149 103.755 0.564941 67.035 0.564941C30.315 0.564941 0.565002 30.3249 0.565002 67.0349C0.565002 103.745 30.325 133.515 67.035 133.515Z' stroke='#9D9D9C' stroke-width='1.13'/><path d='M31.245 56.075L67.985 37.405L104.595 56.315L31.245 56.075ZM102.905 101.625H31.245V55.725H102.895V101.625H102.905ZM105.745 60.045L67.085 40.075L28.295 59.785L25.305 53.905L67.115 32.665L108.775 54.185L105.745 60.045Z' stroke='white' stroke-width='4.15'/><path d='M31.245 56.0748L67.985 37.4048L104.595 56.3248L31.245 56.0748Z' fill='#646363'/><path d='M102.905 91.0251L31.245 91.0151V55.7251L102.905 55.7351V91.0251Z' fill='#646363'/><mask id='mask0_639_140' style='mask-type:luminance' maskUnits='userSpaceOnUse' x='31' y='55' width='72' height='37'><path d='M102.905 91.0251L31.245 91.0151V55.7251L102.905 55.7351V91.0251Z' fill='white'/></mask><g mask='url(#mask0_639_140)'><path d='M73.785 95.4352L60.325 95.3852L60.365 63.6152L73.825 63.6552L73.785 95.4352Z' fill='#B2B2B2'/><path d='M73.785 95.4352L60.325 95.3852L60.365 63.6152L73.825 63.6552L73.785 95.4352Z' stroke='white' stroke-width='1.04' stroke-miterlimit='10'/></g><path d='M105.745 60.0448L67.085 40.0748L28.295 59.7848L25.295 53.9048L67.105 32.6548L108.775 54.1748L105.745 60.0448Z' fill='#B2B2B2'/><path d='M105.745 60.0448L67.085 40.0748L28.295 59.7848L25.295 53.9048L67.105 32.6548L108.775 54.1748L105.745 60.0448Z' stroke='white' stroke-width='1.04' stroke-miterlimit='10'/><path d='M53.685 77.1147L40.225 77.0648L40.275 63.6147L53.725 63.6547L53.685 77.1147Z' fill='#A1DAF8'/><path d='M53.685 77.1147L40.225 77.0648L40.275 63.6147L53.725 63.6547L53.685 77.1147Z' stroke='white' stroke-width='1.04' stroke-miterlimit='10'/><path d='M93.875 77.1147L80.425 77.0648L80.465 63.6147L93.925 63.6547L93.875 77.1147Z' fill='#A1DAF8'/><path d='M93.875 77.1147L80.425 77.0648L80.465 63.6147L93.925 63.6547L93.875 77.1147Z' stroke='white' stroke-width='1.04' stroke-miterlimit='10'/><path d='M87.0651 97.7252C90.7651 97.7252 93.7651 94.7252 93.7651 91.0252C93.7651 87.3252 90.7651 84.3252 87.0651 84.3252C83.3651 84.3252 80.3651 87.3252 80.3651 91.0252C80.3651 94.7252 83.3651 97.7252 87.0651 97.7252Z' fill='#B2B2B2'/><path d='M87.0651 97.7252C90.7651 97.7252 93.7651 94.7252 93.7651 91.0252C93.7651 87.3252 90.7651 84.3252 87.0651 84.3252C83.3651 84.3252 80.3651 87.3252 80.3651 91.0252C80.3651 94.7252 83.3651 97.7252 87.0651 97.7252Z' stroke='white' stroke-width='0.93' stroke-miterlimit='10'/><path d='M47.085 97.7252C50.785 97.7252 53.785 94.7252 53.785 91.0252C53.785 87.3252 50.785 84.3252 47.085 84.3252C43.385 84.3252 40.385 87.3252 40.385 91.0252C40.385 94.7252 43.385 97.7252 47.085 97.7252Z' fill='#B2B2B2'/><path d='M47.085 97.7252C50.785 97.7252 53.785 94.7252 53.785 91.0252C53.785 87.3252 50.785 84.3252 47.085 84.3252C43.385 84.3252 40.385 87.3252 40.385 91.0252C40.385 94.7252 43.385 97.7252 47.085 97.7252Z' stroke='white' stroke-width='0.93' stroke-miterlimit='10'/></svg>",
-			"text": "Behalte das Risiko für Hochwasser, Starkregen und andere Naturereignisse für deinen Standort im Blick.",
+			"text": "Behalten Sie das Risiko für Hochwasser, Starkregen und andere Naturereignisse für Ihren Standort im Blick.",
 			"subcategories": [
 				{
 					"label": "in der Nähe anderer Menschen",
 					"results": {
 						"stromausfall": [
-							"Mach dir eine einfache Checkliste, wie du im Falle eines Stromausfalls vorgehen willst.",
-							"Halte diese Checkliste an einem Ort bereit, den du nicht vergessen oder übersehen kannst. Überlege für jeden neuen Standort, ob deine Überlegungen noch passen.",
-							"Wenn es sich anbietet: sprich mit den Personen in deiner Umgebung über das Thema. Vielleicht könnt ihr euch gegenseitig unterstützen und z. B. Wissen über lokale Anlaufstellen und Versorgungsmöglichkeiten austauschen."
+							"Machen Sie sich eine einfache Checkliste, wie Sie im Falle eines Stromausfalls vorgehen möchten.",
+							"Halten Sie diese Checkliste an einem Ort bereit, den Sie nicht vergessen oder übersehen können. Überlegen Sie für jeden neuen Standort, ob Ihre Überlegungen noch passen.",
+							"Wenn es sich anbietet: sprechen Sie mit den Personen in Ihrer Umgebung über das Thema. Vielleicht können Sie sich gegenseitig unterstützen und z. B. Wissen über lokale Anlaufstellen und Versorgungsmöglichkeiten austauschen."
 						],
 						"hitze": [
-							"Mach dir eine einfache Checkliste, wie du bei extremer Hitze vorgehen willst.",
-							"Halte diese Checkliste an einem Ort bereit, den du nicht vergessen oder übersehen kannst. Überlege für jeden neuen Standort, ob deine Überlegungen noch passen - z. B. ob es Schatten, ausreichend Wasser und kühle Orte in der Nähe gibt.",
-							"Wenn es sich anbietet: sprich mit den Personen in deiner Umgebung über das Thema. Vielleicht könnt ihr euch gegenseitig unterstützen und z. B. Wissen über kühle Orte oder Wasserquellen in der Nähe austauschen."
+							"Machen Sie sich eine einfache Checkliste, wie Sie bei extremer Hitze vorgehen möchten.",
+							"Halten Sie diese Checkliste an einem Ort bereit, den Sie nicht vergessen oder übersehen können. Überlegen Sie für jeden neuen Standort, ob Ihre Überlegungen noch passen - z. B. ob es Schatten, ausreichend Wasser und kühle Orte in der Nähe gibt.",
+							"Wenn es sich anbietet: sprechen Sie mit den Personen in Ihrer Umgebung über das Thema. Vielleicht können Sie sich gegenseitig unterstützen und z. B. Wissen über kühle Orte oder Wasserquellen in der Nähe austauschen."
 						],
 						"starkregen_hochwasser": [
-							"Mach dir eine einfache Checkliste, wie du im Falle eines Hochwassers oder bei anderen Naturgefahren vorgehen willst.",
-							"Halte diese Checkliste an einem Ort bereit, den du nicht vergessen oder übersehen kannst. Überlege für jeden neuen Standort, ob deine Überlegungen noch passen.",
-							"Wenn es sich anbietet: sprich mit den Personen in deiner  Umgebung über das Thema. Vielleicht könnt ihr euch gemeinsam vorbereiten und z. B. Wissen über gefährdete Bereiche und Standorte austauschen."
+							"Machen Sie sich eine einfache Checkliste, wie Sie im Falle eines Hochwassers oder bei anderen Naturgefahren vorgehen möchten.",
+							"Halten Sie diese Checkliste an einem Ort bereit, den Sie nicht vergessen oder übersehen können. Überlegen Sie für jeden neuen Standort, ob Ihre Überlegungen noch passen.",
+							"Wenn es sich anbietet: sprechen Sie mit den Personen in Ihrer  Umgebung über das Thema. Vielleicht können Sie sich gemeinsam vorbereiten und z. B. Wissen über gefährdete Bereiche und Standorte austauschen."
 						],
 						"sturm_tornado": [
-							"Mach dir eine einfache Checkliste, wie du im Falle eines Sturms oder Tornados vorgehen willst.",
-							"Halte diese Checkliste an einem Ort bereit, den du nicht vergessen oder übersehen kannst. Überlege für jeden neuen Standort, ob deine Überlegungen noch passen - z. B. ob es sturmsichere Unterkünfte oder Schutzräume in der Nähe gibt.",
-							"Wenn es sich anbietet: sprich mit den Personen in deiner Umgebung über das Thema. Vielleicht könnt ihr euch gegenseitig warnen und z. B. Wissen über sichere Orte und Schutzräume in der Nähe austauschen."
+							"Machen Sie sich eine einfache Checkliste, wie Sie im Falle eines Sturms oder Tornados vorgehen möchten.",
+							"Halten Sie diese Checkliste an einem Ort bereit, den Sie nicht vergessen oder übersehen können. Überlegen Sie für jeden neuen Standort, ob Ihre Überlegungen noch passen - z. B. ob es sturmsichere Unterkünfte oder Schutzräume in der Nähe gibt.",
+							"Wenn es sich anbietet: sprechen Sie mit den Personen in Ihrer Umgebung über das Thema. Vielleicht können Sie sich gegenseitig warnen und z. B. Wissen über sichere Orte und Schutzräume in der Nähe austauschen."
 						]
 					}
 				},
@@ -510,28 +510,28 @@
 					"label": "außerhalb von Ortschaften oder in Alleinlage",
 					"results": {
 						"stromausfall": [
-							"Mach dir eine einfache Checkliste, wie du im Falle eines Stromausfalls vorgehen willst.",
-							"Halte diese Checkliste an einem Ort bereit, den du nicht vergessen oder übersehen kannst. Überlege für jeden neuen Standort, ob deine Überlegungen noch passen.",
-							"Überlege dir, wie du im Notfall auch ohne Strom oder Mobilfunk Hilfe bekommen kannst und wie lange das dauert.",
-							"Verschaffe dir einen Überblick, wo du im Notfall Hilfe suchen könntest, z. B. Gemeindezentrum, Turnhalle, Kirche …"
+							"Machen Sie sich eine einfache Checkliste, wie Sie im Falle eines Stromausfalls vorgehen möchten.",
+							"Halten Sie diese Checkliste an einem Ort bereit, den Sie nicht vergessen oder übersehen können. Überlegen Sie für jeden neuen Standort, ob Ihre Überlegungen noch passen.",
+							"Überlegen Sie sich, wie Sie im Notfall auch ohne Strom oder Mobilfunk Hilfe bekommen können und wie lange das dauert.",
+							"Verschaffen Sie sich einen Überblick, wo Sie im Notfall Hilfe suchen könnten, z. B. Gemeindezentrum, Turnhalle, Kirche …"
 						],
 						"hitze": [
-							"Mach dir eine einfache Checkliste, wie du bei extremer Hitze vorgehen willst.",
-							"Halte diese Checkliste an einem Ort bereit, den du nicht vergessen oder übersehen kannst. Überlege für jeden neuen Standort, ob deine Überlegungen noch passen - z. B. ob es Schatten, ausreichend Wasser und kühle Orte in der Nähe gibt.",
-							"Überlege dir, wie du im Notfall auch ohne Auto oder Telefon Hilfe bekommen kannst und wie lange das dauert.",
-							"Verschaffe dir einen Überblick, wo du im Notfall kühle Zuflucht oder Hilfe suchen könntest, z. B. Gemeindezentrum, Turnhalle, Kirche …"
+							"Machen Sie sich eine einfache Checkliste, wie Sie bei extremer Hitze vorgehen möchten.",
+							"Halten Sie diese Checkliste an einem Ort bereit, den Sie nicht vergessen oder übersehen können. Überlegen Sie für jeden neuen Standort, ob Ihre Überlegungen noch passen - z. B. ob es Schatten, ausreichend Wasser und kühle Orte in der Nähe gibt.",
+							"Überlegen Sie sich, wie Sie im Notfall auch ohne Auto oder Telefon Hilfe bekommen können und wie lange das dauert.",
+							"Verschaffen Sie sich einen Überblick, wo Sie im Notfall kühle Zuflucht oder Hilfe suchen könnten, z. B. Gemeindezentrum, Turnhalle, Kirche …"
 						],
 						"starkregen_hochwasser": [
-							"Mach dir eine einfache Checkliste, wie du im Falle eines Hochwassers oder bei anderen Naturgefahren vorgehen willst.",
-							"Halte diese Checkliste an einem Ort bereit, den du nicht vergessen oder übersehen kannst. Überlege für jeden neuen Standort, ob deine Überlegungen noch passen.",
-							"Überlege dir, wo und wie du im Notfall auch ohne Notruf oder Auto Hilfe bekommen kannst und wie lange das dauert.",
-							"Verschaffe dir einen Überblick, wo du im Notfall Hilfe suchen könntest, z. B. Gemeindezentrum, Turnhalle, Kirche …"
+							"Machen Sie sich eine einfache Checkliste, wie Sie im Falle eines Hochwassers oder bei anderen Naturgefahren vorgehen möchten.",
+							"Halten Sie diese Checkliste an einem Ort bereit, den Sie nicht vergessen oder übersehen können. Überlegen Sie für jeden neuen Standort, ob Ihre Überlegungen noch passen.",
+							"Überlegen Sie sich, wo und wie Sie im Notfall auch ohne Notruf oder Auto Hilfe bekommen können und wie lange das dauert.",
+							"Verschaffen Sie sich einen Überblick, wo Sie im Notfall Hilfe suchen könnten, z. B. Gemeindezentrum, Turnhalle, Kirche …"
 						],
 						"sturm_tornado": [
-							"Mach dir eine einfache Checkliste, wie du im Falle eines Sturms oder Tornados vorgehen willst.",
-							"Halte diese Checkliste an einem Ort bereit, den du nicht vergessen oder übersehen kannst. Überlege für jeden neuen Standort, ob deine Überlegungen noch passen - z. B. ob es sturmsichere Unterkünfte oder Schutzräume in der Nähe gibt.",
-							"Überlege dir, wie du im Notfall auch ohne Notruf oder Auto Schutz und Hilfe bekommen kannst und wie lange das dauert.",
-							"Verschaffe dir einen Überblick, wo du im Notfall Schutz oder Hilfe suchen könntest, z. B. Gemeindezentrum, Turnhalle, Kirche …"
+							"Machen Sie sich eine einfache Checkliste, wie Sie im Falle eines Sturms oder Tornados vorgehen möchten.",
+							"Halten Sie diese Checkliste an einem Ort bereit, den Sie nicht vergessen oder übersehen können. Überlegen Sie für jeden neuen Standort, ob Ihre Überlegungen noch passen - z. B. ob es sturmsichere Unterkünfte oder Schutzräume in der Nähe gibt.",
+							"Überlegen Sie sich, wie Sie im Notfall auch ohne Notruf oder Auto Schutz und Hilfe bekommen können und wie lange das dauert.",
+							"Verschaffen Sie sich einen Überblick, wo Sie im Notfall Schutz oder Hilfe suchen könnten, z. B. Gemeindezentrum, Turnhalle, Kirche …"
 						]
 					}
 				}
@@ -965,7 +965,7 @@
 		{
 			"label": "Notfallrucksack",
 			"category": "ernstfall",
-			"subtitle": "Der Rucksack sollte griffbereit stehen und etwas Wasser, Kekse oder Nüsse und Kleidung für zwei Tage für verschiedene Wetterlagen enthalten. Im Falle einer Evakuierung solltest du schnellstmöglich deine wichtigste Ausrüstung (Taschenlampe, Powerbank, Radio, Bargeld, wichtige Dokumente und Medikamente) darin verstauen können. Wenn dann noch Platz für Lebensmittel für zwei Tage ist: einpacken! Falls du mehr mitnehmen kannst und möchtest: <a href='https://www.bbk.bund.de/DE/Warnung-Vorsorge/Vorsorge/So-koennen-Sie-sich-vorbereiten/Notgepaeck/notgepaeck_node.html#vt-sprg-2' target='_blank'>hier</a> gibt es eine ausführliche Packliste",
+			"subtitle": "Der Rucksack sollte griffbereit stehen und etwas Wasser, Kekse oder Nüsse und Kleidung für zwei Tage für verschiedene Wetterlagen enthalten. Im Falle einer Evakuierung sollten Sie schnellstmöglich Ihre wichtigste Ausrüstung (Taschenlampe, Powerbank, Radio, Bargeld, wichtige Dokumente und Medikamente) darin verstauen können. Wenn dann noch Platz für Lebensmittel für zwei Tage ist: einpacken! Falls Sie mehr mitnehmen können und möchten: <a href='https://www.bbk.bund.de/DE/Warnung-Vorsorge/Vorsorge/So-koennen-Sie-sich-vorbereiten/Notgepaeck/notgepaeck_node.html#vt-sprg-2' target='_blank'>hier</a> gibt es eine ausführliche Packliste",
 			"icon": "<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24'><!-- Icon from Huge Icons by Hugeicons - undefined --><g fill='none' stroke='currentColor'><path stroke-width='1.5' d='M19 14h1.239c1.11 0 1.944 1.08 1.726 2.239l-.265 1.408C21.443 19.015 20.313 20 19 20M5 14H3.761c-1.11 0-1.944 1.08-1.726 2.239l.265 1.408C2.557 19.015 3.687 20 5 20'/><path stroke-linejoin='round' stroke-width='1.5' d='m18.27 10.5l.521 4.697c.28 3.182.42 4.773-.521 5.788S15.713 22 12.48 22h-.962c-3.232 0-4.847 0-5.789-1.015s-.801-2.606-.521-5.788L5.73 10.5'/><path stroke-width='1.5' d='M15 5a3 3 0 1 0-6 0M5.262 8.87c-.25-1.416-.376-2.124-.126-2.666a2.03 2.03 0 0 1 .793-.883C6.455 5 7.216 5 8.738 5h6.525c1.521 0 2.282 0 2.808.32c.351.215.627.522.793.884c.25.542.124 1.25-.126 2.666l-.05.289c-.098.549-.146.823-.242 1.076c-.165.436-.436.83-.79 1.151c-.204.186-.45.34-.94.65c-.462.29-.693.435-.937.549a4.4 4.4 0 0 1-1.34.382c-.27.033-.547.033-1.102.033h-2.674c-.555 0-.832 0-1.102-.033a4.4 4.4 0 0 1-1.34-.383c-.244-.113-.475-.258-.936-.549c-.491-.308-.737-.463-.942-.649a3 3 0 0 1-.789-1.151c-.096-.253-.144-.527-.241-1.076z'/><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m12 10.002l.009-.002'/></g></svg>"
 		},
 		{
